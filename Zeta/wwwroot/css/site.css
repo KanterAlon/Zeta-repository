@@ -36,14 +36,17 @@
   --secondary2-color: #4D4D4D;
   --secondary3-color: #F6F3E8;
   --secondary4-color: #A7A297;
+  --secondary5-color: #e0e0e0;
+  --whiteback-color: #ffffff;
   --info-color: #42B2E0;
   --success-color: #42B285;
   --warning-color: #E0B248;
-  --error-color: #BD3137;
+  --error-color: #ff000d;
 
   /* Typography Variables */
   --font-family-heading: 'Codec Pro', sans-serif;
-  --font-family-body: 'TT Norms Pro', sans-serif;
+  --font-family-body: 'Codec Pro', sans-serif;
+  --font-family-button: 'TT Norms', sans-serif;
 
   --heading1-size: 48px;
   --heading1-weight: 700;
@@ -83,6 +86,11 @@ body {
   font-family: var(--font-family-body);
 }
 
+h1, h2, h3, h4, p, button, a {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family: var(--font-family-heading);
   font-size: var(--heading1-size);
@@ -104,7 +112,7 @@ h3 {
   line-height: var(--heading3-line-height);
 }
 
-p, span, button, a {
+p, span, a {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-body);
@@ -117,6 +125,7 @@ button {
   font-size: var(--button-text-size);
   font-weight: var(--button-text-weight);
   line-height: var(--button-text-line-height);
+  font-family: var(--font-family-button);
 }
 
 
@@ -150,7 +159,7 @@ header {
 
 .nav-links a {
   text-decoration: none;
-  color: #3a3a3a;
+  color: var(--secondary2-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,9 +187,9 @@ header {
   color: var(--secondary3-color) !important;
 }
 
-/* ------------------ INDEX ------------------ */
+/* ------------------ HERO ------------------ */
 
-.landing-page{
+.home {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,8 +198,17 @@ header {
   gap: 2.5rem;
 }
 
+.home-inner {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .evaluation-content {
-  background-color: #ffffff;
+  background-color: var(--whiteback-color);
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -254,8 +272,8 @@ header {
 }
 
 .info-button {
-  background-color: #788A55; /* Using --primary-color */
-  color: #ffffff;
+  background-color: var(--primary-color); /* Using --primary-color */
+  color: var(--secondary3-color);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -278,15 +296,25 @@ header {
   width: 190px;
 }
 
-.nutrition-evaluation {
+/* ------------------ NUTRITION EVALUATION ------------------ */
+
+.sec-nutrition-evaluation {
   display: flex;
-  justify-content: space-between;
+  padding-block: 4rem;
+  justify-content: center;
   align-items: center;
-  padding: 2rem;
-  border-radius: 15px;
+}
+
+.nutrition-evaluation-inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
 }
 
 .product-info {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -304,6 +332,9 @@ header {
   align-items: center;
   padding: 2rem;
   border-radius: 15px;
+}
+
+.img-rating {
   position: relative;
 }
 
@@ -320,17 +351,18 @@ header {
   height: auto;
 }
 
-.rating.absolute {
+.rating {
   position: absolute;
-  bottom: 280px;
-  left: 195px;
-  background-color: #e0e0e0;
-  padding: 1rem;
-  padding-inline: 2rem;
+  top: -30px;
+  right: -190px;
+  background-color: var(--secondary5-color);
   border-radius: 30px;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
+  gap: 1.12rem;
+  width: 225px;
+  height: 60px;
 }
 
 .circle {
@@ -340,7 +372,17 @@ header {
 }
 
 .red {
-  background-color: #ff4c4c;
+  background-color: var(--error-color);
+}
+
+.circle-shadow-img {
+  width: 200px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--secondary5-color);
+  position: absolute;
+  bottom: -40px;
+  left: 10%;
 }
 
 .nutrition-details {
@@ -351,11 +393,13 @@ header {
 
 .nutrition-detail {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.8rem;
-  background-color: #f0f0f0;
-  padding: 0.8rem;
-  border-radius: 10px;
+  background-color: var(--secondary5-color);
+  border-radius: 0 10px 10px 10px;
+  height: 49px;
+  width: 178px;
 }
 
 .nutrition-detail img {
@@ -364,20 +408,13 @@ header {
 }
 
 .nutritional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: flex-start;
   max-width: 500px;
 }
 
-.nutritional-info h2 {
-  font-family: 'TT Norms Pro', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 1rem;
-  color: #3a3a3a;
-}
-
-.nutritional-info p {
-  font-family: 'TT Norms Pro', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #4d4d4d;
+.nutritional-info h2, .nutritional-info p {
+  color: var(--secondary2-color);
 }

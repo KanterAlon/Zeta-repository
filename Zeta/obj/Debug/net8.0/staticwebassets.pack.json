@@ -121,6 +121,10 @@
       "PackagePath": "staticwebassets\\img\\icon_blog.svg"
     },
     {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_calories.svg",
+      "PackagePath": "staticwebassets\\img\\icon_calories.svg"
+    },
+    {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_community.svg",
       "PackagePath": "staticwebassets\\img\\icon_community.svg"
     },
@@ -135,6 +139,10 @@
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_down_arrow.svg",
       "PackagePath": "staticwebassets\\img\\icon_down_arrow.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_fat.svg",
+      "PackagePath": "staticwebassets\\img\\icon_fat.svg"
     },
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_food.svg",
@@ -165,6 +173,10 @@
       "PackagePath": "staticwebassets\\img\\icon_profile.svg"
     },
     {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_protein.svg",
+      "PackagePath": "staticwebassets\\img\\icon_protein.svg"
+    },
+    {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_saving.svg",
       "PackagePath": "staticwebassets\\img\\icon_saving.svg"
     },
@@ -179,6 +191,10 @@
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_settings.svg",
       "PackagePath": "staticwebassets\\img\\icon_settings.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\lays-classic.svg",
+      "PackagePath": "staticwebassets\\img\\lays-classic.svg"
     },
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\js\\site.js",
