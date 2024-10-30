@@ -2,6 +2,10 @@
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
 
 # User-specific files
 *.suo
@@ -10,19 +14,30 @@
 *.sln.docstates
 .vscode/
 
-# NuGet Packages
-*.nupkg
-**/packages/
+# Visual Studio files
+.vs/
+
+# Node modules
+node_modules/
 
 # Publish Web Output
 *.publishproj
 *.pubxml
 *.azurePubxml
 
-# Other IDE-related directories
-.vs/
+# NuGet Packages
+*.nupkg
+**/packages/
+
+# Rider and JetBrains files
 .idea/
+*.sln.iml
+
+# ReSharper
 _ReSharper*/
 
-# Node modules
-node_modules/
+# Other IDE-related files
+*.pidb
+*.svclog
+*.tlog
+*.cache
