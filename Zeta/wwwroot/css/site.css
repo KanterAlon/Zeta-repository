@@ -1,22 +1,126 @@
-html {
-  font-size: 14px;
+:root {
+  --primary-color: #788A55;
+  --secondary1-color: #D9C86D;
+  --secondary2-color: #4D4D4D;
+  --secondary3-color: #F6F3E8;
+  --info-color: #42B2E0;
+  --success-color: #42B285;
+  --warning-color: #E0B248;
+  --error-color: #BD3137;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+/* Typography */
+@font-face {
+  font-family: 'Codec Pro';
+  src: url('/fonts/CodecPro.ttf') format('truetype');
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+@font-face {
+  font-family: 'TT Norms';
+  src: url('/fonts/TTNorms.otf') format('opentype');
 }
 
 body {
-  margin-bottom: 60px;
+  background-color: var(--secondary3-color);
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  background-color: var(--secondary3-color);
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3a3a3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links a img {
+  margin-right: 15px;
+  height: 30px;
+  width: 30px;
+}
+
+.nav-links a i {
+  margin-right: 5px;
+}
+
+.nav-links .login-button {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 6px;
+}
+
+
+/* Typography */
+.heading-1 {
+  font-family: 'Codec Pro', sans-serif;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.heading-2 {
+  font-family: 'Codec Pro', sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.heading-3 {
+  font-family: 'Codec Pro', sans-serif;
+  font-weight: regular;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.body-text {
+  font-family: 'Codec Pro', sans-serif;
+  font-weight: regular;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button-text {
+  font-family: 'TT Norms', sans-serif;
+  font-weight: regular;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.small-text {
+  font-family: 'Codec Pro', sans-serif;
+  font-weight: regular;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.placeholder-text {
+  font-family: 'Codec Pro', sans-serif;
+  font-weight: regular;
+  font-size: 16px;
+  line-height: 24px;
 }

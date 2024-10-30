@@ -7,40 +7,37 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Zeta.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Zeta</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+<header>
+  <div class="logo">
+    <img src="/img/Logo_Zeta_Header.svg" alt="ZETA Logo">
+  </div>
+  <nav class="nav-links">
+    <a href="/inicio">
+      <img src="/img/icon_home.svg" alt="Inicio Icon" class="nav-icon" width="30" height="30"><span class="body-text">Inicio</span>
+    </a>
+    <a href="/comunidad">
+      <img src="/img/icon_community.svg" alt="Comunidad Icon" class="nav-icon" width="30" height="30"><span class="body-text">Comunidad</span>
+    </a>
+    <a href="/blog">
+      <img src="/img/icon_blog.svg" alt="Blog Icon" class="nav-icon" width="30" height="30"><span class="body-text">Blog</span>
+    </a>
+    <a href="/contacto">
+      <img src="/img/icon_contact.svg" alt="Contacto Icon" class="nav-icon" width="30" height="30"><span class="body-text">Contacto</span>
+    </a>
+    <a href="/login" class="login-button"><span class="button-text">Login</span></a>
+  </nav>
+</header>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Zeta - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
