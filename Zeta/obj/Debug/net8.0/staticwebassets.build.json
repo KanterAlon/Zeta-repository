@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CeIR1cdeY4J4s+WPki8Z1izM7s9piSQrLM20LJIBLGk=",
+  "Hash": "q8bAG48G2siN14XoxDzBWShthWjzkx8106XH1llvPQ0=",
   "Source": "Zeta",
   "BasePath": "_content/Zeta",
   "Mode": "Default",
@@ -908,6 +908,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon_settings.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\image_contacto.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/image_contacto.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\image_contacto.svg"
     },
     {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\lays-classic.svg",
