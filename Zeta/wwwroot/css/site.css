@@ -136,6 +136,13 @@ button {
   color: var(--placeholder-text-color);
 }
 
+.sec-nutrition-evaluation, .sec-funcionalidades {
+  display: flex;
+  padding-block: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* ------------------ HEADER ------------------ */
 
 header {
@@ -483,6 +490,75 @@ header {
   font-size: var(--heading3-size);
   color: var(--secondary3-color);
   margin: 0;
+}
+
+/* ------------------ FUNCIONALIDADES ------------------ */
+
+.funcionalidades-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  gap: 2.5rem;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-funcionalidad {
+  background-color: var(--whiteback-color);
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: justify;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 500px;
+  gap: .5rem;
+  padding-bottom: 1.5rem;
+}
+
+.contenedor-imagen-card-funcionalidad {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.contenedor-imagen-card-funcionalidad img {
+  width: 100%;
+}
+
+.titulo-card-funcionalidad, .descripcion-card-funcionalidad {
+  color: var(--secondary2-color);
+}
+
+.funcionalidades-inner h2 {
+  color: var(--secondary2-color);
+}
+
+.card-funcionalidad h3, .card-funcionalidad p {
+  width: 89%;
+}
+
+.button-card {
+  background-color: var(--primary-color);
+  width: 89%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--whiteback-color);
+  border-radius: 4px;
 }
 
 /* ------------------ FOOTER ------------------ */
