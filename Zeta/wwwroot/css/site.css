@@ -61,7 +61,7 @@
   --heading3-line-height: 28px;
 
   --body-text-size: 16px;
-  --body-text-weight: 500;
+  --body-text-weight: 400;
   --body-text-line-height: 16px;
 
   --button-text-size: 16px;
@@ -73,7 +73,7 @@
   --small-text-line-height: 12px;
 
   --placeholder-text-size: 16px;
-  --placeholder-text-weight: 500;
+  --placeholder-text-weight: 400;
   --placeholder-text-line-height: 16px;
   --placeholder-text-color: #A7A297;
 }
