@@ -193,8 +193,36 @@
       "PackagePath": "staticwebassets\\img\\icon_settings.svg"
     },
     {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard1.png",
+      "PackagePath": "staticwebassets\\img\\imgCard1.png"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard2.png",
+      "PackagePath": "staticwebassets\\img\\imgCard2.png"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard3.png",
+      "PackagePath": "staticwebassets\\img\\imgCard3.png"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\img_alimentacion-intuitiva.png",
+      "PackagePath": "staticwebassets\\img\\img_alimentacion-intuitiva.png"
+    },
+    {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\img_contact.svg",
       "PackagePath": "staticwebassets\\img\\img_contact.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\img_mitos-de-dietas-populares.png",
+      "PackagePath": "staticwebassets\\img\\img_mitos-de-dietas-populares.png"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\img_nutricion-vs-salud-mental.png",
+      "PackagePath": "staticwebassets\\img\\img_nutricion-vs-salud-mental.png"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\img_suplementos-necesarios.png",
+      "PackagePath": "staticwebassets\\img\\img_suplementos-necesarios.png"
     },
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\lays-classic.svg",
