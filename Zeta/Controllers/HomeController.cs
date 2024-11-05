@@ -23,6 +23,11 @@ public class HomeController : Controller
         return View();
     }   
 
+    public IActionResult product()
+    {
+        return View();
+    }  
+
     public IActionResult Privacy()
     {
         return View();
