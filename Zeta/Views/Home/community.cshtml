@@ -1,7 +1,7 @@
 <section class="community-section">
     <div class="inner-community">
         <h1 class="community-title">Comunidad</h1>
-        <div class="cards-container">
+        <div class="community-cards-container">
 
             <div class="community-card">
                 <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
@@ -309,9 +309,44 @@
 
         </div>
 
-        <button class="button-add-post">
+        <button class="button-add-post" onclick="openPopup()">
             <img src="/img/icon_button_add.svg">
         </button>
+
+        <div id="postPopup" class="popup-container">
+            <div class="popup-content">
+                <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
+
+                <div class="top-pop-up-add-post">
+                    <img src="/img/icon_user.svg">
+                    <input id="postInput" type="text" placeholder="¿Qué quieres decir?" />
+                </div>
+
+                <div class="buttons-pop-up-add-post">
+                    <button>
+                        <img src="/img/icon_calendar.svg">
+                    </button>
+
+                    <button>
+                        <img src="/img/icon_calendar.svg">
+                    </button>
+
+                    <button>
+                        <img src="/img/icon_calendar.svg">
+                    </button>
+
+                    <button>
+                        <img src="/img/icon_calendar.svg">
+                    </button>
+
+                    <button>
+                        <img src="/img/icon_calendar.svg">
+                    </button>
+                </div>
+
+                <button class="publish-btn">Publicar</button>
+            </div>
+        </div>
 
     </div>
 </section>

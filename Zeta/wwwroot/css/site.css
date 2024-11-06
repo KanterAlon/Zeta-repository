@@ -37,6 +37,7 @@
   --secondary3-color: #F6F3E8;
   --secondary4-color: #A7A297;
   --secondary5-color: #e0e0e0;
+  --secondary6-color: #E8E8E8;
   --whiteback-color: #ffffff;
   --info-color: #42B2E0;
   --success-color: #42B285;
@@ -825,11 +826,11 @@ gap: .5rem;
   margin-bottom: 2rem;
 }
 
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+.community-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
 }
 
 .community-card {
@@ -838,15 +839,15 @@ gap: .5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-width: 280px;
   max-width: 300px;
-  height: fit-content;
-  max-height: 600px;
+  height: fit;
+  align-self: start;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   padding-bottom: 1.5rem;
   gap: 1.2rem;
 }
+
 
 .bottom-community-card {
   display: flex;
@@ -896,4 +897,85 @@ gap: .5rem;
 
 .button-add-post img {
   width: 80px;
+}
+
+/* Popup Container */
+.popup-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: var(--secondary6-color);
+  width: 95%;
+  height: 60%;
+  max-width: 1440px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border-radius: 60px;
+  position: relative;
+}
+
+.top-pop-up-add-post {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons-pop-up-add-post {
+  display: flex;
+  width: 16%;
+  justify-content: space-evenly;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secondary2-color);
+  cursor: pointer;
+  top: 1.5rem;
+  right: 2rem;
+}
+
+/* Publish Button */
+.publish-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--whiteback-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#postInput {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: inherit;
+  color: inherit;
+  background-color: transparent;
+  width: 100%;
+  cursor: text;
+}
+
+#postInput::placeholder {
+  color: #666;
 }

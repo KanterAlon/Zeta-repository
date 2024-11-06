@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KxXw47GxxTl19rgZGCAfs8XhDgmLYM+aO92gfAMyq+w=",
+  "Hash": "wUG4knIRwUQuxCEr5HnrJ47tnWeXEQun9kc8PHu1R3E=",
   "Source": "Zeta",
   "BasePath": "_content/Zeta",
   "Mode": "Default",
@@ -549,6 +549,25 @@
       "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro Regular.otf"
     },
     {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\first-img.png",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/first-img.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\first-img.png"
+    },
+    {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_blog.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
@@ -568,6 +587,25 @@
       "OriginalItemSpec": "wwwroot\\img\\icon_blog.svg"
     },
     {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_button_add.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_button_add.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_button_add.svg"
+    },
+    {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_calories.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
@@ -585,6 +623,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon_calories.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_comments.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_comments.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_comments.svg"
     },
     {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_community.svg",
@@ -642,6 +699,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon_default_profile_picture.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_dislike.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_dislike.svg"
     },
     {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_down_arrow.svg",
@@ -756,6 +832,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon_home.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_like.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_like.svg"
     },
     {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_notification.svg",
@@ -908,6 +1003,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon_settings.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_share.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_share.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_share.svg"
     },
     {
       "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\img_alimentacion-intuitiva.png",
