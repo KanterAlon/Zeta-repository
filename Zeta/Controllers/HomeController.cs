@@ -27,7 +27,11 @@ public class HomeController : Controller
     {
         return View();
     }  
-
+    
+    public IActionResult community()
+    {
+        return View();
+    }  
     public IActionResult Privacy()
     {
         return View();
@@ -38,5 +42,7 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+
 
 }
