@@ -19364,6 +19364,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\Views\\Home\\contact.cshtml",
+      "TargetPath": "Views\\Home\\contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\Views\\Home\\blog.cshtml",
       "TargetPath": "Views\\Home\\blog.cshtml",
       "FileKind": "mvc"

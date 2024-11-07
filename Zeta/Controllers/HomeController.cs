@@ -44,6 +44,10 @@ public class HomeController : Controller
     {
         return View();
     } 
+    public IActionResult contact()
+    {
+        return View();
+    } 
     public IActionResult Privacy()
     {
         return View();
