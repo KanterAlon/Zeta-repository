@@ -19339,6 +19339,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\Views\\Home\\ca2.cshtml",
+      "TargetPath": "Views\\Home\\ca2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\Views\\Home\\login.cshtml",
       "TargetPath": "Views\\Home\\login.cshtml",
       "FileKind": "mvc"
@@ -19376,6 +19381,11 @@
     {
       "FilePath": "c:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\Views\\Home\\ca1.cshtml",
+      "TargetPath": "Views\\Home\\ca1.cshtml",
       "FileKind": "mvc"
     }
   ],

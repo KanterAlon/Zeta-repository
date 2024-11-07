@@ -97,6 +97,7 @@ h1 {
   font-size: var(--heading1-size);
   font-weight: var(--heading1-weight);
   line-height: var(--heading1-line-height);
+  color: var(--secondary2-color);
 }
 
 h2 {
@@ -104,6 +105,8 @@ h2 {
   font-size: var(--heading2-size);
   font-weight: var(--heading2-weight);
   line-height: var(--heading2-line-height);
+    color: var(--secondary2-color);
+
 }
 
 h3 {
@@ -111,6 +114,7 @@ h3 {
   font-size: var(--heading3-size);
   font-weight: var(--heading3-weight);
   line-height: var(--heading3-line-height);
+    color: var(--secondary2-color);
 }
 
 p, span, a {
@@ -120,6 +124,7 @@ p, span, a {
   font-size: var(--body-text-size);
   font-weight: var(--body-text-weight);
   line-height: var(--body-text-line-height);
+    color: var(--secondary2-color);
 }
 
 button {
@@ -129,6 +134,7 @@ button {
   font-family: var(--font-family-button);
   background-color: transparent;
   border: transparent;
+    color: var(--secondary2-color);
 }
 
 
@@ -979,8 +985,8 @@ gap: .5rem;
 #postInput::placeholder {
   color: #666;
 }
+
 /********************* LOGIN **************************/
-/* site.css */
 
 .login-container {
   display: flex;
@@ -992,16 +998,15 @@ gap: .5rem;
 }
 
 .login-content {
-  background-color: var(--secondary3-color); /* Slight transparency */
+  background-color: var(--secondary3-color); 
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
   padding: 60px;
   gap: 4rem;
 }
@@ -1057,6 +1062,7 @@ gap: .5rem;
   padding-left: 30px;
   font-size: var(--input-text-size);
   color: #333; /* Text color inside input */
+  outline: none;
 }
 
 .forgot-password {
@@ -1100,7 +1106,7 @@ gap: .5rem;
   font-size: var(--button-text-size);
   text-align: center;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
@@ -1114,3 +1120,146 @@ gap: .5rem;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
   background-color: rgba(0, 0, 0, 0.03);
 }
+
+/* Styles for ca1.cshtml layout */
+
+.ca1-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/img/img_fondo-login.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.ca1-content {
+  background-color: var(--secondary3-color);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 4rem;
+  min-height: 600px;
+  min-width: 1700px;
+}
+
+.ca1-inputs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 20px;
+}
+
+.ca1-input-group {
+  width: 530px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  background: transparent;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.ca1-input-group input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: var(--body-text-size);
+  color: #333;
+  outline: none;
+}
+
+.ca1-single-input {
+  grid-column: span 3;
+  width: 530px;
+  height: 65px;
+}
+
+.ca1-btn-next {
+  background-color: var(--primary-color);
+  width: 225px;
+  height: 40px;
+  color: var(--secondary3-color);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-family-button);
+  font-size: var(--button-text-size);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.ca1-btn-next:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* ------------------ SIGNUP SECTION ------------------ */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/img/img_fondo-login.svg') no-repeat center center;
+  background-size: cover;
+}
+
+.signup-content {
+  background-color: var(--secondary3-color);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  height: 90%;
+  text-align: center;
+  width: 90%;
+  max-width: 1700px;
+}
+
+.signup-text {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signup-heading {
+  font-size: var(--heading1-size);
+  color: var(--secondary2-color);
+}
+
+.signup-subheading {
+  font-size: var(--heading3-size);
+  color: var(--secondary2-color);
+}
+
+.signup-btn-next {
+  background-color: var(--primary-color);
+  width: 225px;
+  height: 40px;
+  color: var(--secondary3-color);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-family-button);
+  font-size: var(--button-text-size);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.signup-btn-next:hover {
+  transform: translateY(-1px);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+

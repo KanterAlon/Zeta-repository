@@ -36,6 +36,14 @@ public class HomeController : Controller
     {
         return View();
     } 
+        public IActionResult ca1()
+    {
+        return View();
+    } 
+        public IActionResult ca2()
+    {
+        return View();
+    } 
     public IActionResult Privacy()
     {
         return View();
