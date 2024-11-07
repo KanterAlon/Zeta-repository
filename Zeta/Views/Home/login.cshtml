@@ -1,0 +1,36 @@
+<!-- login.cshtml -->
+@{
+    ViewData["HideHeader"] = true;
+}
+
+<body>
+    <div class="login-container">
+        <div class="login-content">
+            <div class="illustration">
+                <img src="~/img/img_login.svg" alt="Person holding apple illustration" />
+            </div>
+            <div class="welcome-message">
+                <h1 class="welcome-heading">Te damos la bienvenida a la comunidad Zeta</h1>
+                
+                <div class="inputs-group">
+                    <div class="input-group">
+                        <input type="text" name="username" placeholder="Usuario" required />
+                    </div>
+                    <div class="input-group">
+                        <input type="password" name="password" placeholder="Contraseña" required />
+                    </div>
+                    <div class="forgot-password">
+                        <a href="/Account/ForgotPassword">
+                            <span class="small-text">&#191;Has olvidado tu contraseña?</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn-login">Log In</button>
+                    <button type="button" class="btn-create-account" onclick="window.location.href='/Account/Register'">Create account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
