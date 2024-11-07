@@ -200,7 +200,12 @@ header {
   height: 50px;
   background-color: var(--primary-color);
   border-radius: 6px;
-  color: var(--secondary3-color) !important;
+  color: white !important ; 
+}
+
+.button-text
+{
+  color: white !important ; 
 }
 
 /* ------------------ HERO ------------------ */
@@ -310,6 +315,7 @@ header {
   font-size: var(--body-text-size);
   font-weight: var(--body-text-weight);
   width: 190px;
+  color: var(--whiteback-color);
 }
 
 /* ------------------ NUTRITION EVALUATION ------------------ */
