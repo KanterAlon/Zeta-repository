@@ -63,8 +63,14 @@ public class HomeController : Controller
     {
         return View();
     }
-
     public IActionResult Ca2()
+        {
+            List<Patologias> patologias = Patologias.ObtenerTodas();
+            ViewBag.Patologias = patologias;
+            return View();
+
+        }
+    public IActionResult Ca3()
     {
         return View();
     }

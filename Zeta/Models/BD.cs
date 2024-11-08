@@ -15,20 +15,13 @@ using System.Linq;
             }
         }
 
-        public Usuario? ValidarUsuario(string email, string password)
-    {
-        using (var connection = new SqlConnection(_connectionString))
+         public static List<Patologias> ObtenerPatologias()
         {
-            // Consulta SQL para buscar al usuario con email y password
-            string query = @"
-                SELECT id_usuario, nombre, email, fecha_registro, ultima_sesion, 
-                       edad, sexo, peso, altura, password
-                FROM Usuarios
-                WHERE email = @Email AND password = @Password";
-
-            // Ejecuta la consulta y devuelve una instancia de Usuario si coincide
-            return connection.QuerySingleOrDefault<Usuario>(query, new { Email = email, Password = password });
+            using (SqlConnection db = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT id_patologia AS IdPatologia, nombre_patologia AS NombrePatologia FROM Patologias";
+                return db.Query<Patologias>(query).ToList();
+            }
         }
     }
-}
 
