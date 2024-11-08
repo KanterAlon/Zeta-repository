@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FaHxg4eF2ahDHfh+FfX6M+2zyvJtQzyk/Wx6ld2+9Lk=",
+  "Hash": "QPVqGBa0BB2+4HUSN5Xsqdoy9ogzDQU5st0OHmdgaZI=",
   "Source": "Zeta",
   "BasePath": "_content/Zeta",
   "Mode": "Default",
@@ -8,19 +8,19 @@
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
-      "Name": "Zeta\\wwwroot",
+      "Name": "Zeta/wwwroot",
       "Source": "Zeta",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\css\\site.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/css/site.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
+      "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\favicon.ico",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/favicon.ico",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\favicon.ico"
+      "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\codec-pro-light.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/codec-pro-light.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/codec-pro-light.ttf",
       "AssetKind": "All",
@@ -71,13 +71,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\codec-pro-light.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/codec-pro-light.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\codec-pro.regular.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/codec-pro.regular.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/codec-pro.regular.ttf",
       "AssetKind": "All",
@@ -90,13 +90,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\codec-pro.regular.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/codec-pro.regular.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-Bold.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-Bold.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-Bold.ttf",
       "AssetKind": "All",
@@ -109,13 +109,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-Bold.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-Bold.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-BoldItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-BoldItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-BoldItalic.ttf",
       "AssetKind": "All",
@@ -128,13 +128,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-BoldItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-BoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-ExtraBold.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-ExtraBold.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-ExtraBold.ttf",
       "AssetKind": "All",
@@ -147,13 +147,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-ExtraBold.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-ExtraBold.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-ExtraBoldItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-ExtraBoldItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-ExtraBoldItalic.ttf",
       "AssetKind": "All",
@@ -166,13 +166,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-ExtraBoldItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-ExtraBoldItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-ExtraLightItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-ExtraLightItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-ExtraLightItalic.ttf",
       "AssetKind": "All",
@@ -185,13 +185,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-ExtraLightItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-ExtraLightItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-Fat.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-Fat.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-Fat.ttf",
       "AssetKind": "All",
@@ -204,13 +204,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-Fat.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-Fat.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-FatItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-FatItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-FatItalic.ttf",
       "AssetKind": "All",
@@ -223,13 +223,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-FatItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-FatItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-Heavy.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-Heavy.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-Heavy.ttf",
       "AssetKind": "All",
@@ -242,13 +242,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-Heavy.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-Heavy.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-HeavyItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-HeavyItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-HeavyItalic.ttf",
       "AssetKind": "All",
@@ -261,13 +261,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-HeavyItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-HeavyItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-LightItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-LightItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-LightItalic.ttf",
       "AssetKind": "All",
@@ -280,13 +280,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-LightItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-LightItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-News.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-News.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-News.ttf",
       "AssetKind": "All",
@@ -299,13 +299,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-News.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-News.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-NewsItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-NewsItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-NewsItalic.ttf",
       "AssetKind": "All",
@@ -318,13 +318,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-NewsItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-NewsItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-Thin.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-Thin.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-Thin.ttf",
       "AssetKind": "All",
@@ -337,13 +337,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-Thin.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-Thin.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-ThinItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-ThinItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-ThinItalic.ttf",
       "AssetKind": "All",
@@ -356,13 +356,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-ThinItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-ThinItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-Ultra.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-Ultra.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-Ultra.ttf",
       "AssetKind": "All",
@@ -375,13 +375,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-Ultra.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-Ultra.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-UltraBlack.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-UltraBlack.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-UltraBlack.ttf",
       "AssetKind": "All",
@@ -394,13 +394,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-UltraBlack.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-UltraBlack.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-UltraBlackItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-UltraBlackItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-UltraBlackItalic.ttf",
       "AssetKind": "All",
@@ -413,13 +413,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-UltraBlackItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-UltraBlackItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\CodecPro-UltraItalic.ttf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/CodecPro-UltraItalic.ttf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/CodecPro-UltraItalic.ttf",
       "AssetKind": "All",
@@ -432,13 +432,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\CodecPro-UltraItalic.ttf"
+      "OriginalItemSpec": "wwwroot/fonts/CodecPro-UltraItalic.ttf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\TT Norms Pro Black.otf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/TT Norms Pro Black.otf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/TT Norms Pro Black.otf",
       "AssetKind": "All",
@@ -451,13 +451,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro Black.otf"
+      "OriginalItemSpec": "wwwroot/fonts/TT Norms Pro Black.otf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\TT Norms Pro Bold.otf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/TT Norms Pro Bold.otf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/TT Norms Pro Bold.otf",
       "AssetKind": "All",
@@ -470,13 +470,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro Bold.otf"
+      "OriginalItemSpec": "wwwroot/fonts/TT Norms Pro Bold.otf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\TT Norms Pro ExtraBold.otf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/TT Norms Pro ExtraBold.otf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/TT Norms Pro ExtraBold.otf",
       "AssetKind": "All",
@@ -489,13 +489,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro ExtraBold.otf"
+      "OriginalItemSpec": "wwwroot/fonts/TT Norms Pro ExtraBold.otf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\TT Norms Pro Light.otf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/TT Norms Pro Light.otf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/TT Norms Pro Light.otf",
       "AssetKind": "All",
@@ -508,13 +508,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro Light.otf"
+      "OriginalItemSpec": "wwwroot/fonts/TT Norms Pro Light.otf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\TT Norms Pro Medium.otf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/TT Norms Pro Medium.otf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/TT Norms Pro Medium.otf",
       "AssetKind": "All",
@@ -527,13 +527,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro Medium.otf"
+      "OriginalItemSpec": "wwwroot/fonts/TT Norms Pro Medium.otf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\fonts\\TT Norms Pro Regular.otf",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/fonts/TT Norms Pro Regular.otf",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "fonts/TT Norms Pro Regular.otf",
       "AssetKind": "All",
@@ -546,13 +546,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\fonts\\TT Norms Pro Regular.otf"
+      "OriginalItemSpec": "wwwroot/fonts/TT Norms Pro Regular.otf"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\first-img.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/first-img.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/first-img.png",
       "AssetKind": "All",
@@ -565,13 +565,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\first-img.png"
+      "OriginalItemSpec": "wwwroot/img/first-img.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_blog.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_blog.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_blog.svg",
       "AssetKind": "All",
@@ -584,13 +584,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_blog.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_blog.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_button_add.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_button_add.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_button_add.svg",
       "AssetKind": "All",
@@ -603,13 +603,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_button_add.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_button_add.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_calendar.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_calendar.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_calendar.svg",
       "AssetKind": "All",
@@ -622,13 +622,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_calendar.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_calendar.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_calories.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_calories.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_calories.svg",
       "AssetKind": "All",
@@ -641,13 +641,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_calories.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_calories.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_close.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_close.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_close.svg",
       "AssetKind": "All",
@@ -660,13 +660,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_close.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_close.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_comments.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_comments.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_comments.svg",
       "AssetKind": "All",
@@ -679,13 +679,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_comments.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_comments.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_community.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_community.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_community.svg",
       "AssetKind": "All",
@@ -698,13 +698,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_community.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_community.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_contact.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_contact.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_contact.svg",
       "AssetKind": "All",
@@ -717,13 +717,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_contact.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_contact.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_default_profile_picture.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_default_profile_picture.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_default_profile_picture.svg",
       "AssetKind": "All",
@@ -736,13 +736,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_default_profile_picture.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_default_profile_picture.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_dislike.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_dislike.svg",
       "AssetKind": "All",
@@ -755,13 +755,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_dislike.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_dislike.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_down_arrow.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_down_arrow.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_down_arrow.svg",
       "AssetKind": "All",
@@ -774,13 +774,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_down_arrow.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_down_arrow.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_emoji.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_emoji.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_emoji.svg",
       "AssetKind": "All",
@@ -793,13 +793,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_emoji.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_emoji.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_fat.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_fat.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_fat.svg",
       "AssetKind": "All",
@@ -812,13 +812,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_fat.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_fat.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_food.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_food.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_food.svg",
       "AssetKind": "All",
@@ -831,13 +831,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_food.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_food.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_gif.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_gif.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_gif.svg",
       "AssetKind": "All",
@@ -850,13 +850,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_gif.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_gif.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_healthy-eating.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_healthy-eating.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_healthy-eating.svg",
       "AssetKind": "All",
@@ -869,13 +869,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_healthy-eating.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_healthy-eating.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_highlight.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_highlight.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_highlight.svg",
       "AssetKind": "All",
@@ -888,13 +888,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_highlight.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_highlight.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_home.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_home.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_home.svg",
       "AssetKind": "All",
@@ -907,13 +907,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_home.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_home.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_img.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_img.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_img.svg",
       "AssetKind": "All",
@@ -926,13 +926,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_img.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_img.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_like.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_like.svg",
       "AssetKind": "All",
@@ -945,13 +945,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_like.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_like.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_notification.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_notification.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_notification.svg",
       "AssetKind": "All",
@@ -964,13 +964,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_notification.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_notification.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_order-completed.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_order-completed.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_order-completed.svg",
       "AssetKind": "All",
@@ -983,13 +983,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_order-completed.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_order-completed.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_profile.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_profile.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_profile.svg",
       "AssetKind": "All",
@@ -1002,13 +1002,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_profile.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_profile.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_protein.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_protein.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_protein.svg",
       "AssetKind": "All",
@@ -1021,13 +1021,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_protein.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_protein.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_saving.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_saving.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_saving.svg",
       "AssetKind": "All",
@@ -1040,13 +1040,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_saving.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_saving.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_scales.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_scales.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_scales.svg",
       "AssetKind": "All",
@@ -1059,13 +1059,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_scales.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_scales.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_search.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_search.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_search.svg",
       "AssetKind": "All",
@@ -1078,13 +1078,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_search.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_search.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_settings.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_settings.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_settings.svg",
       "AssetKind": "All",
@@ -1097,13 +1097,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_settings.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_settings.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_share.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_share.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_share.svg",
       "AssetKind": "All",
@@ -1116,13 +1116,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_share.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_share.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_survey.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_survey.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_survey.svg",
       "AssetKind": "All",
@@ -1135,13 +1135,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_survey.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_survey.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_user.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/icon_user.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/icon_user.svg",
       "AssetKind": "All",
@@ -1154,13 +1154,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\icon_user.svg"
+      "OriginalItemSpec": "wwwroot/img/icon_user.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_alimentacion-intuitiva.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_alimentacion-intuitiva.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_alimentacion-intuitiva.png",
       "AssetKind": "All",
@@ -1173,13 +1173,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_alimentacion-intuitiva.png"
+      "OriginalItemSpec": "wwwroot/img/img_alimentacion-intuitiva.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_contact.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_contact.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_contact.svg",
       "AssetKind": "All",
@@ -1192,13 +1192,32 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_contact.svg"
+      "OriginalItemSpec": "wwwroot/img/img_contact.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_fondo-login.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_contacto.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/img_contacto.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/img_contacto.svg"
+    },
+    {
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_fondo-login.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_fondo-login.svg",
       "AssetKind": "All",
@@ -1211,13 +1230,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_fondo-login.svg"
+      "OriginalItemSpec": "wwwroot/img/img_fondo-login.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_login.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_login.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_login.svg",
       "AssetKind": "All",
@@ -1230,13 +1249,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_login.svg"
+      "OriginalItemSpec": "wwwroot/img/img_login.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_mitos-de-dietas-populares.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_mitos-de-dietas-populares.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_mitos-de-dietas-populares.png",
       "AssetKind": "All",
@@ -1249,13 +1268,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_mitos-de-dietas-populares.png"
+      "OriginalItemSpec": "wwwroot/img/img_mitos-de-dietas-populares.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_nutricion-vs-salud-mental.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_nutricion-vs-salud-mental.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_nutricion-vs-salud-mental.png",
       "AssetKind": "All",
@@ -1268,13 +1287,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_nutricion-vs-salud-mental.png"
+      "OriginalItemSpec": "wwwroot/img/img_nutricion-vs-salud-mental.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\img_suplementos-necesarios.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/img_suplementos-necesarios.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/img_suplementos-necesarios.png",
       "AssetKind": "All",
@@ -1287,13 +1306,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\img_suplementos-necesarios.png"
+      "OriginalItemSpec": "wwwroot/img/img_suplementos-necesarios.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard1.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard1.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard1.png",
       "AssetKind": "All",
@@ -1306,13 +1325,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard1.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard1.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard2.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard2.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard2.png",
       "AssetKind": "All",
@@ -1325,13 +1344,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard2.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard2.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard3.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard3.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard3.png",
       "AssetKind": "All",
@@ -1344,13 +1363,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard3.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard3.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard4.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard4.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard4.png",
       "AssetKind": "All",
@@ -1363,13 +1382,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard4.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard4.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard5.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard5.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard5.png",
       "AssetKind": "All",
@@ -1382,13 +1401,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard5.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard5.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard6.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard6.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard6.png",
       "AssetKind": "All",
@@ -1401,13 +1420,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard6.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard6.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\imgCard7.png",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/imgCard7.png",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/imgCard7.png",
       "AssetKind": "All",
@@ -1420,13 +1439,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\imgCard7.png"
+      "OriginalItemSpec": "wwwroot/img/imgCard7.png"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\lays-classic.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/lays-classic.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/lays-classic.svg",
       "AssetKind": "All",
@@ -1439,13 +1458,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\lays-classic.svg"
+      "OriginalItemSpec": "wwwroot/img/lays-classic.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\img\\Logo_Zeta_Header.svg",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/img/Logo_Zeta_Header.svg",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "img/Logo_Zeta_Header.svg",
       "AssetKind": "All",
@@ -1458,13 +1477,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Logo_Zeta_Header.svg"
+      "OriginalItemSpec": "wwwroot/img/Logo_Zeta_Header.svg"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\js\\site.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/js/site.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1477,13 +1496,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot/js/site.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1496,13 +1515,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1515,13 +1534,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1534,13 +1553,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1553,13 +1572,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1572,13 +1591,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1591,13 +1610,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1610,13 +1629,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1629,13 +1648,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1648,13 +1667,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1667,13 +1686,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1686,13 +1705,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1705,13 +1724,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1724,13 +1743,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1743,13 +1762,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1762,13 +1781,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1781,13 +1800,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1800,13 +1819,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1819,13 +1838,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1838,13 +1857,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1857,13 +1876,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1876,13 +1895,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1895,13 +1914,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1914,13 +1933,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1933,13 +1952,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1952,13 +1971,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1971,13 +1990,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1990,13 +2009,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2009,13 +2028,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2028,13 +2047,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2047,13 +2066,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2066,13 +2085,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2085,13 +2104,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2104,13 +2123,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2123,13 +2142,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2142,13 +2161,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2161,13 +2180,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2180,13 +2199,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2199,13 +2218,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2218,13 +2237,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2237,13 +2256,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2256,13 +2275,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2275,13 +2294,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2294,13 +2313,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2313,13 +2332,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/bootstrap/LICENSE",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2332,13 +2351,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2351,13 +2370,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2370,13 +2389,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -2389,13 +2408,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2408,13 +2427,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2427,13 +2446,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2446,13 +2465,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2465,13 +2484,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery-validation/LICENSE.md",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2484,13 +2503,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
+      "OriginalItemSpec": "wwwroot/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery/dist/jquery.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2503,13 +2522,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery/dist/jquery.min.js",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2522,13 +2541,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+      "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery/dist/jquery.min.map",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2541,13 +2560,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+      "OriginalItemSpec": "wwwroot/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "/workspaces/Zeta-repository/Zeta/wwwroot/lib/jquery/LICENSE.txt",
       "SourceId": "Zeta",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\95320323\\Downloads\\drive-download-20241107T153411Z-001\\Zeta-repository\\Zeta\\wwwroot\\",
+      "ContentRoot": "/workspaces/Zeta-repository/Zeta/wwwroot/",
       "BasePath": "_content/Zeta",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2560,7 +2579,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     }
   ]
 }

@@ -1,3 +1,7 @@
+@{
+    List<Post> posts = ViewBag.posts;
+}
+
 <section class="community-section">
     <div class="inner-community">
         <h1 class="community-title">Comunidad</h1>
@@ -7,7 +11,7 @@
                 <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
 
                 <div class="bottom-community-card">
-                
+
                     <p class="community-card-text">
                         “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
                     </p>
@@ -350,3 +354,8 @@
 
     </div>
 </section>
+
+@foreach (var post in posts)
+{
+    <p>@post.TituloPost - @post.ContenidoPost</p>
+}

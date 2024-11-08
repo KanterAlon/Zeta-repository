@@ -1,53 +1,58 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Zeta.Models;
-
-namespace Zeta.Controllers;
+using Zeta.Models; // Ensure this matches your namespace for Post and PostRepository
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
+    // Single constructor that accepts both logger and BD dependency
     public HomeController(ILogger<HomeController> logger)
     {
-        _logger = logger;
     }
 
-    public IActionResult index()
+    public IActionResult Index()
     {
         return View();
     }
 
-        public IActionResult blog()
+    public IActionResult Blog()
     {
         return View();
-    }   
+    }
 
-    public IActionResult product()
+    public IActionResult Product()
     {
         return View();
-    }  
-    
-    public IActionResult community()
+    }
+
+    public IActionResult Community()
+    {
+        var posts = PostRepository.CargarPosts(); // Load posts using PostRepository
+        ViewBag.posts = posts;
+        return View(posts); // Pass posts to the view
+    }
+
+    public IActionResult Login()
     {
         return View();
-    }  
-    public IActionResult login()
+    }
+
+    public IActionResult Ca1()
     {
         return View();
-    } 
-        public IActionResult ca1()
+    }
+
+    public IActionResult Ca2()
     {
         return View();
-    } 
-        public IActionResult ca2()
+    }
+
+    public IActionResult Contact()
     {
         return View();
-    } 
-    public IActionResult contact()
-    {
-        return View();
-    } 
+    }
+
     public IActionResult Privacy()
     {
         return View();
@@ -58,7 +63,4 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-
-
-
 }
