@@ -19,4 +19,12 @@ public static class PostRepository
         var posts = BD.ObtenerPostsOrdenadosPorFecha(); // Llama al método para obtener los posts ordenados
         return posts;
     }
+
+    public static List<Post> CargarUltimosTresPosts()
+{
+    var BD = new BD(); // Instancia la clase BD para interactuar con la base de datos
+    var posts = BD.ObtenerUltimosTresPosts(); // Llama al método para obtener los últimos 3 posts
+    return posts;
+}
+
 }

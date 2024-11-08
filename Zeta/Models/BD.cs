@@ -15,7 +15,23 @@ using System.Linq;
             }
         }
 
-        public static List<Patologias> ObtenerPatologias()
+        public Usuario? ValidarUsuario(string email, string password)
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            // Consulta SQL para buscar al usuario con email y password
+            string query = @"
+                SELECT id_usuario, nombre, email, fecha_registro, ultima_sesion, 
+                       edad, sexo, peso, altura, password
+                FROM Usuarios
+                WHERE email = @Email AND password = @Password";
+
+            // Ejecuta la consulta y devuelve una instancia de Usuario si coincide
+            return connection.QuerySingleOrDefault<Usuario>(query, new { Email = email, Password = password });
+        }
+    }
+
+    public static List<Patologias> ObtenerPatologias()
         {
             using (SqlConnection db = new SqlConnection(_connectionString))
             {
@@ -23,5 +39,17 @@ using System.Linq;
                 return db.Query<Patologias>(query).ToList();
             }
         }
-    }
 
+    public static List<Post> ObtenerUltimosTresPosts()
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        // Devuelve solo los 3 posts más recientes
+        return db.Query<Post>("SELECT TOP 3 * FROM Posts ORDER BY fecha_creacion DESC").ToList();
+    }
+}
+
+}
+
+
+        
