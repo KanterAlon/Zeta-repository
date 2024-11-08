@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Zeta
 build_property.RootNamespace = Zeta
-build_property.ProjectDir = /workspaces/Zeta-repository/Zeta/
+build_property.ProjectDir = C:\Users\95320323\Downloads\Zeta-repository\Zeta\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /workspaces/Zeta-repository/Zeta
+build_property.MSBuildProjectDirectory = C:\Users\95320323\Downloads\Zeta-repository\Zeta
 build_property._RazorSourceGeneratorDebug = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/blog.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9ibG9nLmNzaHRtbA==
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxibG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/ca1.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9jYTEuY3NodG1s
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/ca1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYTEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/ca2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9jYTIuY3NodG1s
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/ca2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYTIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/community.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9jb21tdW5pdHkuY3NodG1s
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/community.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb21tdW5pdHkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/contact.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9jb250YWN0LmNzaHRtbA==
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9sb2dpbi5jc2h0bWw=
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Home/product.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9wcm9kdWN0LmNzaHRtbA==
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Home/product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/workspaces/Zeta-repository/Zeta/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+[C:/Users/95320323/Downloads/Zeta-repository/Zeta/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

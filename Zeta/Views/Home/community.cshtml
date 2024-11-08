@@ -1,8 +1,8 @@
-@{
+<!-- @{
     List<Post> posts = ViewBag.posts;
-}
+} -->
 
-<section class="community-section">
+<!-- <section class="community-section">
     <div class="inner-community">
         <h1 class="community-title">Comunidad</h1>
         <div class="community-cards-container">
@@ -353,9 +353,17 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
-@foreach (var post in posts)
+@model List<Post>
+
+<h2>Lista de Publicaciones</h2>
+
+@foreach (var post in Model)
 {
-    <p>@post.TituloPost - @post.ContenidoPost</p>
+    <div>
+        <h3>@post.TituloPost</h3>
+        <p>@post.ContenidoPost</p>
+        <p><strong>Fecha de Creación:</strong> @post.FechaCreacion.ToShortDateString()</p>
+    </div>
 }

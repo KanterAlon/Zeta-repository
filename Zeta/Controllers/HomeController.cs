@@ -1,14 +1,16 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Zeta.Models; // Ensure this matches your namespace for Post and PostRepository
+using Zeta.Models; // Asegúrate de que esté apuntando al espacio de nombres correcto para `Post` y `PostRepository`
+using Microsoft.Extensions.Logging; // Agrega este using si no está presente
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    // Single constructor that accepts both logger and BD dependency
+    // Constructor que inicializa `_logger`
     public HomeController(ILogger<HomeController> logger)
     {
+        _logger = logger;
     }
 
     public IActionResult Index()
@@ -28,9 +30,11 @@ public class HomeController : Controller
 
     public IActionResult Community()
     {
-        var posts = PostRepository.CargarPosts(); // Load posts using PostRepository
-        ViewBag.posts = posts;
-        return View(posts); // Pass posts to the view
+        // Cargar la lista de posts desde el repositorio
+        List<Post> posts = PostRepository.CargarPosts();
+
+        // Pasar la lista de posts a la vista
+        return View(posts);
     }
 
     public IActionResult Login()
