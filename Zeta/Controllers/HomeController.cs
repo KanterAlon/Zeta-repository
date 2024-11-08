@@ -37,9 +37,26 @@ public class HomeController : Controller
         return View(posts);
     }
 
+  [HttpGet]
     public IActionResult Login()
     {
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult Login(string email, string password)
+    {
+        var usuario = Usuario.Validar(email, password);
+
+        if (usuario != null)
+        {
+            // Guardar datos del usuario en la sesión
+            HttpContext.Session.SetString("Usuario", usuario.nombre); 
+            return RedirectToAction("Index", "Home");
+        }
+
+        ViewBag.Error = "Credenciales incorrectas.";
+        return View("Login");
     }
 
     public IActionResult Ca1()
