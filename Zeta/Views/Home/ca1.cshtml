@@ -1,4 +1,3 @@
-<!-- ca1.cshtml -->
 @{
     ViewData["HideHeader"] = true;
 }
@@ -7,34 +6,22 @@
 
     <div class="ca1-content">
         <div class="ca1-text">
-            <h1 class="ca1-heading">Creá tu cuenta</h1>
-            <h3 class="ca1-subheading">Ingresa tus Nombre y Apellido</h3>
+            <h1 class="ca1-heading">Iniciar Sesión</h1>
+            <h3 class="ca1-subheading">Ingresa tu email y contraseña</h3>
         </div>
         <div class="ca1-inputs-grid">
+            <!-- Campo para el email -->
             <div class="ca1-input-group">
-                <input type="text" name="nombre" placeholder="Nombre" required />
+                <input type="email" name="email" placeholder="Correo Electrónico" required />
             </div>
+            
+            <!-- Campo para la contraseña -->
             <div class="ca1-input-group">
-                <input type="text" name="apellido" placeholder="Apellido" required />
-            </div>
-            <div class="ca1-input-group">
-                <input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" required />
-            </div>
-            <div class="ca1-input-group">
-                <input type="text" name="altura" placeholder="Altura" required />
-            </div>
-            <div class="ca1-input-group">
-                <input type="text" name="peso" placeholder="Peso" required />
-            </div>
-            <div class="ca1-input-group">
-                <input type="text" name="actividad_fisica" placeholder="Actividad física que realizas" required />
-            </div>
-            <div class="ca1-input-group ca1-single-input">
-                <input type="text" name="objetivo" placeholder="Objetivo nutricional-físico" required />
+                <input type="password" name="password" placeholder="Contraseña" required />
             </div>
         </div>
 
-        <button type="submit" class="ca1-btn-next" onclick="window.location.href='/Home/ca2'">Siguiente</button>
+        <button type="submit" class="ca1-btn-next" onclick="window.location.href='/Home/ca2'">Iniciar Sesión</button>
     </div>
 
 </section>

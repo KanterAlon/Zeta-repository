@@ -14,5 +14,14 @@ using System.Linq;
                 return db.Query<Post>("SELECT * FROM Posts ORDER BY fecha_creacion DESC").ToList();
             }
         }
+
+        public static List<Patologias> ObtenerPatologias()
+        {
+            using (SqlConnection db = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT id_patologia AS IdPatologia, nombre_patologia AS NombrePatologia FROM Patologias";
+                return db.Query<Patologias>(query).ToList();
+            }
+        }
     }
 

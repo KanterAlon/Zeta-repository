@@ -943,16 +943,67 @@ gap: .5rem;
   position: relative;
 }
 
-.top-pop-up-add-post {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.top-pop-up-add-post textarea::placeholder {
+  position: relative;
+  top: 10px; /* Desplaza el placeholder 10px hacia abajo */
+  color: #aaa; /* Opcional: cambia el color del placeholder si es necesario */
+  font-size: inherit; /* Mantiene el tamaño de fuente consistente */
 }
 
-.buttons-pop-up-add-post {
+.top-pop-up-add-post textarea {
+  padding-top: 10px; /* Empuja el contenido del textarea, incluyendo el placeholder */
+  border: none;
+  resize: none;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.top-pop-up-add-post {
   display: flex;
-  width: 16%;
-  justify-content: space-evenly;
+  align-items: start;
+  gap: 1rem;
+  position: relative;
+  width: 90%;
+  height: 80%;
+}
+
+.top-pop-up-add-post textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  overflow: hidden; /* Evita las barras de desplazamiento */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  background: transparent; /* Sin fondo visible */
+  font-family: inherit; /* Usa la misma fuente que el contenedor */
+  font-size: inherit; /* Usa el mismo tamaño de fuente */
+  color: inherit; /* Usa el mismo color del texto */
+  padding: 0; /* Elimina el padding */
+}
+
+textarea#postInput {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none; /* Sin borde de enfoque */
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.button-select-img {
+  position: absolute;
+  top: 60px;
+  left: 5px;
 }
 
 /* Close Button */
@@ -1148,7 +1199,8 @@ gap: .5rem;
   align-items: left;
   gap: 4rem;
   min-height: 600px;
-  min-width: 1700px;
+  width: 95%;
+  max-width: 1700px;
 }
 
 .ca1-inputs-grid {
@@ -1159,7 +1211,7 @@ gap: .5rem;
 }
 
 .ca1-input-group {
-  width: 530px;
+  width: 100%;
   height: 65px;
   display: flex;
   align-items: center;
@@ -1170,6 +1222,12 @@ gap: .5rem;
   box-sizing: border-box;
 }
 
+.ca1-input-group select {
+  background-color: transparent;
+  border: none;
+  color: var(--placeholder-text-color);
+}
+
 .ca1-input-group input {
   width: 100%;
   height: 100%;
@@ -1178,12 +1236,6 @@ gap: .5rem;
   font-size: var(--body-text-size);
   color: #333;
   outline: none;
-}
-
-.ca1-single-input {
-  grid-column: span 3;
-  width: 530px;
-  height: 65px;
 }
 
 .ca1-btn-next {

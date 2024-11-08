@@ -1,14 +1,73 @@
-<!-- signup.cshtml -->
 @{
     ViewData["HideHeader"] = true;
+    var patologias = ViewBag.Patologias as List<Patologias>;
 }
 
-<section class="signup-container">
-    <div class="signup-content">
-        <div class="signup-text">
-            <h1 class="signup-heading">Bienvenido a Zeta</h1>
-            <h3 class="signup-subheading">Alon Avion Alon Avion Alon Avion</h3>
-            <button type="submit" class="signup-btn-next" onclick="window.location.href='/Home/'">Siguiente</button>
+<section class="ca1-container">
+
+    <div class="ca1-content">
+        <div class="ca1-text">
+            <h1 class="ca1-heading">Creá tu cuenta</h1>
+            <h3 class="ca1-subheading">Ingresa tus datos</h3>
         </div>
+        <div class="ca1-inputs-grid">
+            <div class="ca1-input-group">
+                <input type="text" name="nombre" placeholder="Nombre" required />
+            </div>
+            <div class="ca1-input-group">
+                <input type="text" name="apellido" placeholder="Apellido" required />
+            </div>
+            <div class="ca1-input-group">
+                <input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" required />
+            </div>
+            <div class="ca1-input-group">
+                <input type="text" name="género" placeholder="Genero" required />
+            </div>
+            <div class="ca1-input-group">
+                <input type="text" name="altura" placeholder="Altura" required />
+            </div>
+            <div class="ca1-input-group">
+                <input type="text" name="peso" placeholder="Peso" required />
+            </div>
+            <div class="ca1-input-group">
+                <input type="text" name="actividad_fisica" placeholder="Actividad física que realizas" required />
+            </div>
+
+            <!-- Nueva sección: Selección de Patología -->
+            <div class="ca1-input-group">
+                <select name="patologia" id="patologia" required>
+                    <option value="0" selected>Selecciona tu patología</option> <!-- Opción para "Ninguna" -->
+                    @if (patologias != null && patologias.Any())
+                    {
+                        foreach (var patologia in patologias)
+                        {
+                            <option value="@patologia.IdPatologia">@patologia.NombrePatologia</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="ca1-input-group">
+                <input type="number" min="0" name="cantActividades" placeholder="Ingresa cuantos tipos de deportes/actividades físicas realizas en la cotidianidad" required />
+            </div>
+
+             <!-- se generará una cantidad de inputs correspondiente a la cantidad de tipos de actividades fisicas que realiza la persona para que seleccione en cada tipo cual es esa actividad en cuestion, y luego de ese input una pregunta con otro input para que ingrese las horas semanales que practica cada uno de ellos  
+             
+             
+             RECORDAR PONER HTML QUE LO DEJAMOS EN EL README 
+             PONER LA CANTIDAD, y CUANTO SE PONE LA CANTIDAD; ABAJO SE PONE UN INPUT DE SELECCIONAR EL TIPO DE LA ACTIVIDAD; Y A LA DERECHA LA CANTIDAD DE HORAS SEMANALES. ABAJO DE ESO LO MISMO, y asi .
+             -->
+
+            
+
+            <div class="ca1-input-group">
+                <input type="number" min="0" name="horasActividadAnterior" placeholder="Ingresa cuantas horas por semana realizas dicha actividad" required />
+            </div>
+
+
+        </div>
+
+        <button type="submit" class="ca1-btn-next" onclick="window.location.href='/Home/ca3'">Siguiente</button>
     </div>
+
 </section>
