@@ -662,7 +662,7 @@ gap: .5rem;
   text-align: center;
 }
 
-/* Nutrition & Lifestyle Section CSS */
+/* ------------------ PAGINA BLOG ------------------ */
 
 .nutrition-lifestyle-inner {
   display: flex;
@@ -726,6 +726,37 @@ gap: .5rem;
   margin: 0;
   text-align: left;
   width: 90%;
+}
+
+.pop-up-info-articulo {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.pop-up-info-articulo-inner {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.pop-up-info-articulo-inner img {
+  width: 100%;
+}
+
+.pop-up-info-articulo-inner hr {
+  border: solid 1px black;
+  width: 100%;
+}
+
+.pop-up-info-articulo-inner h1 {
+  color: var(--primary-color);
 }
 
 /* ------------------ PRODUCT PAGE STYLES NEW ------------------ */
