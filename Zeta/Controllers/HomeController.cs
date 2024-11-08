@@ -13,10 +13,13 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+   public IActionResult Index()
+{
+    var lastThreePosts = PostRepository.CargarUltimosTresPosts(); // Obtener últimos 3 posts
+    ViewData["LastThreePosts"] = lastThreePosts; // Enviar a la vista
+    return View();
+}
+
 
     public IActionResult Blog()
     {

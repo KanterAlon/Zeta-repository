@@ -151,77 +151,31 @@
 
 </section>
 
-<section class="sec-advertisements-blog">
-
+<<section class="sec-advertisements-blog">
     <div class="advertisements-blog-inner">
-
-        <h2>Últimas noticas del Blog Alimenticio</h2>
-
-            <div class="cards-container"> 
-            
-                <div class="card-advertisement-blog">
-
-                    <div class="arriba-card-blog">
-
-                        <p class="fecha-card-blog">OCTUBRE 10</p>
-
-                        <h3 class="titulo-card-blog">Para conciliar el sueño</h3>
-
-                        <p class="descripcion-card-blog">Estos son los dos tés que conviene tomar todas las noches antes de dormir</p>
-
+        <h2>Últimos Posts de nuestra comunidad</h2>
+        <div class="cards-container">
+            @if (ViewData["LastThreePosts"] != null)
+            {
+                var lastThreePosts = (List<Post>)ViewData["LastThreePosts"];
+                foreach (var post in lastThreePosts)
+                {
+                    <div class="card-advertisement-blog">
+                        <div class="arriba-card-blog">
+                            <p class="fecha-card-blog">@post.fecha_creacion.ToString("MMMM dd").ToUpper()</p>
+                            <h3 class="titulo-card-blog">@post.titulo_post</h3>
+                            <p class="descripcion-card-blog">@post.contenido_post</p>
+                        </div>
+                        <div class="contenedor-imagen-card-blog">
+                            <img src="@post.imagen_url" alt="Imagen del post">
+                        </div>
                     </div>
-
-                
-                    <div class="contenedor-imagen-card-blog">
-                        <img src="/img/imgCard4.png" alt=""/>
-                    </div>
-
-                </div>
-
-                <div class="card-advertisement-blog">
-
-                    <div class="arriba-card-blog">
-
-                        <p class="fecha-card-blog">SEPTIEMBRE 23</p>
-
-                        <h3 class="titulo-card-blog">Higado Graso</h3>
-
-                        <p class="descripcion-card-blog">Cómo prevenir la enfermedad que afecta a un cuarto de la población</p>
-
-                    </div>
-
-                
-                    <div class="contenedor-imagen-card-blog">
-                        <img src="/img/imgCard5.png" alt=""/>
-                    </div>
-
-                </div>
-
-                <div class="card-advertisement-blog">
-
-                    <div class="arriba-card-blog">
-
-                        <p class="fecha-card-blog">SEPTIEMBRE 16</p>
-
-                        <h3 class="titulo-card-blog">Beneficioso para la Salud</h3>
-
-                        <p class="descripcion-card-blog">El condimento de origen japonés que agiliza el metabolismo y es poco consumido</p>
-
-                    </div>
-
-                
-                    <div class="contenedor-imagen-card-blog">
-                        <img src="/img/imgCard6.png" alt=""/>
-                    </div>
-
-                </div>
-
-            </div>
-
+                }
+            }
+        </div>
     </div>
-
-
 </section>
+
 
 <section class="contact-section">
     <div class="contact-inner">
