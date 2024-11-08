@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 public class Post
 {
-    public int Id { get; set; }
-    public string TituloPost { get; set; } = string.Empty;
-    public string ContenidoPost { get; set; } = string.Empty;
-    public string Imagen { get; set; } = string.Empty;
-    public DateTime FechaCreacion { get; set; }
+    public int id_post { get; set; }
+    public string titulo_post { get; set; } = string.Empty;
+    public string contenido_post { get; set; } = string.Empty;
+    public DateTime fecha_creacion { get; set; }
+    public string imagen_url {get; set;} = string.Empty;
+    public string autor {get; set;} = string.Empty;
 }
 
 public static class PostRepository

@@ -1,369 +1,72 @@
-<!-- @{
-    List<Post> posts = ViewBag.posts;
-} -->
+    @model List<Post>
 
-<!-- <section class="community-section">
-    <div class="inner-community">
-        <h1 class="community-title">Comunidad</h1>
-        <div class="community-cards-container">
+    <section class="community-section">
+        <div class="inner-community">
+            <h1 class="community-title">Comunidad</h1>
+            <div class="community-cards-container">
 
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
+                @foreach (var post in Model)
+                {
+                    <div class="community-card">
+                        <img src="@post.imagen_url" alt="Imagen del post" class="community-card-image">
+                        
+                        <div class="bottom-community-card">
+                            <p class="community-card-text">
+                                @post.contenido_post
+                            </p>
 
-                <div class="bottom-community-card">
+                            <span class="community-time-posted">
+                                @post.fecha_creacion.ToShortDateString() por @post.autor
+                            </span>
 
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
+                            <div class="community-card-footer">
+                                <button>
+                                    <img src="/img/icon_like.svg">
+                                    <span>214</span>
+                                </button>
 
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
+                                <button>
+                                    <img src="/img/icon_dislike.svg">
+                                    <span>214</span>
+                                </button>
 
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
+                                <button>
+                                    <img src="/img/icon_comments.svg">
+                                    <span>214</span>
+                                </button>
 
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
+                                <button>
+                                    <img src="/img/icon_share.svg">
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                
-                </div>
+                }
 
             </div>
 
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
+            <button class="button-add-post" onclick="openPopup()">
+                <img src="/img/icon_button_add.svg">
+            </button>
 
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
+            <div id="postPopup" class="popup-container">
+                <div class="popup-content">
+                    <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
 
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
+                    <div class="top-pop-up-add-post">
+                        <img src="/img/icon_user.svg">
+                        <input id="postInput" type="text" placeholder="¿Qué quieres decir?" />
                     </div>
-                
-                </div>
 
-            </div>
-
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
-
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
-
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
+                    <div class="buttons-pop-up-add-post">
                         <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
+                            <img src="/img/icon_calendar.svg">
                         </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
+                        <!-- Más botones según lo necesario -->
                     </div>
-                
+
+                    <button class="publish-btn">Publicar</button>
                 </div>
-
-            </div>
-
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
-
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
-
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
-                    </div>
-                
-                </div>
-
-            </div>
-
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
-
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
-
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
-                    </div>
-                
-                </div>
-
-            </div>
-
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
-
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
-
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
-                    </div>
-                
-                </div>
-
-            </div>
-
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
-
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
-
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
-                    </div>
-                
-                </div>
-
-            </div>
-
-            <div class="community-card">
-                <img src="/img/first-img.png" alt="Healthy salad" class="community-card-image">
-
-                <div class="bottom-community-card">
-                
-                    <p class="community-card-text">
-                        “Hola, comunidad! Hace poco decidí cambiar mis desayunos tradicionales por algo más fresco y balanceado. Estoy haciendo estas ensaladas rápidas cada mañana y me siento genial. ¿Qué desayunos más saludables están disfrutando ustedes? Gracias por los tips! 🌱 #DesayunoSaludable #EnergíaNatural”
-                    </p>
-
-                    <span class="community-time-posted">
-                        6 hours ago by someone
-                    </span>
-
-                    <div class="community-card-footer">
-                        <button>
-                            <img src="/img/icon_like.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_dislike.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_comments.svg">
-                            <span>214</span>
-                        </button>
-
-                        <button>
-                            <img src="/img/icon_share.svg">
-                        </button>
-                    </div>
-                
-                </div>
-
-            </div>
-
-        </div>
-
-        <button class="button-add-post" onclick="openPopup()">
-            <img src="/img/icon_button_add.svg">
-        </button>
-
-        <div id="postPopup" class="popup-container">
-            <div class="popup-content">
-                <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
-
-                <div class="top-pop-up-add-post">
-                    <img src="/img/icon_user.svg">
-                    <input id="postInput" type="text" placeholder="¿Qué quieres decir?" />
-                </div>
-
-                <div class="buttons-pop-up-add-post">
-                    <button>
-                        <img src="/img/icon_calendar.svg">
-                    </button>
-
-                    <button>
-                        <img src="/img/icon_calendar.svg">
-                    </button>
-
-                    <button>
-                        <img src="/img/icon_calendar.svg">
-                    </button>
-
-                    <button>
-                        <img src="/img/icon_calendar.svg">
-                    </button>
-
-                    <button>
-                        <img src="/img/icon_calendar.svg">
-                    </button>
-                </div>
-
-                <button class="publish-btn">Publicar</button>
             </div>
         </div>
-
-    </div>
-</section> -->
-
-@model List<Post>
-
-<h2>Lista de Publicaciones</h2>
-
-@foreach (var post in Model)
-{
-    <div>
-        <h3>@post.TituloPost</h3>
-        <p>@post.ContenidoPost</p>
-        <p><strong>Fecha de Creación:</strong> @post.FechaCreacion.ToShortDateString()</p>
-    </div>
-}
+    </section>

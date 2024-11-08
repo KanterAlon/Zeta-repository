@@ -7,7 +7,6 @@ using System.Linq;
     {
         // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275";
         private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True";
-
         public static List<Post> ObtenerPostsOrdenadosPorFecha()
         {
             using (SqlConnection db = new SqlConnection(_connectionString))
