@@ -1,59 +1,61 @@
-    @model List<Post>
+@model List<Post>
 
-    <section class="community-section">
-        <div class="inner-community">
-            <h1 class="community-title">Comunidad</h1>
-            <div class="community-cards-container">
+<section class="community-section">
+    <div class="inner-community">
+        <h1 class="community-title">Comunidad</h1>
+        <div class="community-cards-container">
 
-                @foreach (var post in Model)
-                {
-                    <div class="community-card">
-                        <img src="@post.imagen_url" alt="Imagen del post" class="community-card-image">
-                        
-                        <div class="bottom-community-card">
-                            <p class="community-card-text">
-                                @post.contenido_post
-                            </p>
+            @foreach (var post in Model)
+            {
+                <div class="community-card">
+                    <img src="@post.imagen_url" alt="Imagen del post" class="community-card-image">
 
-                            <span class="community-time-posted">
-                                @post.fecha_creacion.ToShortDateString() por @post.autor
-                            </span>
+                    <div class="bottom-community-card">
+                        <p class="community-card-text">
+                            @post.contenido_post
+                        </p>
 
-                            <div class="community-card-footer">
-                                <button>
-                                    <img src="/img/icon_like.svg">
-                                    <span>214</span>
-                                </button>
+                        <span class="community-time-posted">
+                            @post.fecha_creacion.ToShortDateString() por @post.autor
+                        </span>
 
-                                <button>
-                                    <img src="/img/icon_dislike.svg">
-                                    <span>214</span>
-                                </button>
+                        <div class="community-card-footer">
+                            <button onclick="toggleReaction(this, 'like')">
+                                <img src="/img/icon_like.svg" class="img-like">
+                                <img src="/img/icon_like-fill.svg" class="img-like-fill" style="display: none;">
+                                <span>214</span>
+                            </button>
 
-                                <button>
-                                    <img src="/img/icon_comments.svg">
-                                    <span>214</span>
-                                </button>
+                            <button onclick="toggleReaction(this, 'dislike')">
+                                <img src="/img/icon_dislike.svg" class="img-dislike">
+                                <img src="/img/icon_dislike-fill.svg" class="img-dislike-fill" style="display: none;">
+                                <span>214</span>
+                            </button>
 
-                                <button>
-                                    <img src="/img/icon_share.svg">
-                                </button>
-                            </div>
+                            <button class="button-comments" onclick="openCommentsPopup(this)">
+                                <img src="/img/icon_comments.svg">
+                                <span>214</span>
+                            </button>
+
+                            <button>
+                                <img src="/img/icon_share.svg">
+                            </button>
                         </div>
                     </div>
-                }
+                </div>
+            }
 
-            </div>
+        </div>
 
-            <button class="button-add-post" onclick="openPopup()">
-                <img src="/img/icon_button_add.svg">
-            </button>
+        <button class="button-add-post" onclick="openPopup()">
+            <img src="/img/icon_button_add.svg">
+        </button>
 
-            <div id="postPopup" class="popup-container">
-                <div class="popup-content">
-                    <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
+        <div id="postPopup" class="popup-container" style="display: none;">
+            <div class="popup-content">
+                <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
 
-                    <div class="top-pop-up-add-post">
+                <div class="top-pop-up-add-post">
                     <img src="/img/icon_user.svg">
 
                     <textarea id="postInput" name="comments" placeholder="¿Qué quieres decir?"></textarea>
@@ -61,11 +63,32 @@
                     <button class="button-select-img">
                         <img src="/img/icon_img.svg">
                     </button>
-                    </div>
-
-                    <button class="publish-btn">Publicar</button>
                 </div>
-            </div>
 
+                <button class="publish-btn">Publicar</button>
+            </div>
         </div>
-    </section>
+
+        <!-- Popup para comentarios -->
+        <div id="commentsPopup" class="popup-container" style="display: none;">
+            <div class="popup-comments-content">
+                <img src="/img/icon_close.svg" class="close-btn" onclick="closeCommentsPopup()">
+                <h2>Comentarios</h2>
+                <div id="commentsList">
+                    <!-- Aquí irán los comentarios -->
+                    <div class="comment-item">
+                        <p><strong>Usuario1:</strong> Este es un comentario ejemplo.</p>
+                        <button class="reply-btn" onclick="replyToComment()">Responder</button>
+                    </div>
+                    <div class="comment-item">
+                        <p><strong>Usuario2:</strong> Otro comentario más aquí.</p>
+                        <button class="reply-btn" onclick="replyToComment()">Responder</button>
+                    </div>
+                </div>
+                <textarea id="newCommentInput" placeholder="Añadir un comentario..."></textarea>
+                <button class="publish-comment-btn" onclick="publishComment()">Publicar comentario</button>
+            </div>
+        </div>
+
+    </div>
+</section>
