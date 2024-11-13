@@ -16,13 +16,12 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-   public IActionResult Index()
-{
-    var lastThreePosts = PostRepository.CargarUltimosTresPosts(); // Obtener últimos 3 posts
-    ViewData["LastThreePosts"] = lastThreePosts; // Enviar a la vista
-    return View();
-}
-
+    public IActionResult Index()
+    {
+        var lastThreePosts = PostRepository.CargarUltimosTresPosts(); // Obtener últimos 3 posts
+        ViewData["LastThreePosts"] = lastThreePosts; // Enviar a la vista
+        return View();
+    }
 
     public IActionResult Blog()
     {
@@ -39,6 +38,7 @@ public class HomeController : Controller
 
     using HttpClient client = new HttpClient();
     string apiUrl = $"https://world.openfoodfacts.org/api/v0/product/{query}.json";
+
     try
     {
         HttpResponseMessage response = await client.GetAsync(apiUrl);
@@ -52,6 +52,37 @@ public class HomeController : Controller
                 var product = productData["product"];
                 ViewBag.ProductData = product;
                 ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
+
+                // Obtener niveles de nutrientes
+                var nutrientLevels = product?["nutrient_levels"]?.ToObject<Dictionary<string, string>>();
+                var nutrients = product?["nutriments"];
+
+                var positivePoints = new List<string>();
+                var negativePoints = new List<string>();
+
+                if (nutrientLevels != null)
+                {
+                    foreach (var nutrient in nutrientLevels)
+                    {
+                        string nutrientName = nutrient.Key.Replace("-", " ").ToUpper();
+                        string nutrientLevel = nutrient.Value;
+                        string nutrientValue = nutrients?[nutrient.Key + "_100g"]?.ToString();
+
+                        string formattedInfo = $"{nutrientName}: {nutrientValue ?? "No disponible"} g - {nutrientLevel}";
+
+                        if (nutrientLevel == "low")
+                        {
+                            positivePoints.Add(formattedInfo);
+                        }
+                        else if (nutrientLevel == "high")
+                        {
+                            negativePoints.Add(formattedInfo);
+                        }
+                    }
+                }
+
+                ViewBag.PositivePoints = positivePoints;
+                ViewBag.NegativePoints = negativePoints;
             }
             else
             {
@@ -72,7 +103,6 @@ public class HomeController : Controller
     return View();
 }
 
-
     public IActionResult Community()
     {
         // Cargar la lista de posts desde el repositorio
@@ -82,7 +112,7 @@ public class HomeController : Controller
         return View(posts);
     }
 
-  [HttpGet]
+    [HttpGet]
     public IActionResult Login()
     {
         return View();
@@ -108,13 +138,14 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Ca2()
-        {
-            List<Patologias> patologias = Patologias.ObtenerTodas();
-            ViewBag.Patologias = patologias;
-            return View();
 
-        }
+    public IActionResult Ca2()
+    {
+        List<Patologias> patologias = Patologias.ObtenerTodas();
+        ViewBag.Patologias = patologias;
+        return View();
+    }
+
     public IActionResult Ca3()
     {
         return View();

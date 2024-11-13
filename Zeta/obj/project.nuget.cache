@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OpAl48AZVs8odYqATZbNawlDHMQG2mMfDaCWV25mqyF06eNS32rswvDD/8yYJcKt+QyCwYEdB8VNQyWBOZ9BEg==",
+  "dgSpecHash": "mGXHc7/ZHIh5oOr4L/LeD0XYhd03EOOjhHUuq50UrmnOtG5+F7cC6eJJBrSBi9ms8mZioDDsxlkJNRwuCPtZqA==",
   "success": true,
   "projectFilePath": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\Zeta.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "message": "El paquete \"System.Text.Json\" 8.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net8.0"
@@ -56,7 +56,7 @@
       "code": "NU1903",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'System.Text.Json' 8.0.0 has a known high severity vulnerability, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
+      "message": "El paquete \"System.Text.Json\" 8.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-hh2w-p6rv-4g7w",
       "libraryId": "System.Text.Json",
       "targetGraphs": [
         "net8.0"
