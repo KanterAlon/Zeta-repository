@@ -1430,23 +1430,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\95320323\\.nuget\\packages\\": {},
+    "C:\\Users\\48796010\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\Zeta.csproj",
+      "projectUniqueName": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\Zeta.csproj",
       "projectName": "Zeta",
-      "projectPath": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\Zeta.csproj",
-      "packagesPath": "C:\\Users\\95320323\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\obj\\",
+      "projectPath": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\Zeta.csproj",
+      "packagesPath": "C:\\Users\\48796010\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\95320323\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\48796010\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
