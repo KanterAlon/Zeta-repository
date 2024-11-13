@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using Dapper;
 using System.Linq;
-    public class BD
-    {
-        // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275";
-        private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True";
-        public static List<Post> ObtenerPostsOrdenadosPorFecha()
-        {
-            using (SqlConnection db = new SqlConnection(_connectionString))
-            {
-                return db.Query<Post>("SELECT * FROM Posts ORDER BY fecha_creacion DESC").ToList();
-            }
-        }
 
-        public Usuario? ValidarUsuario(string email, string password)
+public class BD
+{
+    // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275";
+    private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True";
+
+    public static List<Post> ObtenerPostsOrdenadosPorFecha()
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            return db.Query<Post>("SELECT * FROM Posts ORDER BY fecha_creacion DESC").ToList();
+        }
+    }
+
+    public Usuario? ValidarUsuario(string email, string password)
     {
         using (var connection = new SqlConnection(_connectionString))
         {
@@ -32,24 +34,30 @@ using System.Linq;
     }
 
     public static List<Patologias> ObtenerPatologias()
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            using (SqlConnection db = new SqlConnection(_connectionString))
-            {
-                string query = "SELECT id_patologia AS IdPatologia, nombre_patologia AS NombrePatologia FROM Patologias";
-                return db.Query<Patologias>(query).ToList();
-            }
+            string query = "SELECT id_patologia AS IdPatologia, nombre_patologia AS NombrePatologia FROM Patologias";
+            return db.Query<Patologias>(query).ToList();
         }
+    }
 
     public static List<Post> ObtenerUltimosTresPosts()
-{
-    using (SqlConnection db = new SqlConnection(_connectionString))
     {
-        // Devuelve solo los 3 posts más recientes
-        return db.Query<Post>("SELECT TOP 3 * FROM Posts ORDER BY fecha_creacion DESC").ToList();
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            // Devuelve solo los 3 posts más recientes
+            return db.Query<Post>("SELECT TOP 3 * FROM Posts ORDER BY fecha_creacion DESC").ToList();
+        }
+    }
+
+    // Nuevo método para obtener todas las actividades
+    public static List<Actividades> ObtenerActividades()
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT id_actividad AS IdActividad, nombre_actividad AS NombreActividad FROM Actividades";
+            return db.Query<Actividades>(query).ToList();
+        }
     }
 }
-
-}
-
-
-        
