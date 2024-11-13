@@ -34,7 +34,7 @@ else if (productData != null && productData.HasValues)
                         <div class="product-rating">
                             <span class="rating-circle rating-red"></span>
                             <h3 class="rating-text">
-                                @("Calidad: " + (productData["nutrition_grades"]?.ToString()?.ToUpper() ?? "Sin calificación"))
+                                Calidad: @(productData["nutrition_grades_tags"]?.FirstOrDefault()?.ToString()?.ToUpper() ?? "Sin calificación")
                             </h3>
                         </div>
                     </div>
@@ -42,15 +42,15 @@ else if (productData != null && productData.HasValues)
                 <div class="product-nutrition-info">
                     <div class="nutrition-info-item">
                         <img src="/img/icon_protein.svg" alt="Proteínas" class="nutrition-icon" />
-                        <span>@("Proteínas: " + (productData["nutriments"]?["proteins_100g"]?.ToString() ?? "No disponible") + " g")</span>
+                        <span>Proteínas: @(productData["nutriments"]?["proteins_100g"] ?? "No disponible") g</span>
                     </div>
                     <div class="nutrition-info-item">
                         <img src="/img/icon_scales.svg" alt="Carbohidratos" class="nutrition-icon" />
-                        <span>@("Carbohidratos: " + (productData["nutriments"]?["carbohydrates_100g"]?.ToString() ?? "No disponible") + " g")</span>
+                        <span>Carbohidratos: @(productData["nutriments"]?["carbohydrates_100g"] ?? "No disponible") g</span>
                     </div>
                     <div class="nutrition-info-item">
-                        <img src="/img/icon_tick.svg" alt="Calidad" class="nutrition-icon" />
-                        <span>@("Grasas: " + (productData["nutriments"]?["fat_100g"]?.ToString() ?? "No disponible") + " g")</span>
+                        <img src="/img/icon_tick.svg" alt="Grasas" class="nutrition-icon" />
+                        <span>Grasas: @(productData["nutriments"]?["fat_100g"] ?? "No disponible") g</span>
                     </div>
                 </div>
             </div>
@@ -59,81 +59,87 @@ else if (productData != null && productData.HasValues)
 
     @* Nutrition Evaluation Section *@
     <div class="nutrition-evaluation">
-        <h2>Positivas</h2>
+        <h2>Evaluación Nutricional</h2>
 
-        <div class="nutrition-item">
-            <img src="/img/icon_fat.svg" class="nutrition-icon" />
-            <img src="/img/icon_arrow-down.svg" />
-            <div class="nutrition-description">
-                <h3>Bajo en grasas</h3>
-                <p>Ideal si sigues una dieta reducida en grasas.</p>
+        <h3>Aspectos Positivos</h3>
+        @if (productData["nutrient_levels"]?["fat"]?.ToString() == "low")
+        {
+            <div class="nutrition-item positive">
+                <img src="/img/icon_fat.svg" class="nutrition-icon" />
+                <div class="nutrition-description">
+                    <h4>Bajo en Grasas</h4>
+                    <p>Ideal si sigues una dieta reducida en grasas.</p>
+                </div>
+                <span>@(productData["nutriments"]?["fat_100g"] ?? "No disponible") g cada 100 g</span>
+                <img src="/img/icon_tick.svg" class="tick-icon" />
             </div>
+        }
 
-            <span> 2g de grasa por porción de 100 g></span>
-            <img src="/img/icon_tick.svg" class="tick-icon"/>
-        </div>
-
-        <div class="nutrition-item">
-            <img src="/img/icon_salt.svg" class="nutrition-icon" />
-            <img src="/img/icon_arrow-down.svg" />
-            <div class="nutrition-description">
-                <h3>Bajo en sodio</h3>
-                <p>Contribuye a mantener una ingesta controlada de sodio.</p>
+        @if (productData["nutrient_levels"]?["salt"]?.ToString() == "low")
+        {
+            <div class="nutrition-item positive">
+                <img src="/img/icon_salt.svg" class="nutrition-icon" />
+                <div class="nutrition-description">
+                    <h4>Bajo en Sodio</h4>
+                    <p>Contribuye a mantener una ingesta controlada de sodio.</p>
+                </div>
+                <span>@(productData["nutriments"]?["salt_100g"] ?? "No disponible") g cada 100 g</span>
+                <img src="/img/icon_tick.svg" class="tick-icon" />
             </div>
+        }
 
-            <span>10mg cada 100g</span>
-            <img src="/img/icon_tick.svg" class="tick-icon"/>
-        </div>
-
-        <div class="nutrition-item">
-            <img src="/img/icon_vitamins.svg" class="nutrition-icon" />
-            <img src="/img/icon_arrow-up.svg" />
-            <div class="nutrition-description">
-                <h3>Fuente de vitamina B</h3>
-                <p>Estas vitaminas son importantes para el metabolismo, la energía y la salud del sistema nervioso.</p>
+        @if (productData["nutrient_levels"]?["fiber"]?.ToString() == "high")
+        {
+            <div class="nutrition-item positive">
+                <img src="/img/icon_fiber.svg" class="nutrition-icon" />
+                <div class="nutrition-description">
+                    <h4>Alto en Fibra</h4>
+                    <p>Contribuye a una mejor digestión y control del colesterol.</p>
+                </div>
+                <span>@(productData["nutriments"]?["fiber_100g"] ?? "No disponible") g cada 100 g</span>
+                <img src="/img/icon_tick.svg" class="tick-icon" />
             </div>
+        }
 
-            <span>30,5% de la ingesta diaria recomendada</span>
-            <img src="/img/icon_tick.svg" class="tick-icon"/>
-        </div>
-
-        <h2>Negativas</h2>
-
-        <div class="nutrition-item">
-            <img src="/img/icon_fiber.svg" class="nutrition-icon" />
-            <img src="/img/icon_arrow-down.svg" />
-            <div class="nutrition-description">
-                <h3>Bajo en Fibras</h3>
-                <p>Poca cantidad en comparación con otras fuentes de carbohidratos más ricas en fibra.</p>
+        <h3>Aspectos Negativos</h3>
+        @if (productData["nutrient_levels"]?["sugars"]?.ToString() == "high")
+        {
+            <div class="nutrition-item negative">
+                <img src="/img/icon_sugar.svg" class="nutrition-icon" />
+                <div class="nutrition-description">
+                    <h4>Alto en Azúcares</h4>
+                    <p>Puede contribuir al exceso de calorías y afectar la salud dental.</p>
+                </div>
+                <span>@(productData["nutriments"]?["sugars_100g"] ?? "No disponible") g cada 100 g</span>
+                <img src="/img/icon_close.svg" class="close-icon" />
             </div>
+        }
 
-            <span>Estadística</span>
-            <img src="/img/icon_close.svg" class="close-icon"/>
-        </div>
-
-        <div class="nutrition-item">
-            <img src="/img/icon_sugar.svg" class="nutrition-icon" />
-            <img src="/img/icon_arrow-up.svg" />
-            <div class="nutrition-description">
-                <h3>Alto Índice Glucémico</h3>
-                <p>Contiene un índice glucémico (IG) demasiado alto, lo que puede generar picos de glucosa en la sangre, afectando a personas con resistencia a la insulina o diabetes.</p>
+        @if (productData["nutrient_levels"]?["saturated-fat"]?.ToString() == "high")
+        {
+            <div class="nutrition-item negative">
+                <img src="/img/icon_fat.svg" class="nutrition-icon" />
+                <div class="nutrition-description">
+                    <h4>Alto en Grasas Saturadas</h4>
+                    <p>Puede contribuir a un aumento de colesterol si se consume en exceso.</p>
+                </div>
+                <span>@(productData["nutriments"]?["saturated-fat_100g"] ?? "No disponible") g cada 100 g</span>
+                <img src="/img/icon_close.svg" class="close-icon" />
             </div>
+        }
 
-            <span>Estadística</span>
-            <img src="/img/icon_close.svg" class="close-icon"/>
-        </div>
-
-        <div class="nutrition-item">
-            <img src="/img/icon_calories.svg" class="nutrition-icon" />
-            <img src="/img/icon_arrow-up.svg" />
-            <div class="nutrition-description">
-                <h3>Alto en Calorías</h3>
-                <p>Si no se consume moderadamente en combinación con otros alimentos puede contribuir a un consumo elevado de calorías.</p>
+        @if (productData["nutrient_levels"]?["energy"]?.ToString() == "high")
+        {
+            <div class="nutrition-item negative">
+                <img src="/img/icon_energy.svg" class="nutrition-icon" />
+                <div class="nutrition-description">
+                    <h4>Alto en Energía</h4>
+                    <p>Podría contribuir al exceso de calorías si se consume en exceso.</p>
+                </div>
+                <span>@(productData["nutriments"]?["energy_100g"] ?? "No disponible") kJ cada 100 g</span>
+                <img src="/img/icon_close.svg" class="close-icon" />
             </div>
-
-            <span>Estadística</span>
-            <img src="/img/icon_close.svg" class="close-icon"/>
-        </div>
+        }
     </div>
 }
 else

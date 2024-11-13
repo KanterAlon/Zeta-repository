@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "Q8i60AiH8qbVcm+4mk+xv7Z0uj3yZLm09Tu/3BW7VhFkjzMBFWt3eA0jx++7skoRcgZqEKYGSXVqolLTRObZtA==",
+=======
+  "dgSpecHash": "mGXHc7/ZHIh5oOr4L/LeD0XYhd03EOOjhHUuq50UrmnOtG5+F7cC6eJJBrSBi9ms8mZioDDsxlkJNRwuCPtZqA==",
+>>>>>>> 9d8f45f1e7bf195b3fc69cf6771aed51c99ef33c
   "success": true,
   "projectFilePath": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\Zeta\\Zeta.csproj",
   "expectedPackageFiles": [
