@@ -138,7 +138,6 @@ public class HomeController : Controller
     {
         return View();
     }
-<<<<<<< HEAD
     public IActionResult Ca2()
     {
         List<Patologias> patologias = Patologias.ObtenerTodas();
@@ -150,16 +149,6 @@ public class HomeController : Controller
         return View();
     }
 
-=======
-
-    public IActionResult Ca2()
-    {
-        List<Patologias> patologias = Patologias.ObtenerTodas();
-        ViewBag.Patologias = patologias;
-        return View();
-    }
-
->>>>>>> 9d8f45f1e7bf195b3fc69cf6771aed51c99ef33c
     public IActionResult Ca3()
     {
         return View();
