@@ -17,18 +17,40 @@
                 </div>
             </div>
             <div class="product-nutrition-info">
+
                 <div class="nutrition-info-item">
-                    <img src="/img/high_carbs_icon.png" alt="Alto en Carbohidratos" class="nutrition-icon" />
+
+                    <div class="icon-container-info-item">
+                    
+                        <img src="/img/icon_carbs.svg" class="nutrition-icon" />
+
+                    </div>
+                    
                     <span>Alto en Carbohidratos</span>
                 </div>
+
                 <div class="nutrition-info-item">
-                    <img src="/img/low_protein_icon.png" alt="Bajo en Proteínas" class="nutrition-icon" />
+
+                    <div class="icon-container-info-item">
+                    
+                        <img src="/img/icon_proteins.svg" class="nutrition-icon" />
+
+                    </div>
+                    
                     <span>Bajo en Proteínas</span>
                 </div>
+
                 <div class="nutrition-info-item">
-                    <img src="/img/vitamin_b_icon.png" alt="Rico en Vitamina B" class="nutrition-icon" />
+
+                    <div class="icon-container-info-item">
+                    
+                        <img src="/img/icon_vitamins.svg" class="nutrition-icon" />
+
+                    </div>
+                    
                     <span>Rico en Vitamina B</span>
                 </div>
+
             </div>
         </div>
     </div>
@@ -36,132 +58,88 @@
 
 @* Nutrition Evaluation Section *@
 <div class="nutrition-evaluation">
+
     <h2>Positivas</h2>
+
     <div class="nutrition-item">
-        <img src="~/images/icons/low-fat.png" alt="Low Fat Icon" class="nutrition-icon" />
+        <img src="/img/icon_fat.svg" class="nutrition-icon" />
+        <img src="/img/icon_arrow-down.svg" />
         <div class="nutrition-description">
             <h3>Bajo en grasas</h3>
             <p>Ideal si sigues una dieta reducida en grasas.</p>
         </div>
-        <span class="nutrition-status positive">&#x2714; <span class="nutrition-detail">&lt; 2g de grasa por porción de 100g</span></span>
+
+        <span> <2g de grasa por porción de 100 g</span>
+        <img src="/img/icon_tick.svg" class="tick-icon"/>
+
     </div>
+
     <div class="nutrition-item">
-        <img src="~/images/icons/low-sodium.png" alt="Low Sodium Icon" class="nutrition-icon" />
+        <img src="/img/icon_salt.svg" class="nutrition-icon" />
+        <img src="/img/icon_arrow-down.svg" />
         <div class="nutrition-description">
             <h3>Bajo en sodio</h3>
             <p>Contribuye a mantener una ingesta controlada de sodio.</p>
         </div>
-        <span class="nutrition-status positive">&#x2714; <span class="nutrition-detail">10mg cada 100g</span></span>
+
+        <span>10mg cada 100g</span>
+
+        <img src="/img/icon_tick.svg" class="tick-icon"/>
+
     </div>
+
     <div class="nutrition-item">
-        <img src="~/images/icons/vitamin-b.png" alt="Vitamin B Icon" class="nutrition-icon" />
+        <img src="/img/icon_vitamins.svg" class="nutrition-icon" />
+        <img src="/img/icon_arrow-up.svg" />
         <div class="nutrition-description">
             <h3>Fuente de vitamina B</h3>
             <p>Estas vitaminas son importantes para el metabolismo, la energía y la salud del sistema nervioso.</p>
         </div>
-        <span class="nutrition-status positive">&#x2714; <span class="nutrition-detail">30.5% de la ingesta diaria recomendada</span></span>
+
+        <span>30,5% de la ingesta diaria recomendada</span>
+        <img src="/img/icon_tick.svg" class="tick-icon"/>
+
     </div>
 
     <h2>Negativas</h2>
+
     <div class="nutrition-item">
-        <img src="~/images/icons/low-fiber.png" alt="Low Fiber Icon" class="nutrition-icon" />
+        <img src="/img/icon_fiber.svg" class="nutrition-icon" />
+        <img src="/img/icon_arrow-down.svg" />
         <div class="nutrition-description">
             <h3>Bajo en Fibras</h3>
             <p>Poca cantidad en comparación con otras fuentes de carbohidratos más ricas en fibra.</p>
         </div>
-        <span class="nutrition-status negative">&#x2718; <span class="nutrition-detail">Estadística</span></span>
+
+        <span>Estadística</span>
+        <img src="/img/icon_close.svg" class="close-icon"/>
+
     </div>
+
     <div class="nutrition-item">
-        <img src="~/images/icons/high-glycemic.png" alt="High Glycemic Index Icon" class="nutrition-icon" />
+        <img src="/img/icon_sugar.svg" class="nutrition-icon" />
+        <img src="/img/icon_arrow-up.svg" />
         <div class="nutrition-description">
             <h3>Alto Índice Glucémico</h3>
             <p>Contiene un índice glucémico (IG) demasiado alto, lo que puede generar picos de glucosa en la sangre, afectando a personas con resistencia a la insulina o diabetes.</p>
         </div>
-        <span class="nutrition-status negative">&#x2718; <span class="nutrition-detail">Estadística</span></span>
+
+        <span>Estadística</span>
+        <img src="/img/icon_close.svg" class="close-icon"/>
+
     </div>
+
     <div class="nutrition-item">
-        <img src="~/images/icons/high-calories.png" alt="High Calories Icon" class="nutrition-icon" />
+        <img src="/img/icon_calories.svg" class="nutrition-icon" />
+        <img src="/img/icon_arrow-up.svg" />
         <div class="nutrition-description">
             <h3>Alto en Calorías</h3>
             <p>Si no se consume moderadamente en combinación con otros alimentos puede contribuir a un consumo elevado de calorías.</p>
         </div>
-        <span class="nutrition-status negative">&#x2718; <span class="nutrition-detail">Estadística</span></span>
+
+        <span>Estadística</span>
+        <img src="/img/icon_close.svg" class="close-icon"/>
+
     </div>
+
 </div>
-
-<style>
-    /* ------------------ NUTRITION EVALUATION SECTION ------------------ */
-    .nutrition-evaluation {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .nutrition-category {
-        flex: 1;
-    }
-
-    .nutrition-category h2 {
-        font-family: var(--font-family-heading);
-        font-size: var(--heading2-size);
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-    }
-
-    .nutrition-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 1rem;
-        padding: 1rem;
-        background-color: transparent;
-        width: 1200px;
-        margin: 0 auto;
-    }
-
-    .nutrition-icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .nutrition-description {
-        flex-grow: 1;
-    }
-
-    .nutrition-description h3 {
-        font-family: var(--font-family-heading);
-        font-size: var(--heading3-size);
-        color: var(--secondary2-color);
-        margin-bottom: 0.5rem;
-    }
-
-    .nutrition-description p {
-        font-family: var(--font-family-body);
-        font-size: var(--body-text-size);
-        color: var(--secondary2-color);
-    }
-
-    .nutrition-status {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 24px;
-    }
-
-    .nutrition-status.positive {
-        color: var(--success-color);
-    }
-
-    .nutrition-status.negative {
-        color: var(--error-color);
-    }
-
-    .nutrition-detail {
-        font-family: var(--font-family-body);
-        font-size: var(--body-text-size);
-        color: var(--secondary4-color);
-    }
-</style>
