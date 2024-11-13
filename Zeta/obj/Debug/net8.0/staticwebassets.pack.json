@@ -121,6 +121,7 @@
       "PackagePath": "staticwebassets\\img\\first-img.png"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_arrow-down.svg",
       "PackagePath": "staticwebassets\\img\\icon_arrow-down.svg"
     },
@@ -130,6 +131,17 @@
     },
     {
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_blog.svg",
+=======
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_arrow-down.svg",
+      "PackagePath": "staticwebassets\\img\\icon_arrow-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_arrow-up.svg",
+      "PackagePath": "staticwebassets\\img\\icon_arrow-up.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_blog.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "PackagePath": "staticwebassets\\img\\icon_blog.svg"
     },
     {
@@ -165,11 +177,19 @@
       "PackagePath": "staticwebassets\\img\\icon_default_profile_picture.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_dislike-fill.svg",
       "PackagePath": "staticwebassets\\img\\icon_dislike-fill.svg"
     },
     {
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_dislike.svg",
+=======
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike-fill.svg",
+      "PackagePath": "staticwebassets\\img\\icon_dislike-fill.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "PackagePath": "staticwebassets\\img\\icon_dislike.svg"
     },
     {
@@ -209,11 +229,19 @@
       "PackagePath": "staticwebassets\\img\\icon_img.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_like-fill.svg",
       "PackagePath": "staticwebassets\\img\\icon_like-fill.svg"
     },
     {
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_like.svg",
+=======
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like-fill.svg",
+      "PackagePath": "staticwebassets\\img\\icon_like-fill.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "PackagePath": "staticwebassets\\img\\icon_like.svg"
     },
     {
@@ -257,11 +285,19 @@
       "PackagePath": "staticwebassets\\img\\icon_survey.svg"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_tick.svg.svg",
       "PackagePath": "staticwebassets\\img\\icon_tick.svg.svg"
     },
     {
       "Id": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_user.svg",
+=======
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_tick.svg.svg",
+      "PackagePath": "staticwebassets\\img\\icon_tick.svg.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_user.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "PackagePath": "staticwebassets\\img\\icon_user.svg"
     },
     {

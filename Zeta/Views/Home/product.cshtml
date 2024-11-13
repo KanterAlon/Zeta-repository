@@ -1,145 +1,144 @@
 @{
-    ViewData["Title"] = "Producto EN ALTA";
+    var productData = ViewBag.ProductData as JObject; // Datos del producto obtenidos de la API
+    var errorMessage = ViewBag.ErrorMessage as string; // Mensaje de error, si existe
+    var productName = ViewBag.ProductName as string; // Nombre del producto
 }
 
-<h1 class="product-title">FIDEOS MATARAZZO FORATINI</h1>
+<h1 class="product-title">@productName</h1>
 
-<div class="product-section">
-    <div class="product-inner">
-        <div class="product-details-container">
-            <div class="product-image-rating">
-                <div class="product-image-wrapper">
-                    <img src="/img/lays-classic.svg" alt="Lays Classic" class="product-image-new" />
-                    <div class="product-rating">
-                        <span class="rating-circle rating-red"></span>
-                        <h3 class="rating-text">Mediocre</h3>
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="error-message">
+        <p>@errorMessage</p>
+    </div>
+}
+else if (productData != null && productData.HasValues)
+{
+    <div class="product-section">
+        <div class="product-inner">
+            <div class="product-details-container">
+                <div class="product-image-rating">
+                    <div class="product-image-wrapper">
+                        @if (!string.IsNullOrEmpty(productData["image_url"]?.ToString()))
+                        {
+                            <img src="@productData["image_url"].ToString()" 
+                                 alt="@productName"
+                                 class="product-image-new" />
+                        }
+                        else
+                        {
+                            <img src="/img/lays-classic.svg" 
+                                 alt="Imagen no disponible"
+                                 class="product-image-new" />
+                        }
+                        <div class="product-rating">
+                            <span class="rating-circle rating-red"></span>
+                            <h3 class="rating-text">
+                                @("Calidad: " + (productData["nutrition_grades"]?.ToString()?.ToUpper() ?? "Sin calificación"))
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-nutrition-info">
+                    <div class="nutrition-info-item">
+                        <img src="/img/icon_protein.svg" alt="Proteínas" class="nutrition-icon" />
+                        <span>@("Proteínas: " + (productData["nutriments"]?["proteins_100g"]?.ToString() ?? "No disponible") + " g")</span>
+                    </div>
+                    <div class="nutrition-info-item">
+                        <img src="/img/icon_scales.svg" alt="Carbohidratos" class="nutrition-icon" />
+                        <span>@("Carbohidratos: " + (productData["nutriments"]?["carbohydrates_100g"]?.ToString() ?? "No disponible") + " g")</span>
+                    </div>
+                    <div class="nutrition-info-item">
+                        <img src="/img/icon_tick.svg" alt="Calidad" class="nutrition-icon" />
+                        <span>@("Grasas: " + (productData["nutriments"]?["fat_100g"]?.ToString() ?? "No disponible") + " g")</span>
                     </div>
                 </div>
             </div>
-            <div class="product-nutrition-info">
+        </div>
+    </div>
 
-                <div class="nutrition-info-item">
+    @* Nutrition Evaluation Section *@
+    <div class="nutrition-evaluation">
+        <h2>Positivas</h2>
 
-                    <div class="icon-container-info-item">
-                    
-                        <img src="/img/icon_carbs.svg" class="nutrition-icon" />
-
-                    </div>
-                    
-                    <span>Alto en Carbohidratos</span>
-                </div>
-
-                <div class="nutrition-info-item">
-
-                    <div class="icon-container-info-item">
-                    
-                        <img src="/img/icon_proteins.svg" class="nutrition-icon" />
-
-                    </div>
-                    
-                    <span>Bajo en Proteínas</span>
-                </div>
-
-                <div class="nutrition-info-item">
-
-                    <div class="icon-container-info-item">
-                    
-                        <img src="/img/icon_vitamins.svg" class="nutrition-icon" />
-
-                    </div>
-                    
-                    <span>Rico en Vitamina B</span>
-                </div>
-
+        <div class="nutrition-item">
+            <img src="/img/icon_fat.svg" class="nutrition-icon" />
+            <img src="/img/icon_arrow-down.svg" />
+            <div class="nutrition-description">
+                <h3>Bajo en grasas</h3>
+                <p>Ideal si sigues una dieta reducida en grasas.</p>
             </div>
-        </div>
-    </div>
-</div>
 
-@* Nutrition Evaluation Section *@
-<div class="nutrition-evaluation">
-
-    <h2>Positivas</h2>
-
-    <div class="nutrition-item">
-        <img src="/img/icon_fat.svg" class="nutrition-icon" />
-        <img src="/img/icon_arrow-down.svg" />
-        <div class="nutrition-description">
-            <h3>Bajo en grasas</h3>
-            <p>Ideal si sigues una dieta reducida en grasas.</p>
+            <span> <2g de grasa por porción de 100 g</span>
+            <img src="/img/icon_tick.svg" class="tick-icon"/>
         </div>
 
-        <span> <2g de grasa por porción de 100 g</span>
-        <img src="/img/icon_tick.svg" class="tick-icon"/>
+        <div class="nutrition-item">
+            <img src="/img/icon_salt.svg" class="nutrition-icon" />
+            <img src="/img/icon_arrow-down.svg" />
+            <div class="nutrition-description">
+                <h3>Bajo en sodio</h3>
+                <p>Contribuye a mantener una ingesta controlada de sodio.</p>
+            </div>
 
-    </div>
-
-    <div class="nutrition-item">
-        <img src="/img/icon_salt.svg" class="nutrition-icon" />
-        <img src="/img/icon_arrow-down.svg" />
-        <div class="nutrition-description">
-            <h3>Bajo en sodio</h3>
-            <p>Contribuye a mantener una ingesta controlada de sodio.</p>
+            <span>10mg cada 100g</span>
+            <img src="/img/icon_tick.svg" class="tick-icon"/>
         </div>
 
-        <span>10mg cada 100g</span>
+        <div class="nutrition-item">
+            <img src="/img/icon_vitamins.svg" class="nutrition-icon" />
+            <img src="/img/icon_arrow-up.svg" />
+            <div class="nutrition-description">
+                <h3>Fuente de vitamina B</h3>
+                <p>Estas vitaminas son importantes para el metabolismo, la energía y la salud del sistema nervioso.</p>
+            </div>
 
-        <img src="/img/icon_tick.svg" class="tick-icon"/>
-
-    </div>
-
-    <div class="nutrition-item">
-        <img src="/img/icon_vitamins.svg" class="nutrition-icon" />
-        <img src="/img/icon_arrow-up.svg" />
-        <div class="nutrition-description">
-            <h3>Fuente de vitamina B</h3>
-            <p>Estas vitaminas son importantes para el metabolismo, la energía y la salud del sistema nervioso.</p>
+            <span>30,5% de la ingesta diaria recomendada</span>
+            <img src="/img/icon_tick.svg" class="tick-icon"/>
         </div>
 
-        <span>30,5% de la ingesta diaria recomendada</span>
-        <img src="/img/icon_tick.svg" class="tick-icon"/>
+        <h2>Negativas</h2>
 
-    </div>
+        <div class="nutrition-item">
+            <img src="/img/icon_fiber.svg" class="nutrition-icon" />
+            <img src="/img/icon_arrow-down.svg" />
+            <div class="nutrition-description">
+                <h3>Bajo en Fibras</h3>
+                <p>Poca cantidad en comparación con otras fuentes de carbohidratos más ricas en fibra.</p>
+            </div>
 
-    <h2>Negativas</h2>
-
-    <div class="nutrition-item">
-        <img src="/img/icon_fiber.svg" class="nutrition-icon" />
-        <img src="/img/icon_arrow-down.svg" />
-        <div class="nutrition-description">
-            <h3>Bajo en Fibras</h3>
-            <p>Poca cantidad en comparación con otras fuentes de carbohidratos más ricas en fibra.</p>
+            <span>Estadística</span>
+            <img src="/img/icon_close.svg" class="close-icon"/>
         </div>
 
-        <span>Estadística</span>
-        <img src="/img/icon_close.svg" class="close-icon"/>
+        <div class="nutrition-item">
+            <img src="/img/icon_sugar.svg" class="nutrition-icon" />
+            <img src="/img/icon_arrow-up.svg" />
+            <div class="nutrition-description">
+                <h3>Alto Índice Glucémico</h3>
+                <p>Contiene un índice glucémico (IG) demasiado alto, lo que puede generar picos de glucosa en la sangre, afectando a personas con resistencia a la insulina o diabetes.</p>
+            </div>
 
-    </div>
-
-    <div class="nutrition-item">
-        <img src="/img/icon_sugar.svg" class="nutrition-icon" />
-        <img src="/img/icon_arrow-up.svg" />
-        <div class="nutrition-description">
-            <h3>Alto Índice Glucémico</h3>
-            <p>Contiene un índice glucémico (IG) demasiado alto, lo que puede generar picos de glucosa en la sangre, afectando a personas con resistencia a la insulina o diabetes.</p>
+            <span>Estadística</span>
+            <img src="/img/icon_close.svg" class="close-icon"/>
         </div>
 
-        <span>Estadística</span>
-        <img src="/img/icon_close.svg" class="close-icon"/>
+        <div class="nutrition-item">
+            <img src="/img/icon_calories.svg" class="nutrition-icon" />
+            <img src="/img/icon_arrow-up.svg" />
+            <div class="nutrition-description">
+                <h3>Alto en Calorías</h3>
+                <p>Si no se consume moderadamente en combinación con otros alimentos puede contribuir a un consumo elevado de calorías.</p>
+            </div>
 
-    </div>
-
-    <div class="nutrition-item">
-        <img src="/img/icon_calories.svg" class="nutrition-icon" />
-        <img src="/img/icon_arrow-up.svg" />
-        <div class="nutrition-description">
-            <h3>Alto en Calorías</h3>
-            <p>Si no se consume moderadamente en combinación con otros alimentos puede contribuir a un consumo elevado de calorías.</p>
+            <span>Estadística</span>
+            <img src="/img/icon_close.svg" class="close-icon"/>
         </div>
-
-        <span>Estadística</span>
-        <img src="/img/icon_close.svg" class="close-icon"/>
-
     </div>
-
-</div>
+}
+else
+{
+    <div class="no-data-message">
+        <p>No se encontró información para el producto buscado: "<strong>@productName</strong>"</p>
+    </div>
+}

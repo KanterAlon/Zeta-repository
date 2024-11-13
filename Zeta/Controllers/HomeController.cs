@@ -2,6 +2,9 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Zeta.Models; // Asegúrate de que esté apuntando al espacio de nombres correcto para `Post` y `PostRepository`
 using Microsoft.Extensions.Logging; // Agrega este using si no está presente
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 public class HomeController : Controller
 {
@@ -26,10 +29,49 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Product()
+    public async Task<IActionResult> Product(string query)
+{
+    if (string.IsNullOrWhiteSpace(query))
     {
+        ViewBag.ErrorMessage = "No se ingresó un producto para buscar.";
         return View();
     }
+
+    using HttpClient client = new HttpClient();
+    string apiUrl = $"https://world.openfoodfacts.org/api/v0/product/{query}.json";
+    try
+    {
+        HttpResponseMessage response = await client.GetAsync(apiUrl);
+        if (response.IsSuccessStatusCode)
+        {
+            string jsonResponse = await response.Content.ReadAsStringAsync();
+            JObject productData = JObject.Parse(jsonResponse);
+
+            if (productData["status"]?.ToString() == "1")
+            {
+                var product = productData["product"];
+                ViewBag.ProductData = product;
+                ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "No se encontró información del producto.";
+            }
+        }
+        else
+        {
+            ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
+        }
+    }
+    catch
+    {
+        ViewBag.ErrorMessage = "Ocurrió un error al procesar la solicitud.";
+    }
+
+    ViewBag.ProductQuery = query;
+    return View();
+}
+
 
     public IActionResult Community()
     {

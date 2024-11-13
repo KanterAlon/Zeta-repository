@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "BoNrrr5dkGejLrprU+Jz9cCy/bx0CSHKb/2KNsIloOE=",
+=======
+  "Hash": "7SiAil/+hja1STBVP5Gmqgi74I6ycKPbjqipfkxHA6s=",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
   "Source": "Zeta",
   "BasePath": "_content/Zeta",
   "Mode": "Default",
@@ -568,7 +572,49 @@
       "OriginalItemSpec": "wwwroot\\img\\first-img.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_arrow-down.svg",
+=======
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_arrow-down.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_arrow-down.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_arrow-down.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_arrow-up.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_arrow-up.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_arrow-up.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_blog.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "SourceId": "Zeta",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\",
@@ -777,7 +823,30 @@
       "OriginalItemSpec": "wwwroot\\img\\icon_default_profile_picture.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_dislike-fill.svg",
+=======
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike-fill.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_dislike-fill.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_dislike-fill.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "SourceId": "Zeta",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\",
@@ -986,7 +1055,30 @@
       "OriginalItemSpec": "wwwroot\\img\\icon_img.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_like-fill.svg",
+=======
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like-fill.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_like-fill.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_like-fill.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "SourceId": "Zeta",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\",
@@ -1214,7 +1306,30 @@
       "OriginalItemSpec": "wwwroot\\img\\icon_survey.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\img\\icon_tick.svg.svg",
+=======
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_tick.svg.svg",
+      "SourceId": "Zeta",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\",
+      "BasePath": "_content/Zeta",
+      "RelativePath": "img/icon_tick.svg.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon_tick.svg.svg"
+    },
+    {
+      "Identity": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_user.svg",
+>>>>>>> 5267ff449cac8b4d53fa063ff4c3196b5ee8d9c6
       "SourceId": "Zeta",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\48796010\\Downloads\\Zeta-repository\\zeta\\wwwroot\\",
