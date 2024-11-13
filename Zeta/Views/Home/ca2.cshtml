@@ -1,6 +1,7 @@
 @{
     ViewData["HideHeader"] = true;
     var patologias = ViewBag.Patologias as List<Patologias>;
+    var actividades = ViewBag.Actividades as List<Actividades>; // Lista de actividades físicas
 }
 
 <section class="ca1-container">
@@ -21,22 +22,24 @@
                 <input type="date" name="fecha_nacimiento" placeholder="Fecha de Nacimiento" required />
             </div>
             <div class="ca1-input-group">
-                <input type="text" name="género" placeholder="Genero" required />
+               <select name="genero" id="genero" required>
+                    <option value="0" selected>Selecciona tu género</option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Otro</option>
+                </select>
             </div>
             <div class="ca1-input-group">
-                <input type="text" name="altura" placeholder="Altura" required />
+                <input type="text" name="altura" placeholder="Altura en cm" required />
             </div>
             <div class="ca1-input-group">
-                <input type="text" name="peso" placeholder="Peso" required />
-            </div>
-            <div class="ca1-input-group">
-                <input type="text" name="actividad_fisica" placeholder="Actividad física que realizas" required />
+                <input type="text" name="peso" placeholder="Peso en kg" required />
             </div>
 
             <!-- Nueva sección: Selección de Patología -->
             <div class="ca1-input-group">
                 <select name="patologia" id="patologia" required>
-                    <option value="0" selected>Selecciona tu patología</option> <!-- Opción para "Ninguna" -->
+                    <option value="0" selected>Selecciona tu patología</option>
                     @if (patologias != null && patologias.Any())
                     {
                         foreach (var patologia in patologias)
@@ -48,22 +51,8 @@
             </div>
 
             <div class="ca1-input-group">
-                <input type="number" min="0" name="cantActividades" placeholder="Ingresa cuantos tipos de deportes/actividades físicas realizas en la cotidianidad" required />
+                <input type="number" min="0" name="cantActividades" id="cantActividades" placeholder="Ingresa cuantos tipos de deportes/actividades físicas realizas en la cotidianidad" required onchange="generarInputsActividades()" />
             </div>
-
-             <!-- se generará una cantidad de inputs correspondiente a la cantidad de tipos de actividades fisicas que realiza la persona para que seleccione en cada tipo cual es esa actividad en cuestion, y luego de ese input una pregunta con otro input para que ingrese las horas semanales que practica cada uno de ellos  
-             
-             
-             RECORDAR PONER HTML QUE LO DEJAMOS EN EL README 
-             PONER LA CANTIDAD, y CUANTO SE PONE LA CANTIDAD; ABAJO SE PONE UN INPUT DE SELECCIONAR EL TIPO DE LA ACTIVIDAD; Y A LA DERECHA LA CANTIDAD DE HORAS SEMANALES. ABAJO DE ESO LO MISMO, y asi .
-             -->
-
-            
-
-            <div class="ca1-input-group">
-                <input type="number" min="0" name="horasActividadAnterior" placeholder="Ingresa cuantas horas por semana realizas dicha actividad" required />
-            </div>
-
 
         </div>
 
@@ -71,3 +60,58 @@
     </div>
 
 </section>
+
+<script>
+    function generarInputsActividades() {
+        const cantidad = document.getElementById('cantActividades').value;
+        const container = document.querySelector('.ca1-inputs-grid');
+
+        for (let i = 1; i <= cantidad; i++) {
+            // Crear contenedor para el select de actividad
+            const actividadGroup = document.createElement('div');
+            actividadGroup.className = 'ca1-input-group';
+
+            // Crear select para seleccionar la actividad
+            const selectActividad = document.createElement('select');
+            selectActividad.name = `actividad_${i}`;
+            selectActividad.required = true;
+
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '0';
+            defaultOption.selected = true;
+            defaultOption.textContent = `Selecciona la actividad física número ${i}`;
+            selectActividad.appendChild(defaultOption);
+
+            @if (actividades != null && actividades.Any())
+            {
+                foreach (var actividad in actividades)
+                {
+                    <text>
+                    const option = document.createElement('option');
+                    option.value = "@actividad.IdActividad";
+                    option.textContent = "@actividad.NombreActividad";
+                    selectActividad.appendChild(option);
+                    </text>
+                }
+            }
+
+            actividadGroup.appendChild(selectActividad);
+            container.appendChild(actividadGroup);
+
+            // Crear contenedor para el input de horas
+            const horasGroup = document.createElement('div');
+            horasGroup.className = 'ca1-input-group';
+
+            // Crear input para ingresar las horas semanales de la actividad
+            const inputHoras = document.createElement('input');
+            inputHoras.type = 'number';
+            inputHoras.min = '0';
+            inputHoras.name = `horasActividad_${i}`;
+            inputHoras.placeholder = `Ingresa cuántas horas por semana realizas la actividad ${i}`;
+            inputHoras.required = true;
+
+            horasGroup.appendChild(inputHoras);
+            container.appendChild(horasGroup);
+        }
+    }
+</script>
