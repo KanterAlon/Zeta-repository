@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "V/bRTSYatUQZHwWVyOgbQ3+SpiT0whisRIrwANcXJZEPV7iRc4JIpAXt/v93KsxYzgAkeiP8huCN2vn2Biy8Aw==",
+  "dgSpecHash": "8GmnnDExyDSYbn19iyKXA3N/nsBoRCXOrMbk7/cmvIYNJWOtRE8O7lqwKMV9pkpS5EiIHtK9SL8KgZBlLDvN2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\Zeta.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\95320323\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\95320323\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\95320323\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\95320323\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\95320323\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\95320323\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\95320323\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

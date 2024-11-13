@@ -37,3 +37,4 @@ C:\Users\95320323\Downloads\Zeta-repository\Zeta\obj\Debug\net8.0\refint\Zeta.dl
 C:\Users\95320323\Downloads\Zeta-repository\Zeta\obj\Debug\net8.0\Zeta.pdb
 C:\Users\95320323\Downloads\Zeta-repository\Zeta\obj\Debug\net8.0\Zeta.genruntimeconfig.cache
 C:\Users\95320323\Downloads\Zeta-repository\Zeta\obj\Debug\net8.0\ref\Zeta.dll
+C:\Users\95320323\Downloads\Zeta-repository\Zeta\bin\Debug\net8.0\Newtonsoft.Json.dll

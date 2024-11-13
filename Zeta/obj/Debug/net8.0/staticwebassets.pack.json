@@ -121,6 +121,14 @@
       "PackagePath": "staticwebassets\\img\\first-img.png"
     },
     {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_arrow-down.svg",
+      "PackagePath": "staticwebassets\\img\\icon_arrow-down.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_arrow-up.svg",
+      "PackagePath": "staticwebassets\\img\\icon_arrow-up.svg"
+    },
+    {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_blog.svg",
       "PackagePath": "staticwebassets\\img\\icon_blog.svg"
     },
@@ -155,6 +163,10 @@
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_default_profile_picture.svg",
       "PackagePath": "staticwebassets\\img\\icon_default_profile_picture.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike-fill.svg",
+      "PackagePath": "staticwebassets\\img\\icon_dislike-fill.svg"
     },
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_dislike.svg",
@@ -195,6 +207,10 @@
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_img.svg",
       "PackagePath": "staticwebassets\\img\\icon_img.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like-fill.svg",
+      "PackagePath": "staticwebassets\\img\\icon_like-fill.svg"
     },
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_like.svg",
@@ -239,6 +255,10 @@
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_survey.svg",
       "PackagePath": "staticwebassets\\img\\icon_survey.svg"
+    },
+    {
+      "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_tick.svg.svg",
+      "PackagePath": "staticwebassets\\img\\icon_tick.svg.svg"
     },
     {
       "Id": "C:\\Users\\95320323\\Downloads\\Zeta-repository\\Zeta\\wwwroot\\img\\icon_user.svg",
