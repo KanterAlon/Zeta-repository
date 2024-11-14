@@ -80,3 +80,21 @@ function publishComment() {
         document.getElementById("newCommentInput").value = "";
     }
 }
+
+function openSharePopup() {
+    document.getElementById('sharePopup').style.display = 'flex';
+
+    // Configuración dinámica de las URLs
+    const postUrl = window.location.href; // Cambia según la lógica del post
+    const whatsappShareUrl = `https://api.whatsapp.com/send?text=Mira este post: ${postUrl}`;
+    const smsShareUrl = `sms:?body=Mira este post: ${postUrl}`;
+    const mailShareUrl = `mailto:?subject=Mira este post&body=Mira este post: ${postUrl}`;
+
+    document.getElementById('whatsappShare').href = whatsappShareUrl;
+    document.getElementById('smsShare').href = smsShareUrl;
+    document.getElementById('mailShare').href = mailShareUrl;
+}
+
+function closeSharePopup() {
+    document.getElementById('sharePopup').style.display = 'none';
+}
