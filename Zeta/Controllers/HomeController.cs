@@ -29,94 +29,82 @@ public class HomeController : Controller
     }
 
     public async Task<IActionResult> Product(string query)
+{
+    if (string.IsNullOrWhiteSpace(query))
     {
-        if (string.IsNullOrWhiteSpace(query))
+        ViewBag.ErrorMessage = "No se ingresó un producto para buscar.";
+        return View();
+    }
+
+    const string baseUrl = "https://world.openfoodfacts.org/api/v0/product/";
+
+    try
+    {
+        using var client = new HttpClient();
+        string apiUrl = $"{baseUrl}{query}.json";
+
+        HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+        if (!response.IsSuccessStatusCode)
         {
-            ViewBag.ErrorMessage = "No se ingresó un producto para buscar.";
+            ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
             return View();
         }
 
-        using HttpClient client = new HttpClient();
-        string apiUrl = $"https://world.openfoodfacts.org/api/v0/product/{query}.json";
+        string jsonResponse = await response.Content.ReadAsStringAsync();
+        JObject productData = JObject.Parse(jsonResponse);
 
-        try
+        if (productData["status"]?.ToString() != "1")
         {
-            HttpResponseMessage response = await client.GetAsync(apiUrl);
-            if (response.IsSuccessStatusCode)
-            {
-                string jsonResponse = await response.Content.ReadAsStringAsync();
-                JObject productData = JObject.Parse(jsonResponse);
-
-                if (productData["status"]?.ToString() == "1")
-                {
-                    var product = productData["product"];
-                    ViewBag.ProductData = product;
-                    ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
-
-                    // Obtener niveles de nutrientes
-                    var nutrientLevels = product?["nutrient_levels"]?.ToObject<Dictionary<string, string>>();
-                    var nutrients = product?["nutriments"];
-
-                    var positivePoints = new List<string>();
-                    var negativePoints = new List<string>();
-
-                    if (nutrientLevels != null)
-                    {
-                        foreach (var nutrient in nutrientLevels)
-                        {
-                            string nutrientName = nutrient.Key.Replace("-", " ").ToUpper();
-                            string nutrientLevel = nutrient.Value;
-                            string nutrientValue = nutrients?[nutrient.Key + "_100g"]?.ToString();
-
-                            string formattedInfo = $"{nutrientName}: {nutrientValue ?? "No disponible"} g - {nutrientLevel}";
-
-                            if (nutrientLevel == "low")
-                            {
-                                positivePoints.Add(formattedInfo);
-                            }
-                            else if (nutrientLevel == "high")
-                            {
-                                negativePoints.Add(formattedInfo);
-                            }
-
-                            // Agregar punto positivo para fibra alta
-                            if (nutrient.Key == "fiber" && nutrientLevel == "high")
-                            {
-                                positivePoints.Add($"ALTO EN FIBRA: {nutrientValue ?? "No disponible"} g");
-                            }
-                        }
-                    }
-
-                    // Validación para asegurar la inclusión de puntos positivos importantes
-                    if (!positivePoints.Any() && nutrients != null)
-                    {
-                        if (nutrients["fiber_100g"]?.ToString() != null)
-                        {
-                            positivePoints.Add($"ALTO EN FIBRA: {nutrients["fiber_100g"]} g");
-                        }
-                    }
-
-                    ViewBag.PositivePoints = positivePoints;
-                    ViewBag.NegativePoints = negativePoints;
-                }
-                else
-                {
-                    ViewBag.ErrorMessage = "No se encontró información del producto.";
-                }
-            }
-            else
-            {
-                ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
-            }
-        }
-        catch
-        {
-            ViewBag.ErrorMessage = "Ocurrió un error al procesar la solicitud.";
+            ViewBag.ErrorMessage = "No se encontró información del producto.";
+            return View();
         }
 
-        ViewBag.ProductQuery = query;
-        return View();
+        var product = productData["product"];
+        var nutrientLevels = product?["nutrient_levels"]?.ToObject<Dictionary<string, string>>();
+        var nutrients = product?["nutriments"];
+
+        ViewBag.ProductData = product;
+        ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
+        ViewBag.PositivePoints = GetNutrientDetails(nutrientLevels, nutrients, true);
+        ViewBag.NegativePoints = GetNutrientDetails(nutrientLevels, nutrients, false);
     }
+    catch (Exception ex)
+    {
+        // Log exception if logging is configured
+        ViewBag.ErrorMessage = "Ocurrió un error al procesar la solicitud.";
+    }
+
+    ViewBag.ProductQuery = query;
+    return View();
+}
+
+private List<string> GetNutrientDetails(Dictionary<string, string> nutrientLevels, JToken nutrients, bool isPositive)
+{
+    var nutrientDetails = new List<string>();
+
+    if (nutrientLevels == null) return nutrientDetails;
+
+    foreach (var nutrient in nutrientLevels)
+    {
+        string nutrientName = nutrient.Key.Replace("-", " ").ToUpper();
+        string nutrientLevel = nutrient.Value;
+        string nutrientValue = nutrients?[nutrient.Key + "_100g"]?.ToString();
+
+        string formattedInfo = $"{nutrientName}: {nutrientValue ?? "No disponible"} g - {nutrientLevel}";
+
+        if (isPositive && nutrientLevel == "low")
+        {
+            nutrientDetails.Add(formattedInfo);
+        }
+        else if (!isPositive && nutrientLevel == "high")
+        {
+            nutrientDetails.Add(formattedInfo);
+        }
+    }
+
+    return nutrientDetails;
+}
 
     public IActionResult Community()
     {

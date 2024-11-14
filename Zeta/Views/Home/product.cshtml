@@ -1,10 +1,11 @@
 @{
-    var productData = ViewBag.ProductData as JObject;
-    var errorMessage = ViewBag.ErrorMessage as string;
-    var productName = ViewBag.ProductName as string;
-    var positivePoints = ViewBag.PositivePoints as List<string>;
-    var negativePoints = ViewBag.NegativePoints as List<string>;
+    var productData = ViewBag.ProductData as JObject; // Datos del producto obtenidos de la API
+    var errorMessage = ViewBag.ErrorMessage as string; // Mensaje de error, si existe
+    var productName = ViewBag.ProductName as string; // Nombre del producto
+    
 }
+
+
 
 <h1 class="product-title">@productName</h1>
 
@@ -59,39 +60,116 @@ else if (productData != null && productData.HasValues)
         </div>
     </div>
 
-
+    @* Nutrition Evaluation Section *@
     <div class="nutrition-evaluation">
         <h2>Evaluación Nutricional</h2>
 
         <h3>Aspectos Positivos</h3>
-        @if (positivePoints != null && positivePoints.Count > 0)
-        {
-            foreach (var point in positivePoints)
-            {
-                <div class="nutrition-item positive">
-                    <p>@point</p>
-                </div>
-            }
-        }
-        else
-        {
-            <p>No hay aspectos positivos destacados.</p>
-        }
 
-        <h3>Aspectos Negativos</h3>
-        @if (negativePoints != null && negativePoints.Count > 0)
-        {
-            foreach (var point in negativePoints)
-            {
-                <div class="nutrition-item negative">
-                    <p>@point</p>
-                </div>
-            }
-        }
-        else
-        {
-            <p>No hay aspectos negativos destacados.</p>
-        }
+@if (productData["nutrient_levels"]?["fat"]?.ToString() == "low")
+{
+    <div class="nutrition-item positive">
+        <img src="/img/icon_fat.svg" class="nutrition-icon" alt="Bajo en grasas" />
+        <div class="nutrition-description">
+            <h4>Bajo en Grasas</h4>
+            <p>Ideal para una dieta equilibrada en grasas.</p>
+        </div>
+        <span>@(productData["nutriments"]?["fat_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_tick.svg" class="tick-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["saturated-fat"]?.ToString() == "low")
+{
+    <div class="nutrition-item positive">
+        <img src="/img/icon_saturated_fat.svg" class="nutrition-icon" alt="Bajo en grasas saturadas" />
+        <div class="nutrition-description">
+            <h4>Bajo en Grasas Saturadas</h4>
+            <p>Contribuye a mantener niveles saludables de colesterol.</p>
+        </div>
+        <span>@(productData["nutriments"]?["saturated-fat_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_tick.svg" class="tick-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["sugars"]?.ToString() == "low")
+{
+    <div class="nutrition-item positive">
+        <img src="/img/icon_sugar.svg" class="nutrition-icon" alt="Bajo en azúcares" />
+        <div class="nutrition-description">
+            <h4>Bajo en Azúcares</h4>
+            <p>Ideal para mantener un consumo controlado de azúcar.</p>
+        </div>
+        <span>@(productData["nutriments"]?["sugars_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_tick.svg" class="tick-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["salt"]?.ToString() == "low")
+{
+    <div class="nutrition-item positive">
+        <img src="/img/icon_salt.svg" class="nutrition-icon" alt="Bajo en sodio" />
+        <div class="nutrition-description">
+            <h4>Bajo en Sodio</h4>
+            <p>Ayuda a controlar la presión arterial.</p>
+        </div>
+        <span>@(productData["nutriments"]?["salt_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_tick.svg" class="tick-icon" />
+    </div>
+}
+
+<h3>Aspectos Negativos</h3>
+
+@if (productData["nutrient_levels"]?["sugars"]?.ToString() == "high")
+{
+    <div class="nutrition-item negative">
+        <img src="/img/icon_sugar.svg" class="nutrition-icon" alt="Alto en azúcares" />
+        <div class="nutrition-description">
+            <h4>Alto en Azúcares</h4>
+            <p>Contribuye al aumento de calorías y puede afectar la salud dental.</p>
+        </div>
+        <span>@(productData["nutriments"]?["sugars_100g"] ?? "No disponible") g cada 100 g</span>
+         <img src="/img/icon_close.svg" class="close-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["saturated-fat"]?.ToString() == "high")
+{
+    <div class="nutrition-item negative">
+        <img src="/img/icon_saturated_fat.svg" class="nutrition-icon" alt="Alto en grasas saturadas" />
+        <div class="nutrition-description">
+            <h4>Alto en Grasas Saturadas</h4>
+            <p>Puede aumentar los niveles de colesterol si se consume en exceso.</p>
+        </div>
+        <span>@(productData["nutriments"]?["saturated-fat_100g"] ?? "No disponible") g cada 100 g</span>
+         <img src="/img/icon_close.svg" class="close-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["salt"]?.ToString() == "high")
+{
+    <div class="nutrition-item negative">
+        <img src="/img/icon_salt.svg" class="nutrition-icon" alt="Alto en sodio" />
+        <div class="nutrition-description">
+            <h4>Alto en Sodio</h4>
+            <p>Contribuye a problemas de presión arterial alta si se consume en exceso.</p>
+        </div>
+        <span>@(productData["nutriments"]?["salt_100g"] ?? "No disponible") g cada 100 g</span>
+         <img src="/img/icon_close.svg" class="close-icon" />
+    </div>
+}
+
+@if (productData["nova_group"]?.ToString() == "4")
+{
+    <div class="nutrition-item negative">
+        <img src="/img/icon_ultraprocessed.svg" class="nutrition-icon" alt="Producto ultra procesado" />
+        <div class="nutrition-description">
+            <h4>Ultra Procesado</h4>
+            <p>Clasificado en el grupo NOVA 4, indicando alto procesamiento.</p>
+        </div>
+         <img src="/img/icon_close.svg" class="close-icon" />
+    </div>
+}
     </div>
 }
 else
@@ -100,3 +178,5 @@ else
         <p>No se encontró información para el producto buscado: "<strong>@productName</strong>"</p>
     </div>
 }
+
+
