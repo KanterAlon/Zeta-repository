@@ -37,7 +37,7 @@
                                 <span>214</span>
                             </button>
 
-                            <button>
+                            <button class="button-share" onclick="openSharePopup()">
                                 <img src="/img/icon_share.svg">
                             </button>
                         </div>
@@ -87,6 +87,25 @@
                 </div>
                 <textarea id="newCommentInput" placeholder="Añadir un comentario..."></textarea>
                 <button class="publish-comment-btn" onclick="publishComment()">Publicar comentario</button>
+            </div>
+        </div>
+
+        <!-- Popup para compartir -->
+        <div id="sharePopup" class="popup-container" style="display: none;">
+            <div class="popup-share-content">
+                <img src="/img/icon_close.svg" class="close-btn" onclick="closeSharePopup()">
+                <h2>¡Comparte este post!</h2>
+                <div class="share-options">
+                    <a href="#" id="whatsappShare" target="_blank">
+                        <img src="/img/icon_whatsapp.svg" alt="WhatsApp">
+                    </a>
+                    <a href="#" id="smsShare" target="_blank">
+                        <img src="/img/icon_sms.svg" alt="SMS">
+                    </a>
+                    <a href="#" id="mailShare" target="_blank">
+                        <img src="/img/icon_email.svg" alt="Email">
+                    </a>
+                </div>
             </div>
         </div>
 
