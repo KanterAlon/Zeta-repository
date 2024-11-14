@@ -29,91 +29,134 @@ public class HomeController : Controller
     }
 
    public async Task<IActionResult> Product(string query)
+    {
+        if (string.IsNullOrWhiteSpace(query))
+        {
+            ViewBag.ErrorMessage = "No se ingresó un producto para buscar.";
+            return View();
+        }
+
+        try
+        {
+            using var client = new HttpClient();
+
+            JObject productData;
+
+            // Determinar si es un EAN o un nombre de producto
+            if (IsEAN(query))
+            {
+                // Búsqueda por código de barras
+                string apiUrl = $"https://world.openfoodfacts.org/api/v0/product/{query}.json";
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
+                    return View();
+                }
+
+                string jsonResponse = await response.Content.ReadAsStringAsync();
+                productData = JObject.Parse(jsonResponse);
+
+                if (productData["status"]?.ToString() != "1")
+                {
+                    ViewBag.ErrorMessage = "No se encontró información del producto.";
+                    return View();
+                }
+
+                ViewBag.ProductData = productData["product"];
+            }
+            else
+            {
+                // Búsqueda por nombre de producto
+                string apiUrl = $"https://world.openfoodfacts.org/cgi/search.pl?search_terms={Uri.EscapeDataString(query)}&json=1";
+                HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
+                    return View();
+                }
+
+                string jsonResponse = await response.Content.ReadAsStringAsync();
+                productData = JObject.Parse(jsonResponse);
+
+                if (productData["count"]?.ToObject<int>() <= 0)
+                {
+                    ViewBag.ErrorMessage = "No se encontraron productos con ese nombre.";
+                    return View();
+                }
+
+                // Mostrar el primer producto encontrado
+                ViewBag.ProductData = productData["products"]?[0];
+            }
+
+            var product = ViewBag.ProductData;
+
+            ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
+            ViewBag.Ingredients = product?["ingredients_text"]?.ToString() ?? "Ingredientes no disponibles";
+        }
+        catch (Exception ex)
+        {
+            // Log de la excepción si está configurado
+            ViewBag.ErrorMessage = "Ocurrió un error al procesar la solicitud.";
+        }
+
+        ViewBag.ProductQuery = query;
+
+        return View();
+    }
+
+[HttpGet]
+public async Task<IActionResult> SearchProducts(string query)
 {
     if (string.IsNullOrWhiteSpace(query))
     {
-        ViewBag.ErrorMessage = "No se ingresó un producto para buscar.";
-        return View();
+        return Json(new { success = false, message = "No se ingresó un término de búsqueda." });
     }
 
     try
     {
         using var client = new HttpClient();
+        string apiUrl = $"https://world.openfoodfacts.org/cgi/search.pl?search_terms={Uri.EscapeDataString(query)}&json=1";
+        HttpResponseMessage response = await client.GetAsync(apiUrl);
 
-        JObject productData;
-
-        // Determinar si es un EAN o un nombre de producto
-        if (IsEAN(query))
+        if (!response.IsSuccessStatusCode)
         {
-            // Búsqueda por código de barras
-            string apiUrl = $"https://world.openfoodfacts.org/api/v0/product/{query}.json";
-            HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-            if (!response.IsSuccessStatusCode)
-            {
-                ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
-                return View();
-            }
-
-            string jsonResponse = await response.Content.ReadAsStringAsync();
-            productData = JObject.Parse(jsonResponse);
-
-            if (productData["status"]?.ToString() != "1")
-            {
-                ViewBag.ErrorMessage = "No se encontró información del producto.";
-                return View();
-            }
-
-            ViewBag.ProductData = productData["product"];
-        }
-        else
-        {
-            // Búsqueda por nombre de producto
-            string apiUrl = $"https://world.openfoodfacts.org/cgi/search.pl?search_terms={Uri.EscapeDataString(query)}&json=1";
-            HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-            if (!response.IsSuccessStatusCode)
-            {
-                ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
-                return View();
-            }
-
-            string jsonResponse = await response.Content.ReadAsStringAsync();
-            productData = JObject.Parse(jsonResponse);
-
-            if (productData["count"]?.ToObject<int>() <= 0)
-            {
-                ViewBag.ErrorMessage = "No se encontraron productos con ese nombre.";
-                return View();
-            }
-
-            // Mostrar el primer producto encontrado
-            ViewBag.ProductData = productData["products"]?[0];
+            return Json(new { success = false, message = "Hubo un problema al conectarse con la API." });
         }
 
-        var product = ViewBag.ProductData;
+        string jsonResponse = await response.Content.ReadAsStringAsync();
+        var productData = JObject.Parse(jsonResponse);
 
-        ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
-        ViewBag.Ingredients = product?["ingredients_text"]?.ToString() ?? "Ingredientes no disponibles";
+        if (productData["count"]?.ToObject<int>() <= 0)
+        {
+            return Json(new { success = true, products = new List<string>() });
+        }
+
+        var products = productData["products"]
+            ?.Where(p => p["lang"]?.ToString() == "es" || p["lang"]?.ToString() == "en") // Filtrar por idioma
+            .OrderByDescending(p => p["popularity_tags"]?.Count()) // Ordenar por relevancia
+            .Select(p => new
+            {
+                name = p["product_name"]?.ToString(),
+                image = p["image_url"]?.ToString() ?? "/img/default_product.png"
+            });
+
+        return Json(new { success = true, products });
     }
-    catch (Exception ex)
+    catch (Exception)
     {
-        // Log de la excepción si está configurado
-        ViewBag.ErrorMessage = "Ocurrió un error al procesar la solicitud.";
+        return Json(new { success = false, message = "Ocurrió un error al procesar la solicitud." });
     }
-
-    ViewBag.ProductQuery = query;
-
-    return View();
-}
-
-// Método auxiliar para determinar si el query es un EAN
-private bool IsEAN(string input)
-{
-    return input.All(char.IsDigit) && (input.Length >= 8 && input.Length <= 13);
 }
 
 
+    // Método auxiliar para determinar si el query es un EAN
+    private bool IsEAN(string input)
+    {
+        return input.All(char.IsDigit) && (input.Length >= 8 && input.Length <= 13);
+    }
 
     public IActionResult Community()
     {
