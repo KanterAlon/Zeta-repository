@@ -28,7 +28,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public async Task<IActionResult> Product(string query)
+   public async Task<IActionResult> Product(string query)
 {
     if (string.IsNullOrWhiteSpace(query))
     {
@@ -36,75 +36,84 @@ public class HomeController : Controller
         return View();
     }
 
-    const string baseUrl = "https://world.openfoodfacts.org/api/v0/product/";
-
     try
     {
         using var client = new HttpClient();
-        string apiUrl = $"{baseUrl}{query}.json";
 
-        HttpResponseMessage response = await client.GetAsync(apiUrl);
+        JObject productData;
 
-        if (!response.IsSuccessStatusCode)
+        // Determinar si es un EAN o un nombre de producto
+        if (IsEAN(query))
         {
-            ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
-            return View();
+            // Búsqueda por código de barras
+            string apiUrl = $"https://world.openfoodfacts.org/api/v0/product/{query}.json";
+            HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
+                return View();
+            }
+
+            string jsonResponse = await response.Content.ReadAsStringAsync();
+            productData = JObject.Parse(jsonResponse);
+
+            if (productData["status"]?.ToString() != "1")
+            {
+                ViewBag.ErrorMessage = "No se encontró información del producto.";
+                return View();
+            }
+
+            ViewBag.ProductData = productData["product"];
+        }
+        else
+        {
+            // Búsqueda por nombre de producto
+            string apiUrl = $"https://world.openfoodfacts.org/cgi/search.pl?search_terms={Uri.EscapeDataString(query)}&json=1";
+            HttpResponseMessage response = await client.GetAsync(apiUrl);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.ErrorMessage = "Hubo un problema al conectarse con la API.";
+                return View();
+            }
+
+            string jsonResponse = await response.Content.ReadAsStringAsync();
+            productData = JObject.Parse(jsonResponse);
+
+            if (productData["count"]?.ToObject<int>() <= 0)
+            {
+                ViewBag.ErrorMessage = "No se encontraron productos con ese nombre.";
+                return View();
+            }
+
+            // Mostrar el primer producto encontrado
+            ViewBag.ProductData = productData["products"]?[0];
         }
 
-        string jsonResponse = await response.Content.ReadAsStringAsync();
-        JObject productData = JObject.Parse(jsonResponse);
+        var product = ViewBag.ProductData;
 
-        if (productData["status"]?.ToString() != "1")
-        {
-            ViewBag.ErrorMessage = "No se encontró información del producto.";
-            return View();
-        }
-
-        var product = productData["product"];
-        var nutrientLevels = product?["nutrient_levels"]?.ToObject<Dictionary<string, string>>();
-        var nutrients = product?["nutriments"];
-
-        ViewBag.ProductData = product;
         ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
-        ViewBag.PositivePoints = GetNutrientDetails(nutrientLevels, nutrients, true);
-        ViewBag.NegativePoints = GetNutrientDetails(nutrientLevels, nutrients, false);
+        ViewBag.Ingredients = product?["ingredients_text"]?.ToString() ?? "Ingredientes no disponibles";
     }
     catch (Exception ex)
     {
-        // Log exception if logging is configured
+        // Log de la excepción si está configurado
         ViewBag.ErrorMessage = "Ocurrió un error al procesar la solicitud.";
     }
 
     ViewBag.ProductQuery = query;
+
     return View();
 }
 
-private List<string> GetNutrientDetails(Dictionary<string, string> nutrientLevels, JToken nutrients, bool isPositive)
+// Método auxiliar para determinar si el query es un EAN
+private bool IsEAN(string input)
 {
-    var nutrientDetails = new List<string>();
-
-    if (nutrientLevels == null) return nutrientDetails;
-
-    foreach (var nutrient in nutrientLevels)
-    {
-        string nutrientName = nutrient.Key.Replace("-", " ").ToUpper();
-        string nutrientLevel = nutrient.Value;
-        string nutrientValue = nutrients?[nutrient.Key + "_100g"]?.ToString();
-
-        string formattedInfo = $"{nutrientName}: {nutrientValue ?? "No disponible"} g - {nutrientLevel}";
-
-        if (isPositive && nutrientLevel == "low")
-        {
-            nutrientDetails.Add(formattedInfo);
-        }
-        else if (!isPositive && nutrientLevel == "high")
-        {
-            nutrientDetails.Add(formattedInfo);
-        }
-    }
-
-    return nutrientDetails;
+    return input.All(char.IsDigit) && (input.Length >= 8 && input.Length <= 13);
 }
+
+
 
     public IActionResult Community()
     {
@@ -141,6 +150,8 @@ private List<string> GetNutrientDetails(Dictionary<string, string> nutrientLevel
     {
         return View();
     }
+
+    
     public IActionResult Ca2()
     {
         List<Patologias> patologias = Patologias.ObtenerTodas();
