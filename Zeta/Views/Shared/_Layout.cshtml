@@ -14,7 +14,7 @@
 @if (!(ViewData["HideHeader"] as bool? ?? false))
 {
     <header>
-        <div class="logo">
+        <div class="logo" onclick="window.location.href='/Home/'" style="cursor: pointer;">
             <img src="/img/Logo_Zeta_Header.svg" alt="ZETA Logo">
         </div>
         <nav class="nav-links">
