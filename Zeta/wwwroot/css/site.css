@@ -152,6 +152,27 @@ button {
   align-items: center;
 }
 
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.back-button img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.back-button img:hover {
+  transform: scale(1.1);
+}
+
+
 /* ------------------ HEADER ------------------ */
 
 header {
@@ -576,6 +597,11 @@ header {
   border-radius: 4px;
 }
 
+.button-card:hover {
+  color: var(--whiteback-color);
+  transform: scale(1.01);
+}
+
 
 /* ------------------ PUBLICIDAD DEL BLOG ------------------ */
 
@@ -583,6 +609,10 @@ header {
   padding-top: 1rem;
   padding-bottom: 0;
   justify-content: space-between;
+  min-width: 398px !important;
+  height: 500px !important;
+  text-align: justify;
+  align-items: start;
 }
 
 .card-advertisement-blog .arriba-card-blog {
@@ -600,11 +630,6 @@ header {
 .contenedor-imagen-card-blog img {
   width: 100%;
   border-radius: 17px;  
-}
-
-.card-advertisement-blog {
-  text-align: justify;
-  align-items: start;
 }
 
 .fecha-card-blog, .titulo-card-blog, .descripcion-card-blog {
