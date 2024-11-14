@@ -62,16 +62,14 @@ else if (productData != null && productData.HasValues)
 
     @* Nutrition Evaluation Section *@
     <div class="nutrition-evaluation">
-        <h2>Evaluación Nutricional</h2>
-
-        <h3>Aspectos Positivos</h3>
+        <h2>Positivas</h2>
 
 @if (productData["nutrient_levels"]?["fat"]?.ToString() == "low")
 {
     <div class="nutrition-item positive">
         <img src="/img/icon_fat.svg" class="nutrition-icon" alt="Bajo en grasas" />
         <div class="nutrition-description">
-            <h4>Bajo en Grasas</h4>
+            <h3>Bajo en Grasas</h3>
             <p>Ideal para una dieta equilibrada en grasas.</p>
         </div>
         <span>@(productData["nutriments"]?["fat_100g"] ?? "No disponible") g cada 100 g</span>
@@ -84,7 +82,7 @@ else if (productData != null && productData.HasValues)
     <div class="nutrition-item positive">
         <img src="/img/icon_saturated_fat.svg" class="nutrition-icon" alt="Bajo en grasas saturadas" />
         <div class="nutrition-description">
-            <h4>Bajo en Grasas Saturadas</h4>
+            <h3>Bajo en Grasas Saturadas</h3>
             <p>Contribuye a mantener niveles saludables de colesterol.</p>
         </div>
         <span>@(productData["nutriments"]?["saturated-fat_100g"] ?? "No disponible") g cada 100 g</span>
@@ -97,7 +95,7 @@ else if (productData != null && productData.HasValues)
     <div class="nutrition-item positive">
         <img src="/img/icon_sugar.svg" class="nutrition-icon" alt="Bajo en azúcares" />
         <div class="nutrition-description">
-            <h4>Bajo en Azúcares</h4>
+            <h3>Bajo en Azúcares</h3>
             <p>Ideal para mantener un consumo controlado de azúcar.</p>
         </div>
         <span>@(productData["nutriments"]?["sugars_100g"] ?? "No disponible") g cada 100 g</span>
@@ -110,7 +108,7 @@ else if (productData != null && productData.HasValues)
     <div class="nutrition-item positive">
         <img src="/img/icon_salt.svg" class="nutrition-icon" alt="Bajo en sodio" />
         <div class="nutrition-description">
-            <h4>Bajo en Sodio</h4>
+            <h3>Bajo en Sodio</h3>
             <p>Ayuda a controlar la presión arterial.</p>
         </div>
         <span>@(productData["nutriments"]?["salt_100g"] ?? "No disponible") g cada 100 g</span>
@@ -118,14 +116,69 @@ else if (productData != null && productData.HasValues)
     </div>
 }
 
-<h3>Aspectos Negativos</h3>
+<h2>Moderados</h2>
+
+@if (productData["nutrient_levels"]?["fat"]?.ToString() == "moderate")
+{
+    <div class="nutrition-item moderate">
+        <img src="/img/icon_fat.svg" class="nutrition-icon" alt="Grasas moderadas" />
+        <div class="nutrition-description">
+            <h3>Grasas Moderadas</h3>
+            <p>Apropiado si se consume con moderación.</p>
+        </div>
+        <span>@(productData["nutriments"]?["fat_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_less.svg" class="tick-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["saturated-fat"]?.ToString() == "moderate")
+{
+    <div class="nutrition-item moderate">
+        <img src="/img/icon_saturated_fat.svg" class="nutrition-icon" alt="Grasas saturadas moderadas" />
+        <div class="nutrition-description">
+            <h3>Grasas Saturadas Moderadas</h3>
+            <p>Consumir con precaución para evitar excesos.</p>
+        </div>
+        <span>@(productData["nutriments"]?["saturated-fat_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_less.svg" class="tick-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["sugars"]?.ToString() == "moderate")
+{
+    <div class="nutrition-item moderate">
+        <img src="/img/icon_sugar.svg" class="nutrition-icon" alt="Azúcares moderados" />
+        <div class="nutrition-description">
+            <h3>Azúcares Moderados</h3>
+            <p>Es importante limitar el consumo adicional de azúcar.</p>
+        </div>
+        <span>@(productData["nutriments"]?["sugars_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_less.svg" class="tick-icon" />
+    </div>
+}
+
+@if (productData["nutrient_levels"]?["salt"]?.ToString() == "moderate")
+{
+    <div class="nutrition-item moderate">
+        <img src="/img/icon_salt.svg" class="nutrition-icon" alt="Sodio moderado" />
+        <div class="nutrition-description">
+            <h3>Sodio Moderado</h3>
+            <p>Consumir en cantidades limitadas para evitar problemas de salud.</p>
+        </div>
+        <span>@(productData["nutriments"]?["salt_100g"] ?? "No disponible") g cada 100 g</span>
+        <img src="/img/icon_less.svg" class="tick-icon" />
+    </div>
+}
+
+
+<h2>Negativas</h2>
 
 @if (productData["nutrient_levels"]?["sugars"]?.ToString() == "high")
 {
     <div class="nutrition-item negative">
         <img src="/img/icon_sugar.svg" class="nutrition-icon" alt="Alto en azúcares" />
         <div class="nutrition-description">
-            <h4>Alto en Azúcares</h4>
+            <h3>Alto en Azúcares</h3>
             <p>Contribuye al aumento de calorías y puede afectar la salud dental.</p>
         </div>
         <span>@(productData["nutriments"]?["sugars_100g"] ?? "No disponible") g cada 100 g</span>
@@ -138,7 +191,7 @@ else if (productData != null && productData.HasValues)
     <div class="nutrition-item negative">
         <img src="/img/icon_saturated_fat.svg" class="nutrition-icon" alt="Alto en grasas saturadas" />
         <div class="nutrition-description">
-            <h4>Alto en Grasas Saturadas</h4>
+            <h3>Alto en Grasas Saturadas</h3>
             <p>Puede aumentar los niveles de colesterol si se consume en exceso.</p>
         </div>
         <span>@(productData["nutriments"]?["saturated-fat_100g"] ?? "No disponible") g cada 100 g</span>
@@ -151,7 +204,7 @@ else if (productData != null && productData.HasValues)
     <div class="nutrition-item negative">
         <img src="/img/icon_salt.svg" class="nutrition-icon" alt="Alto en sodio" />
         <div class="nutrition-description">
-            <h4>Alto en Sodio</h4>
+            <h3>Alto en Sodio</h3>
             <p>Contribuye a problemas de presión arterial alta si se consume en exceso.</p>
         </div>
         <span>@(productData["nutriments"]?["salt_100g"] ?? "No disponible") g cada 100 g</span>
@@ -164,7 +217,7 @@ else if (productData != null && productData.HasValues)
     <div class="nutrition-item negative">
         <img src="/img/icon_ultraprocessed.svg" class="nutrition-icon" alt="Producto ultra procesado" />
         <div class="nutrition-description">
-            <h4>Ultra Procesado</h4>
+            <h3>Ultra Procesado</h3>
             <p>Clasificado en el grupo NOVA 4, indicando alto procesamiento.</p>
         </div>
          <img src="/img/icon_close.svg" class="close-icon" />
