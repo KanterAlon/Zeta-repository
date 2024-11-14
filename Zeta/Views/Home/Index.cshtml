@@ -2,50 +2,54 @@
     ViewData["Title"] = "Home Page";
 }
 
-<section class="page">
+    <section class="page">
 
-    <div class="inner">
-        
-        <div class="evaluation-content">
+        <div class="inner">
+                
+            <div class="evaluation-content">
+                <h1>EVALUÁ TU PRODUCTO</h1>
+                <h3>Acá encontrarás toda la información nutricional 100% simplificada</h3>
 
-            <h1>EVALUÁ TU PRODUCTO</h1>
+                <div class="search-bar">
+                    <form action="/home/product" method="get">
+                        <button type="submit" class="search-button">
+                            <img src="/img/icon_search.svg" alt="Search Icon" width="20" height="20">
+                        </button>
+                        <input type="text" id="search-input" name="query" placeholder="Ej: Fideos Matarazzo" class="search-input" autocomplete="off">
+                    </form>
 
-            <h3>Acá encontrarás toda la información nutricional 100% simplificada</h3>
-
-            <div class="search-bar">
-                <form action="/home/product" method="get">
-                    <button type="submit" class="search-button">
-                        <img src="/img/icon_search.svg" alt="Search Icon" width="20" height="20">
-                    </button>
-                    <input type="text" name="query" placeholder="Ej: Fideos Matarazzo" class="search-input">
-                </form>
+                    <div id="autocomplete-results" class="autocomplete-results">
+                        <div id="loader" class="loader">
+                            <img src="/img/loader.gif" alt="Cargando...">
+                        </div>
+                    </div>
+                </div>
             </div>
 
-        </div>
 
-        <div class="info-buttons">
+            <div class="info-buttons">
 
-            <div class="info-button">
-                <img src="/img/icon_food.svg" alt="Icono Comida">
-                <span>Ingresás que querés comer</span>
+                <div class="info-button">
+                    <img src="/img/icon_food.svg" alt="Icono Comida">
+                    <span>Ingresás que querés comer</span>
+                </div>
+                
+                <div class="info-button">
+                    <img src="/img/icon_order-completed.svg" alt="Icono Order Completed">
+                    <span>Obtenés feedback nutricional rápido</span>
+                </div>
+
+                <div class="info-button">
+                    <img src="/img/icon_healthy-eating.svg" alt="Icono Información">
+                    <span>Te informás íntegramente con facilidad</span>
+                </div>
+
+                <div class="info-button">
+                    <img src="/img/icon_scales.svg" alt="Icono Decisión">
+                    <span>Te ayudamos a tomar una decisión</span>
+                </div>
+
             </div>
-            
-            <div class="info-button">
-                <img src="/img/icon_order-completed.svg" alt="Icono Order Completed">
-                <span>Obtenés feedback nutricional rápido</span>
-            </div>
-
-            <div class="info-button">
-                <img src="/img/icon_healthy-eating.svg" alt="Icono Información">
-                <span>Te informás íntegramente con facilidad</span>
-            </div>
-
-            <div class="info-button">
-                <img src="/img/icon_scales.svg" alt="Icono Decisión">
-                <span>Te ayudamos a tomar una decisión</span>
-            </div>
-
-        </div>
 
     </div>
 
@@ -189,3 +193,91 @@
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const autocompleteResults = document.getElementById('autocomplete-results');
+    const loader = document.getElementById('loader');
+    let timeoutId = null;
+
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.trim();
+        clearTimeout(timeoutId);
+
+        if (query.length > 0) {
+            autocompleteResults.style.display = 'block'; // Mostrar el contenedor
+            loader.style.display = 'flex'; // Mostrar el loader
+
+            // Limpiar resultados previos sin borrar el loader
+            Array.from(autocompleteResults.children).forEach(child => {
+                if (!child.classList.contains('loader')) {
+                    child.remove();
+                }
+            });
+
+            timeoutId = setTimeout(() => {
+                fetchSuggestions(query);
+            }, 500);
+        } else {
+            autocompleteResults.style.display = 'none'; // Ocultar el contenedor si no hay input
+        }
+    });
+
+    autocompleteResults.addEventListener('click', (event) => {
+        const selectedItem = event.target.closest('.autocomplete-item');
+        if (selectedItem) {
+            const selectedProduct = selectedItem.dataset.productName;
+            searchInput.value = selectedProduct;
+
+            // Redirigir directamente a la página de resultados
+            window.location.href = `/home/product?query=${encodeURIComponent(selectedProduct)}`;
+        }
+    });
+
+    function fetchSuggestions(query) {
+        fetch(`/home/SearchProducts?query=${encodeURIComponent(query)}`)
+            .then(response => response.json())
+            .then(data => {
+                // Limpiar resultados previos
+                Array.from(autocompleteResults.children).forEach(child => {
+                    if (!child.classList.contains('loader')) {
+                        child.remove();
+                    }
+                });
+
+                if (data.success && data.products.length > 0) {
+                    loader.style.display = 'none'; // Ocultar el loader
+
+                    data.products.forEach(product => {
+                        const item = document.createElement('div');
+                        item.classList.add('autocomplete-item');
+                        item.dataset.productName = product.name;
+
+                        item.innerHTML = `
+                            <img src="${product.image}" alt="${product.name}" style="width:30px; height:30px; margin-right:10px;">
+                            <span>${product.name}</span>
+                        `;
+                        autocompleteResults.appendChild(item);
+                    });
+                } else {
+                    loader.style.display = 'none'; // Ocultar el loader si no hay resultados
+                    const noResults = document.createElement('div');
+                    noResults.classList.add('autocomplete-item');
+                    noResults.textContent = 'No se encontraron resultados.';
+                    autocompleteResults.appendChild(noResults);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching suggestions:', error);
+                loader.style.display = 'none'; // Ocultar el loader si ocurre un error
+                const errorItem = document.createElement('div');
+                errorItem.classList.add('autocomplete-item');
+                errorItem.textContent = 'Error al cargar resultados.';
+                autocompleteResults.appendChild(errorItem);
+            });
+    }
+});
+
+
+</script>
