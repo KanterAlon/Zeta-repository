@@ -28,7 +28,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public async Task<IActionResult> Product(string query)
+   public async Task<IActionResult> Product(string query)
 {
     if (string.IsNullOrWhiteSpace(query))
     {
@@ -61,13 +61,13 @@ public class HomeController : Controller
         }
 
         var product = productData["product"];
-        var nutrientLevels = product?["nutrient_levels"]?.ToObject<Dictionary<string, string>>();
-        var nutrients = product?["nutriments"];
+
+        // Fetch and process ingredients
+        var ingredients = product?["ingredients"]?.ToObject<List<JObject>>();
 
         ViewBag.ProductData = product;
         ViewBag.ProductName = product?["product_name"]?.ToString() ?? "Producto sin nombre";
-        ViewBag.PositivePoints = GetNutrientDetails(nutrientLevels, nutrients, true);
-        ViewBag.NegativePoints = GetNutrientDetails(nutrientLevels, nutrients, false);
+        ViewBag.Ingredients = ingredients ?? new List<JObject>(); // Default empty if no ingredients
     }
     catch (Exception ex)
     {
@@ -76,6 +76,7 @@ public class HomeController : Controller
     }
 
     ViewBag.ProductQuery = query;
+
     return View();
 }
 
@@ -141,6 +142,8 @@ private List<string> GetNutrientDetails(Dictionary<string, string> nutrientLevel
     {
         return View();
     }
+
+    
     public IActionResult Ca2()
     {
         List<Patologias> patologias = Patologias.ObtenerTodas();

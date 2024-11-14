@@ -17,6 +17,17 @@ public class BD
         }
     }
 
+    public void AgregarActividadUsuario(int userId, int actividadId, int horas)
+{
+    using (var connection = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            INSERT INTO UsuarioActividades (id_usuario, id_actividad, horas)
+            VALUES (@UserId, @ActividadId, @Horas)";
+        connection.Execute(query, new { UserId = userId, ActividadId = actividadId, Horas = horas });
+    }
+}
+
     public Usuario? ValidarUsuario(string email, string password)
     {
         using (var connection = new SqlConnection(_connectionString))
@@ -32,6 +43,20 @@ public class BD
             return connection.QuerySingleOrDefault<Usuario>(query, new { Email = email, Password = password });
         }
     }
+
+
+    public int CrearUsuario(Usuario usuario)
+{
+    using (var connection = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            INSERT INTO Usuarios (nombre, email, password, fecha_registro, edad, sexo, peso, altura)
+            OUTPUT INSERTED.id_usuario
+            VALUES (@Nombre, @Email, @Password, @FechaRegistro, @Edad, @Sexo, @Peso, @Altura)";
+
+        return connection.QuerySingle<int>(query, usuario);
+    }
+}
 
     public static List<Patologias> ObtenerPatologias()
     {
