@@ -1,6 +1,7 @@
 # Zeta-repository
 
 DOC API OPEN FOOD FACTS: https://openfoodfacts.github.io/openfoodfacts-server/api/ref-v2/#get-/api/v2/search
+LANDING:https://www.behance.net/gallery/212045829/Real-Estate-Property-Search-Web-Design-UIUX?tracking_source=search_projects|landing+page+search&l=12
 
 1. Crear la pantalla de Home (No Logueado)
 Descripción: Desarrollar la pantalla principal de la plataforma Zeta para usuarios no logueados. Esta pantalla debe incluir una barra de búsqueda en la parte superior donde los usuarios puedan evaluar productos. Debajo, se debe mostrar una sección de productos destacados y su información nutricional, seguidos de una serie de tarjetas con funcionalidades adicionales de la plataforma, como el comparador de alimentos y bebidas, interacción con la comunidad y otros recursos educativos. También debe haber una sección deslizable con las últimas noticias del blog sobre alimentación y salud. Finalmente, en la parte inferior de la página, se debe incluir un botón de contacto para que los usuarios puedan enviar sus dudas o comentarios.
