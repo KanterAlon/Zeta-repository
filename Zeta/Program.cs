@@ -14,15 +14,29 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Configurar middleware de sesión
-app.UseSession();
+// Configuración de entorno
+if (app.Environment.IsDevelopment())
+{
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
 
-// Otros middlewares
+// Middleware de la aplicación
+app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
+
+app.UseSession(); // Habilitar middleware de sesión
 app.UseAuthorization();
 
-app.MapDefaultControllerRoute();
+// Configuración de rutas
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-

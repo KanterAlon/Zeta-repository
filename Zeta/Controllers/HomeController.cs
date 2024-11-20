@@ -167,27 +167,36 @@ public async Task<IActionResult> SearchProducts(string query)
         return View(posts);
     }
 
-    [HttpGet]
-    public IActionResult Login()
+   [HttpGet]
+public IActionResult Login()
+{
+    return View();
+}
+
+[HttpPost]
+public IActionResult Login(string email, string password)
+{
+    var usuario = Usuario.Validar(email, password);
+
+    if (usuario != null)
     {
-        return View();
+        // Guardar datos del usuario en la sesión
+        HttpContext.Session.SetString("Usuario", usuario.email); 
+        HttpContext.Session.SetString("Autenticado", "true"); // Marca de autenticación
+        return RedirectToAction("Index", "Home");
     }
 
-    [HttpPost]
-    public IActionResult Login(string email, string password)
-    {
-        var usuario = Usuario.Validar(email, password);
+    ViewBag.Error = "Credenciales incorrectas.";
+    return View("Login");
+}
 
-        if (usuario != null)
-        {
-            // Guardar datos del usuario en la sesión
-            HttpContext.Session.SetString("Usuario", usuario.nombre); 
-            return RedirectToAction("Index", "Home");
-        }
+public IActionResult Logout()
+{
+    HttpContext.Session.Remove("Usuario");
+    HttpContext.Session.Remove("Autenticado");
+    return RedirectToAction("Login", "Home");
+}
 
-        ViewBag.Error = "Credenciales incorrectas.";
-        return View("Login");
-    }
 
     public IActionResult Ca1()
     {
