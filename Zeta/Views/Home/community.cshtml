@@ -18,9 +18,9 @@
                         </span>
 
                         <div class="community-card-footer">
-                            <button onclick="darLike(@post.Id)" class="like-button">
-                                <img src="/img/icon_like.svg" class="img-like">
-                                <img src="/img/icon_like-fill.svg" class="img-like-fill" style="display: none;">
+                            <button class="like-button" onclick="darLike(@post.Id)">
+                                <img id="like-icon-@post.Id" src="/img/icon_like.svg" class="img-like">
+                                <img id="like-icon-fill-@post.Id" src="/img/icon_like-fill.svg" class="img-like-fill" style="display: none;">
                                 <span id="likes-count-@post.Id">@post.Likes</span>
                             </button>
 
@@ -47,92 +47,96 @@
     </div>
 </section>
 
-        <button class="button-add-post" onclick="openPopup()">
-            <img src="/img/icon_button_add.svg">
-        </button>
+<button class="button-add-post" onclick="openPopup()">
+    <img src="/img/icon_button_add.svg">
+</button>
 
-        <div id="postPopup" class="popup-container" style="display: none;">
-            <div class="popup-content">
-                <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
+<div id="postPopup" class="popup-container" style="display: none;">
+    <div class="popup-content">
+        <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
 
-                <div class="top-pop-up-add-post">
-                    <img src="/img/icon_user.svg">
+        <div class="top-pop-up-add-post">
+            <img src="/img/icon_user.svg">
 
-                    <textarea id="postInput" name="comments" placeholder="¿Qué quieres decir?"></textarea>
+            <textarea id="postInput" name="comments" placeholder="¿Qué quieres decir?"></textarea>
 
-                    <button class="button-select-img">
-                        <img src="/img/icon_img.svg">
-                    </button>
-                </div>
-
-                <button class="publish-btn">Publicar</button>
-            </div>
+            <button class="button-select-img">
+                <img src="/img/icon_img.svg">
+            </button>
         </div>
 
-        <!-- Popup para comentarios -->
-        <div id="commentsPopup" class="popup-container" style="display: none;">
-            <div class="popup-comments-content">
-                <img src="/img/icon_close.svg" class="close-btn" onclick="closeCommentsPopup()">
-                <h2>Comentarios</h2>
-                <div id="commentsList">
-                    <!-- Aquí irán los comentarios -->
-                    <div class="comment-item">
-                        <p><strong>Usuario1:</strong> Este es un comentario ejemplo.</p>
-                        <button class="reply-btn" onclick="replyToComment()">Responder</button>
-                    </div>
-                    <div class="comment-item">
-                        <p><strong>Usuario2:</strong> Otro comentario más aquí.</p>
-                        <button class="reply-btn" onclick="replyToComment()">Responder</button>
-                    </div>
-                </div>
-                <textarea id="newCommentInput" placeholder="Añadir un comentario..."></textarea>
-                <button class="publish-comment-btn" onclick="publishComment()">Publicar comentario</button>
-            </div>
-        </div>
-
-        <!-- Popup para compartir -->
-        <div id="sharePopup" class="popup-container" style="display: none;">
-            <div class="popup-share-content">
-                <img src="/img/icon_close.svg" class="close-btn" onclick="closeSharePopup()">
-                <h2>¡Comparte este post!</h2>
-                <div class="share-options">
-                    <a href="#" id="whatsappShare" target="_blank">
-                        <img src="/img/icon_whatsapp.svg" alt="WhatsApp">
-                    </a>
-                    <a href="#" id="smsShare" target="_blank">
-                        <img src="/img/icon_sms.svg" alt="SMS">
-                    </a>
-                    <a href="#" id="mailShare" target="_blank">
-                        <img src="/img/icon_mail.svg" alt="Email">
-                    </a>
-                </div>
-            </div>
-        </div>
-
+        <button class="publish-btn">Publicar</button>
     </div>
-</section>
+</div>
+
+<!-- Popup para comentarios -->
+<div id="commentsPopup" class="popup-container" style="display: none;">
+    <div class="popup-comments-content">
+        <img src="/img/icon_close.svg" class="close-btn" onclick="closeCommentsPopup()">
+        <h2>Comentarios</h2>
+        <div id="commentsList">
+            <!-- Aquí irán los comentarios -->
+            <div class="comment-item">
+                <p><strong>Usuario1:</strong> Este es un comentario ejemplo.</p>
+                <button class="reply-btn" onclick="replyToComment()">Responder</button>
+            </div>
+            <div class="comment-item">
+                <p><strong>Usuario2:</strong> Otro comentario más aquí.</p>
+                <button class="reply-btn" onclick="replyToComment()">Responder</button>
+            </div>
+        </div>
+        <textarea id="newCommentInput" placeholder="Añadir un comentario..."></textarea>
+        <button class="publish-comment-btn" onclick="publishComment()">Publicar comentario</button>
+    </div>
+</div>
+
+<!-- Popup para compartir -->
+<div id="sharePopup" class="popup-container" style="display: none;">
+    <div class="popup-share-content">
+        <img src="/img/icon_close.svg" class="close-btn" onclick="closeSharePopup()">
+        <h2>¡Comparte este post!</h2>
+        <div class="share-options">
+            <a href="#" id="whatsappShare" target="_blank">
+                <img src="/img/icon_whatsapp.svg" alt="WhatsApp">
+            </a>
+            <a href="#" id="smsShare" target="_blank">
+                <img src="/img/icon_sms.svg" alt="SMS">
+            </a>
+            <a href="#" id="mailShare" target="_blank">
+                <img src="/img/icon_mail.svg" alt="Email">
+            </a>
+        </div>
+    </div>
+</div>
 
 <script>
-    function darLike(idPost) {
-        fetch('@Url.Action("DarLike", "Home")', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
-            },
-            body: JSON.stringify({ idPost: idPost })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                let likesCount = document.getElementById('likes-count-' + idPost);
-                likesCount.innerText = parseInt(likesCount.innerText) + 1;
-            } else {
-                alert('Error al dar like.');
-            }
-        })
-        .catch(() => {
-            alert('Error al comunicarse con el servidor.');
-        });
-    }
+  function darLike(idPost) {
+      fetch(`/Home/DarLike`, { // URL actualizada para llamar al método correspondiente
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ idPost })
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              const likesCount = document.getElementById(`likes-count-${idPost}`);
+              likesCount.innerText = parseInt(likesCount.innerText) + 1;
+
+              // Cambiar el ícono de like
+              const imgLike = document.getElementById(`like-icon-${idPost}`);
+              const imgLikeFill = document.getElementById(`like-icon-fill-${idPost}`);
+              if (imgLike && imgLikeFill) {
+                  imgLike.style.display = 'none';
+                  imgLikeFill.style.display = 'inline';
+              }
+          } else if (data.redirect) {
+              window.location.href = data.redirect;
+          } else {
+              alert('Error al dar like.');
+          }
+      })
+      .catch(() => alert('Error al comunicarse con el servidor.'));
+  }
 </script>

@@ -168,49 +168,43 @@ public async Task<IActionResult> SearchProducts(string query)
 
         return View();
     }
-
-
 [HttpPost]
-public JsonResult DarLike(int idPost)
+public IActionResult DarLike(int idPost)
 {
     try
     {
-        int idUsuario = ObtenerIdUsuario(); // Asumiendo que ya tienes una forma de obtener el id del usuario logueado
+        // Verificar si el usuario está autenticado
+        int idUsuario = ObtenerIdUsuario();
+
+        // Registrar el "Me gusta"
         Posts.DarLike(idPost, idUsuario);
 
-        // Actualiza el número de likes en el ViewBag
-        var posts = BD.ObtenerPostsOrdenadosPorFecha();
-        ViewBag.Posts = posts;
-
-        return Json(new { success = true });
+        return Ok(new { success = true });
+    }
+    catch (UnauthorizedAccessException)
+    {
+        return Redirect("/login.chs");
     }
     catch (Exception ex)
     {
-        return Json(new { success = false, error = ex.Message });
+        return BadRequest(new { success = false, error = ex.Message });
     }
 }
 
-    private int ObtenerIdUsuario()
+private int ObtenerIdUsuario()
 {
     // Obtener el email del usuario desde la sesión
     var email = HttpContext.Session.GetString("Usuario");
-
     if (string.IsNullOrEmpty(email))
-    {
-        throw new UnauthorizedAccessException("Usuario no autenticado.");
-    }
+        throw new UnauthorizedAccessException();
 
-    // Llamar a la función de BD para obtener el id_usuario basado en el email
+    // Obtener el ID del usuario desde la base de datos
     var idUsuario = BD.ObtenerIdUsuarioPorEmail(email);
-
     if (idUsuario == 0)
-    {
-        throw new Exception("Usuario no encontrado en la base de datos.");
-    }
+        throw new Exception("Usuario no encontrado.");
 
     return idUsuario;
 }
-
 
 
    [HttpGet]
