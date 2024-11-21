@@ -18,7 +18,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        var lastThreePosts = PostRepository.CargarUltimosTresPosts(); // Obtener últimos 3 posts
+        var lastThreePosts = Posts.CargarUltimosTresPosts(); // Obtener últimos 3 posts
         ViewData["LastThreePosts"] = lastThreePosts; // Enviar a la vista
         return View();
     }
@@ -158,14 +158,60 @@ public async Task<IActionResult> SearchProducts(string query)
         return input.All(char.IsDigit) && (input.Length >= 8 && input.Length <= 13);
     }
 
-    public IActionResult Community()
+     public IActionResult Community()
     {
         // Cargar la lista de posts desde el repositorio
-        List<Post> posts = PostRepository.CargarPosts();
+        List<Posts> posts = Posts.CargarPosts();
 
-        // Pasar la lista de posts a la vista
-        return View(posts);
+        // Pasar la lista de posts a ViewBag
+        ViewBag.Posts = posts;
+
+        return View();
     }
+
+
+[HttpPost]
+public JsonResult DarLike(int idPost)
+{
+    try
+    {
+        int idUsuario = ObtenerIdUsuario(); // Asumiendo que ya tienes una forma de obtener el id del usuario logueado
+        Posts.DarLike(idPost, idUsuario);
+
+        // Actualiza el número de likes en el ViewBag
+        var posts = BD.ObtenerPostsOrdenadosPorFecha();
+        ViewBag.Posts = posts;
+
+        return Json(new { success = true });
+    }
+    catch (Exception ex)
+    {
+        return Json(new { success = false, error = ex.Message });
+    }
+}
+
+    private int ObtenerIdUsuario()
+{
+    // Obtener el email del usuario desde la sesión
+    var email = HttpContext.Session.GetString("Usuario");
+
+    if (string.IsNullOrEmpty(email))
+    {
+        throw new UnauthorizedAccessException("Usuario no autenticado.");
+    }
+
+    // Llamar a la función de BD para obtener el id_usuario basado en el email
+    var idUsuario = BD.ObtenerIdUsuarioPorEmail(email);
+
+    if (idUsuario == 0)
+    {
+        throw new Exception("Usuario no encontrado en la base de datos.");
+    }
+
+    return idUsuario;
+}
+
+
 
    [HttpGet]
 public IActionResult Login()
@@ -179,7 +225,7 @@ public IActionResult Login(string email, string password)
     var usuario = Usuario.Validar(email, password);
 
     if (usuario != null)
-    {
+    {  
         // Guardar datos del usuario en la sesión
         HttpContext.Session.SetString("Usuario", usuario.email); 
         HttpContext.Session.SetString("Autenticado", "true"); // Marca de autenticación
