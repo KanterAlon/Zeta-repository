@@ -4,16 +4,36 @@ using System.Data.SqlClient;
 using Dapper;
 using System.Linq;
 
+
 public class BD
 {
     // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275";
     private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True";
 
-    public static List<Post> ObtenerPostsOrdenadosPorFecha()
+    public static List<Posts> ObtenerPostsOrdenadosPorFecha()
+    {
+       using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            // Modificación de la consulta para hacer el JOIN con la tabla Usuarios y obtener los likes y dislikes
+            string sql = @"SELECT p.id_post, p.titulo_post, p.contenido_post, p.fecha_creacion, p.imagen_url, u.nombre AS autor,
+                                  (SELECT COUNT(*) FROM Interacciones i WHERE i.id_post = p.id_post AND i.tipo_interaccion = 1) AS likes,
+                                  (SELECT COUNT(*) FROM Interacciones i WHERE i.id_post = p.id_post AND i.tipo_interaccion = 2) AS dislikes
+                           FROM Posts p
+                           INNER JOIN Usuarios u ON p.id_usuario = u.id_usuario
+                           ORDER BY p.fecha_creacion DESC";
+
+            return db.Query<Posts>(sql).ToList();
+        }
+    }
+
+     public static void InsertarLike(int idPost, int idUsuario)
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            return db.Query<Post>("SELECT * FROM Posts ORDER BY fecha_creacion DESC").ToList();
+            string sql = @"INSERT INTO Interacciones (id_post, id_usuario, tipo_interaccion)
+                           VALUES (@IdPost, @IdUsuario, 1)";
+
+            db.Execute(sql, new { IdPost = idPost, IdUsuario = idUsuario });
         }
     }
 
@@ -67,12 +87,12 @@ public class BD
         }
     }
 
-    public static List<Post> ObtenerUltimosTresPosts()
+    public static List<Posts> ObtenerUltimosTresPosts()
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
             // Devuelve solo los 3 posts más recientes
-            return db.Query<Post>("SELECT TOP 3 * FROM Posts ORDER BY fecha_creacion DESC").ToList();
+            return db.Query<Posts>("SELECT TOP 3 * FROM Posts ORDER BY fecha_creacion DESC").ToList();
         }
     }
 
@@ -83,6 +103,22 @@ public class BD
         {
             string query = "SELECT id_actividad AS IdActividad, nombre_actividad AS NombreActividad FROM Actividades";
             return db.Query<Actividades>(query).ToList();
+        }
+    }
+
+   public static int ObtenerIdUsuarioPorEmail(string email)
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            db.Open();
+
+            // Consulta SQL para obtener el id_usuario usando el email
+            var query = "SELECT id_usuario FROM Usuarios WHERE email = @Email";
+
+            // Ejecutar la consulta y obtener el resultado
+            var idUsuario = db.QuerySingleOrDefault<int>(query, new { Email = email });
+
+            return idUsuario;
         }
     }
 }

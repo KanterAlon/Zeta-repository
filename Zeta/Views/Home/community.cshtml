@@ -1,35 +1,33 @@
-@model List<Post>
-
 <section class="community-section">
     <div class="inner-community">
         <h1 class="community-title">Comunidad</h1>
         <div class="community-cards-container">
 
-            @foreach (var post in Model)
+            @foreach (var post in ViewBag.Posts as List<Posts>)
             {
                 <div class="community-card">
-                    <img src="@post.imagen_url" alt="Imagen del post" class="community-card-image">
+                    <img src="@post.ImagenUrl" alt="Imagen del post" class="community-card-image">
 
                     <div class="bottom-community-card">
                         <p class="community-card-text">
-                            @post.contenido_post
+                            @post.Contenido
                         </p>
 
                         <span class="community-time-posted">
-                            @post.fecha_creacion.ToShortDateString() por @post.autor
+                            @post.FechaCreacion.ToShortDateString() por @post.Autor
                         </span>
 
                         <div class="community-card-footer">
-                            <button onclick="toggleReaction(this, 'like')">
+                            <button onclick="darLike(@post.Id)" class="like-button">
                                 <img src="/img/icon_like.svg" class="img-like">
                                 <img src="/img/icon_like-fill.svg" class="img-like-fill" style="display: none;">
-                                <span>214</span>
+                                <span id="likes-count-@post.Id">@post.Likes</span>
                             </button>
 
                             <button onclick="toggleReaction(this, 'dislike')">
                                 <img src="/img/icon_dislike.svg" class="img-dislike">
                                 <img src="/img/icon_dislike-fill.svg" class="img-dislike-fill" style="display: none;">
-                                <span>214</span>
+                                @post.Dislikes
                             </button>
 
                             <button class="button-comments" onclick="openCommentsPopup(this)">
@@ -46,6 +44,8 @@
             }
 
         </div>
+    </div>
+</section>
 
         <button class="button-add-post" onclick="openPopup()">
             <img src="/img/icon_button_add.svg">
@@ -111,3 +111,28 @@
 
     </div>
 </section>
+
+<script>
+    function darLike(idPost) {
+        fetch('@Url.Action("DarLike", "Home")', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+            },
+            body: JSON.stringify({ idPost: idPost })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                let likesCount = document.getElementById('likes-count-' + idPost);
+                likesCount.innerText = parseInt(likesCount.innerText) + 1;
+            } else {
+                alert('Error al dar like.');
+            }
+        })
+        .catch(() => {
+            alert('Error al comunicarse con el servidor.');
+        });
+    }
+</script>

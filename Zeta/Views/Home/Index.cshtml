@@ -161,17 +161,17 @@
         <div class="cards-container">
             @if (ViewData["LastThreePosts"] != null)
             {
-                var lastThreePosts = (List<Post>)ViewData["LastThreePosts"];
-                foreach (var post in lastThreePosts)
+                var lastThreePosts = (List<Posts>)ViewData["LastThreePosts"];
+                foreach (var Posts in lastThreePosts)
                 {
                     <div class="card-advertisement-blog">
                         <div class="arriba-card-blog">
-                            <p class="fecha-card-blog">@post.fecha_creacion.ToString("MMMM dd").ToUpper()</p>
-                            <h3 class="titulo-card-blog">@post.titulo_post</h3>
-                            <p class="descripcion-card-blog">@post.contenido_post</p>
+                            <p class="fecha-card-blog">@Posts.FechaCreacion.ToString("MMMM dd").ToUpper()</p>
+                            <h3 class="titulo-card-blog">@Posts.Titulo</h3>
+                            <p class="descripcion-card-blog">@Posts.Contenido</p>
                         </div>
                         <div class="contenedor-imagen-card-blog">
-                            <img src="@post.imagen_url" alt="Imagen del post">
+                            <img src="@Posts.ImagenUrl" alt="Imagen del post">
                         </div>
                     </div>
                 }
