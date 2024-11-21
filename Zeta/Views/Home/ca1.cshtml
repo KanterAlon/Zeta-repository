@@ -10,25 +10,28 @@
     </button>
 
     <div class="ca1-content">
+
         <div class="ca1-text">
             <h1 class="ca1-heading">Iniciar Sesión</h1>
             <h3 class="ca1-subheading">Ingresa tu email y contraseña</h3>
         </div>
-        <form method="POST" action="/Home/Ca1Step1">
-    <div class="ca1-inputs-grid">
-        <!-- Campo para el email -->
-        <div class="ca1-input-group">
-            <input type="email" name="email" placeholder="Correo Electrónico" required />
-        </div>
 
-        <!-- Campo para la contraseña -->
-        <div class="ca1-input-group">
-            <input type="password" name="password" placeholder="Contraseña" required />
-        </div>
-    </div>
-</form>
+        <form method="POST" action="/Home/Ca1Step1">
+            <div class="ca1-inputs-grid">
+                <!-- Campo para el email -->
+                <div class="ca1-input-group">
+                    <input type="email" name="email" placeholder="Correo Electrónico" required />
+                </div>
+
+                <!-- Campo para la contraseña -->
+                <div class="ca1-input-group">
+                    <input type="password" name="password" placeholder="Contraseña" required />
+                </div>
+            </div>
+        </form>
 
         <button type="submit" class="ca1-btn-next" onclick="window.location.href='/Home/ca2'">Iniciar Sesión</button>
+        
     </div>
 
 </section>

@@ -1550,6 +1550,7 @@ textarea:focus, input:focus {
   min-height: 600px;
   width: 95%;
   max-width: 1700px;
+  position: relative;
 }
 
 .ca1-inputs-grid {
@@ -1599,11 +1600,32 @@ textarea:focus, input:focus {
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  position: absolute;
+  left: 3rem;
+  bottom: 3rem;
 }
 
 .ca1-btn-next:hover {
   transform: translateY(-1px);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+#ca4-section .ca1-content {
+  justify-content: center; 
+  align-items: center;
+}
+
+#ca4-section .ca1-content .ca1-text {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#ca4-section .ca1-content .ca1-btn-next {
+  position: static;
 }
 
 /* ------------------ SIGNUP SECTION ------------------ */
