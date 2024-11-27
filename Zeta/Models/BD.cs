@@ -8,9 +8,9 @@ using System.Linq;
 public class BD
 {
     // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275"; juan
-    //private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True"; local
+    private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True"; //localhost
 
-    private static string _connectionString = @"Server=zetabd.c5g00cey2pne.us-east-1.rds.amazonaws.com,1433;Database=bdZeta;User Id=admin;Password=somoszeta;"; //aws
+    // private static string _connectionString = @"Server=zetabd.c5g00cey2pne.us-east-1.rds.amazonaws.com,1433;Database=bdZeta;User Id=admin;Password=somoszeta;"; //aws
     //agregar regla en aws para ejecutar en local y en la nube
     //https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#ModifyInboundSecurityGroupRules:securityGroupId=sg-00fb263b5ddd14fd6
     public static List<Posts> ObtenerPostsOrdenadosPorFecha()
@@ -33,12 +33,22 @@ public class BD
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            string sql = @"INSERT INTO Interacciones (id_post, id_usuario, tipo_interaccion)
-                           VALUES (@IdPost, @IdUsuario, 1)";
-
+            string sql = @"INSERT INTO Interacciones (id_post,id_usuario,tipo_interaccion,fecha_interaccion)
+               VALUES (@IdPost, @IdUsuario, 1, GETDATE())";
             db.Execute(sql, new { IdPost = idPost, IdUsuario = idUsuario });
         }
     }
+
+      public static void InsertarDislike(int idPost, int idUsuario)
+    {
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            string sql = @"INSERT INTO Interacciones (id_post,id_usuario,tipo_interaccion,fecha_interaccion)
+               VALUES (@IdPost, @IdUsuario, 2, GETDATE())";
+            db.Execute(sql, new { IdPost = idPost, IdUsuario = idUsuario });
+        }
+    }
+
 
     public void AgregarActividadUsuario(int userId, int actividadId, int horas)
 {

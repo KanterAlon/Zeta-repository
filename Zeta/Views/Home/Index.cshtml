@@ -166,12 +166,12 @@
                 {
                     <div class="card-advertisement-blog">
                         <div class="arriba-card-blog">
-                            <p class="fecha-card-blog">@Posts.FechaCreacion.ToString("MMMM dd").ToUpper()</p>
-                            <h3 class="titulo-card-blog">@Posts.Titulo</h3>
-                            <p class="descripcion-card-blog">@Posts.Contenido</p>
+                            <p class="fecha-card-blog">@Posts.fecha_creacion.ToString("MMMM dd").ToUpper()</p>
+                            <h3 class="titulo-card-blog">@Posts.titulo_post</h3>
+                            <p class="descripcion-card-blog">@Posts.contenido_post</p>
                         </div>
                         <div class="contenedor-imagen-card-blog">
-                            <img src="@Posts.ImagenUrl" alt="Imagen del post">
+                            <img src="@Posts.imagen_url" alt="Imagen del post">
                         </div>
                     </div>
                 }
@@ -189,7 +189,7 @@
         <div class="contact-content">
             <h1>¿Te quedó alguna inquietud?</h1>
             <h3>Escribinos que a la brevedad te contestamos.</h3>
-            <a href="#contact" class="contact-button"><h3>Ir a contacto</h3></a>
+            <a href="/home/contact" class="contact-button"><h3>Ir a contacto</h3></a>
         </div>
     </div>
 </section>
