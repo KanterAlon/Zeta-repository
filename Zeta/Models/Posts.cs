@@ -31,4 +31,11 @@ public class Posts // Cambiado el nombre de la clase
     {
         BD.InsertarLike(idPost, idUsuario);
     }
+
+    public static List<Posts> CargarPostsPorUsuario(int userId)
+    {
+        var BD = new BD(); // Instance of BD to interact with the database
+        return BD.ObtenerPostsPorUsuario(userId); // Calls the method to get all posts from a specific user
+    }
+
 }

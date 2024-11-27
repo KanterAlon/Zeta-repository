@@ -6,15 +6,15 @@ function closePopup() {
     document.querySelector(".popup-container").style.display = "none";
 }
 
-function openPopupArticuloBlog() {
-    document.querySelector(".pop-up-info-articulo").style.display = "flex";
-    document.querySelector(".sec-nutrition-lifestyle").style.display = "none";
-    document.querySelector(".page").style.display = "none";
-}
+// function openPopupArticuloBlog() {
+//     document.querySelector(".pop-up-info-articulo").style.display = "flex";
+//     document.querySelector(".sec-nutrition-lifestyle").style.display = "none";
+//     document.querySelector(".page").style.display = "none";
+// }
 
-function closePopupArticuloBlog() {
-    document.querySelector(".pop-up-info-articulo").style.display = "none";
-}
+// function closePopupArticuloBlog() {
+//     document.querySelector(".pop-up-info-articulo").style.display = "none";
+// }
 
 function toggleReaction(button, type) {
     const likeIcon = button.parentElement.querySelector(".img-like");

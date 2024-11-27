@@ -1,4 +1,4 @@
-<section class="page">
+<!-- <section class="page">
     <div class="inner">
         <div class="evaluation-content">
             <h1>¿QUÉ QUERÉS APRENDER?</h1>     
@@ -6,7 +6,7 @@
                     <button type="submit" class="search-button">
                     <img src="/img/icon_search.svg" alt="Search Icon" width="20" height="20">
                     </button>
-                <input type="text" placeholder="Ej: Fideos Matarazzo" class="search-input">
+                <input type="text" placeholder="Ej: Alimentación intuitiva" class="search-input">
             </div>
         </div>
     </div>
@@ -111,4 +111,66 @@
     </div>
 
 
+</section> -->
+
+<section class="page">
+    <div class="inner">
+        <div class="evaluation-content">
+            <h1>¿QUÉ QUERÉS APRENDER?</h1>
+            <div class="search-bar">
+                <button type="submit" class="search-button">
+                    <img src="/img/icon_search.svg" alt="Search Icon" width="20" height="20">
+                </button>
+                <input type="text" placeholder="Ej: Alimentación intuitiva" class="search-input">
+            </div>
+        </div>
+    </div>
 </section>
+
+<section class="sec-nutrition-lifestyle">
+    <div class="nutrition-lifestyle-inner">
+        <h3>Nutrición y Estilo de Vida</h3>
+        <p>Explora temas clave relacionados con una alimentación equilibrada y las últimas tendencias en salud. Aprende cómo implementar hábitos sostenibles que impacten positivamente tu bienestar general.</p>
+
+        <div class="cards-row">
+            @foreach (var post in ViewData["UserPosts"] as List<Posts>)
+            {
+                <div class="nutrition-card" onclick="openPopupArticuloBlog('@post.Titulo', '@post.Contenido', '@post.ImagenUrl', '@post.FechaCreacion')">
+                    <img src="/img/@post.ImagenUrl" alt="Imagen del post" class="community-card-image">
+                    <h3 class="community-card-text">@post.Titulo</h3>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="pop-up-info-articulo" style="display: none;">
+    <div class="pop-up-info-articulo-inner">
+        <img id="popupImage" src="" alt="Post Image">
+        <h1 id="popupTitle"></h1>
+        <h3>Escrito por todo el equipo de Zeta</h3>
+        <hr>
+        <span id="popupFecha"></span>
+        <p id="popupContenido"></p>
+    </div>
+</section>
+
+
+<script>
+    function openPopupArticuloBlog(titulo, contenido, imagenUrl, fechaCreacion) {
+        document.getElementById("popupTitle").innerText = titulo;
+        document.getElementById("popupContenido").innerText = contenido;
+        document.getElementById("popupImage").src = imagenUrl;
+        document.getElementById("popupFecha").innerText = fechaCreacion;
+
+        document.querySelector(".pop-up-info-articulo").style.display = "flex";
+        document.querySelector(".sec-nutrition-lifestyle").style.display = "none";
+        document.querySelector(".page").style.display = "none";
+    }
+
+    function closePopupArticuloBlog() {
+        document.querySelector(".pop-up-info-articulo").style.display = "none";
+        document.querySelector(".sec-nutrition-lifestyle").style.display = "block";
+        document.querySelector(".page").style.display = "block";
+    }
+</script>

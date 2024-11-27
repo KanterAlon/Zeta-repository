@@ -25,6 +25,9 @@ public class HomeController : Controller
 
     public IActionResult Blog()
     {
+        // Load all posts from the user with ID 1
+        List<Posts> userPosts = Posts.CargarPostsPorUsuario(1);
+        ViewData["UserPosts"] = userPosts;
         return View();
     }
 
