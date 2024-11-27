@@ -3,11 +3,13 @@ using System.Collections.Generic;
 
 public class Posts // Cambiado el nombre de la clase
 {
-    public int Id { get; set; } // Corregido el estilo de las propiedades para cumplir con estándares de nomenclatura
-    public string Titulo { get; set; } = string.Empty;
-    public string Contenido { get; set; } = string.Empty;
-    public DateTime FechaCreacion { get; set; }
-    public string ImagenUrl { get; set; } = string.Empty;
+    public int id_post { get; set; } // Corregido el estilo de las propiedades para cumplir con estándares de nomenclatura
+    public string id_usuario { get; set; } = string.Empty;
+    public string titulo_post {get;set;} =string.Empty;
+    public string contenido_post { get; set; } = string.Empty;
+    public DateTime fecha_creacion { get; set; }
+    public string imagen_url { get; set; } = string.Empty;
+    public int version {get; set;}
     public string Autor { get; set; } = string.Empty; // Campo que se llenará con el nombre del autor desde la tabla Usuarios
     public int Likes { get; set; } // Campo para los likes
     public int Dislikes { get; set; } // Campo para los dislikes
@@ -32,10 +34,14 @@ public class Posts // Cambiado el nombre de la clase
         BD.InsertarLike(idPost, idUsuario);
     }
 
-    public static List<Posts> CargarPostsPorUsuario(int userId)
+     public static List<Posts> CargarPostsPorUsuario(int userId)
     {
         var BD = new BD(); // Instance of BD to interact with the database
         return BD.ObtenerPostsPorUsuario(userId); // Calls the method to get all posts from a specific user
     }
 
+    public static void DarDislike(int idPost, int idUsuario)
+    {
+        BD.InsertarDislike(idPost, idUsuario);
+    }
 }
