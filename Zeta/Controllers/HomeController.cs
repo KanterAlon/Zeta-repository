@@ -179,17 +179,41 @@ public IActionResult DarLike(int idPost)
         // Registrar el "Me gusta"
         Posts.DarLike(idPost, idUsuario);
 
-        return Ok(new { success = true });
+        return  Redirect("/home/Community");
     }
     catch (UnauthorizedAccessException)
     {
-        return Redirect("/login.chs");
+        return Redirect("/home/login");
     }
     catch (Exception ex)
     {
         return BadRequest(new { success = false, error = ex.Message });
     }
 }
+
+[HttpPost]
+public IActionResult DarDislike(int idPost)
+{
+    try
+    {
+        // Verificar si el usuario está autenticado
+        int idUsuario = ObtenerIdUsuario();
+
+        // Registrar el "No me gusta"
+        Posts.DarDislike(idPost, idUsuario);
+
+        return Redirect("/home/Community");
+    }
+    catch (UnauthorizedAccessException)
+    {
+        return Redirect("/home/login");
+    }
+    catch (Exception ex)
+    {
+        return BadRequest(new { success = false, error = ex.Message });
+    }
+}
+
 
 private int ObtenerIdUsuario()
 {

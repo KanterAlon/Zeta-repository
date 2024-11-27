@@ -2,39 +2,36 @@
     <div class="inner-community">
         <h1 class="community-title">Comunidad</h1>
         <div class="community-cards-container">
-
             @foreach (var post in ViewBag.Posts as List<Posts>)
             {
                 <div class="community-card">
-                    <img src="@post.ImagenUrl" alt="Imagen del post" class="community-card-image">
+                    <img src="@post.imagen_url" alt="Imagen del post" class="community-card-image">
 
                     <div class="bottom-community-card">
-                        <p class="community-card-text">
-                            @post.Contenido
-                        </p>
-
+                        <p class="community-card-text">@post.contenido_post</p>
                         <span class="community-time-posted">
-                            @post.FechaCreacion.ToShortDateString() por @post.Autor
+                            @post.fecha_creacion.ToShortDateString() por @post.Autor
                         </span>
 
                         <div class="community-card-footer">
-                            <button class="like-button" onclick="darLike(@post.Id)">
-                                <img id="like-icon-@post.Id" src="/img/icon_like.svg" class="img-like">
-                                <img id="like-icon-fill-@post.Id" src="/img/icon_like-fill.svg" class="img-like-fill" style="display: none;">
-                                <span id="likes-count-@post.Id">@post.Likes</span>
-                            </button>
-
-                            <button onclick="toggleReaction(this, 'dislike')">
-                                <img src="/img/icon_dislike.svg" class="img-dislike">
-                                <img src="/img/icon_dislike-fill.svg" class="img-dislike-fill" style="display: none;">
-                                @post.Dislikes
-                            </button>
-
+                            <form action="/Home/DarLike" method="post">
+                                <input type="hidden" name="idPost" value="@post.id_post" />
+                                <button type="submit" class="like-button">
+                                    <img src="/img/icon_like.svg" class="img-like">
+                                    <span>@post.Likes</span>
+                                </button>
+                            </form>
+                            <form action="/Home/DarDislike" method="post">
+                                <input type="hidden" name="idPost" value="@post.id_post" />
+                                <button type="submit" class="dislike-button">
+                                    <img src="/img/icon_dislike.svg" class="img-dislike">
+                                    <span>@post.Dislikes</span>
+                                </button>
+                            </form>
                             <button class="button-comments" onclick="openCommentsPopup(this)">
                                 <img src="/img/icon_comments.svg">
                                 <span>214</span>
                             </button>
-
                             <button class="button-share" onclick="openSharePopup()">
                                 <img src="/img/icon_share.svg">
                             </button>
@@ -42,10 +39,10 @@
                     </div>
                 </div>
             }
-
         </div>
     </div>
 </section>
+
 
 <button class="button-add-post" onclick="openPopup()">
     <img src="/img/icon_button_add.svg">
@@ -54,17 +51,12 @@
 <div id="postPopup" class="popup-container" style="display: none;">
     <div class="popup-content">
         <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
-
         <div class="top-pop-up-add-post">
-            <img src="/img/icon_user.svg">
-
             <textarea id="postInput" name="comments" placeholder="¿Qué quieres decir?"></textarea>
-
             <button class="button-select-img">
                 <img src="/img/icon_img.svg">
             </button>
         </div>
-
         <button class="publish-btn">Publicar</button>
     </div>
 </div>
@@ -75,18 +67,12 @@
         <img src="/img/icon_close.svg" class="close-btn" onclick="closeCommentsPopup()">
         <h2>Comentarios</h2>
         <div id="commentsList">
-            <!-- Aquí irán los comentarios -->
             <div class="comment-item">
                 <p><strong>Usuario1:</strong> Este es un comentario ejemplo.</p>
-                <button class="reply-btn" onclick="replyToComment()">Responder</button>
-            </div>
-            <div class="comment-item">
-                <p><strong>Usuario2:</strong> Otro comentario más aquí.</p>
-                <button class="reply-btn" onclick="replyToComment()">Responder</button>
             </div>
         </div>
         <textarea id="newCommentInput" placeholder="Añadir un comentario..."></textarea>
-        <button class="publish-comment-btn" onclick="publishComment()">Publicar comentario</button>
+        <button class="publish-comment-btn">Publicar comentario</button>
     </div>
 </div>
 
@@ -96,47 +82,13 @@
         <img src="/img/icon_close.svg" class="close-btn" onclick="closeSharePopup()">
         <h2>¡Comparte este post!</h2>
         <div class="share-options">
-            <a href="#" id="whatsappShare" target="_blank">
+            <a href="#" target="_blank">
                 <img src="/img/icon_whatsapp.svg" alt="WhatsApp">
             </a>
-            <a href="#" id="smsShare" target="_blank">
-                <img src="/img/icon_sms.svg" alt="SMS">
-            </a>
-            <a href="#" id="mailShare" target="_blank">
+            <a href="#" target="_blank">
                 <img src="/img/icon_mail.svg" alt="Email">
             </a>
         </div>
     </div>
 </div>
 
-<script>
-  function darLike(idPost) {
-      fetch(`/Home/DarLike`, { // URL actualizada para llamar al método correspondiente
-          method: 'POST',
-          headers: {
-              'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ idPost })
-      })
-      .then(response => response.json())
-      .then(data => {
-          if (data.success) {
-              const likesCount = document.getElementById(`likes-count-${idPost}`);
-              likesCount.innerText = parseInt(likesCount.innerText) + 1;
-
-              // Cambiar el ícono de like
-              const imgLike = document.getElementById(`like-icon-${idPost}`);
-              const imgLikeFill = document.getElementById(`like-icon-fill-${idPost}`);
-              if (imgLike && imgLikeFill) {
-                  imgLike.style.display = 'none';
-                  imgLikeFill.style.display = 'inline';
-              }
-          } else if (data.redirect) {
-              window.location.href = data.redirect;
-          } else {
-              alert('Error al dar like.');
-          }
-      })
-      .catch(() => alert('Error al comunicarse con el servidor.'));
-  }
-</script>

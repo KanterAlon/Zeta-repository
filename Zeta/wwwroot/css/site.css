@@ -1050,6 +1050,13 @@ gap: .5rem;
 
 /* ------------------ COMMUNITY SECTION STYLES  ------------------ */
 
+.like-button.active .img-like {
+  filter: brightness(1.5);
+}
+.dislike-button.active .img-dislike {
+  filter: brightness(0.5);
+}
+
 .community-section {
   padding: 4rem 0;
   background-color: var(--secondary3-color);
