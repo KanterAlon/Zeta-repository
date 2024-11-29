@@ -237,11 +237,20 @@ private int ObtenerIdUsuario()
    [HttpGet]
 public IActionResult Login()
 {
+    // Llamar a los métodos para obtener los datos
+    var patologias = Patologias.ObtenerTodas();
+    var actividades = Actividades.ObtenerTodas();
+
+    // Asignar los datos al ViewBag
+    ViewBag.Patologias = patologias;
+    ViewBag.Actividades = actividades;
+
+    // Retornar la vista
     return View();
 }
 
 [HttpPost]
-public IActionResult Login(string email, string password)
+public IActionResult LoginValidation(string email, string password)
 {
     var usuario = Usuario.Validar(email, password);
 
@@ -257,12 +266,49 @@ public IActionResult Login(string email, string password)
     return View("Login");
 }
 
-public IActionResult Logout()
-{
-    HttpContext.Session.Remove("Usuario");
-    HttpContext.Session.Remove("Autenticado");
-    return RedirectToAction("Login", "Home");
-}
+ [HttpPost]
+    public IActionResult CreateAccount(
+        string email,
+        string password,
+        string nombre,
+        string apellido,
+        DateTime fecha_nacimiento,
+        string genero,
+        int altura,
+        int peso
+    )
+    {
+        try
+        {
+            // Llamada al método de la clase Usuario para registrar un nuevo usuario
+            Usuario.Registrar(
+                email,
+                password,
+                nombre,
+                apellido,
+                fecha_nacimiento,
+                genero,
+                altura,
+                peso
+            );
+
+            // Redirigir al usuario a la página principal o a una página de bienvenida
+            return RedirectToAction("Login");
+        }
+        catch (Exception ex)
+        {
+        
+            return View("Community");
+        }
+    }
+
+
+    public IActionResult Logout()
+    {
+        HttpContext.Session.Remove("Usuario");
+        HttpContext.Session.Remove("Autenticado");
+        return RedirectToAction("Login", "Home");
+    }
 
 
     public IActionResult Ca1()
