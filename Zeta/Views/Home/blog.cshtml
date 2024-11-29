@@ -157,10 +157,12 @@
 
 
 <script>
+    
     function openPopupArticuloBlog(titulo, contenido, imagenUrl, fechaCreacion) {
         document.getElementById("popupTitle").innerText = titulo;
         document.getElementById("popupContenido").innerText = contenido;
-        document.getElementById("popupImage").src = imagenUrl;
+        document.getElementById("popupImage").src = `/img/${imagenUrl}`;
+        console.log("aca esta la " + imagenUrl);
         document.getElementById("popupFecha").innerText = fechaCreacion;
 
         document.querySelector(".pop-up-info-articulo").style.display = "flex";
