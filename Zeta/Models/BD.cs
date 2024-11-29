@@ -5,7 +5,7 @@ using Dapper;
 using System.Linq;
 
 
-public class BD
+public static class BD
 {
     // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275"; juan
     private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True"; //localhost
@@ -49,19 +49,31 @@ public class BD
         }
     }
 
-
-    public void AgregarActividadUsuario(int userId, int actividadId, int horas)
-{
-    using (var connection = new SqlConnection(_connectionString))
+  public static void AgregarPatologiaUsuario(int userId, int patologiaId)
     {
-        string query = @"
-            INSERT INTO UsuarioActividades (id_usuario, id_actividad, horas)
-            VALUES (@UserId, @ActividadId, @Horas)";
-        connection.Execute(query, new { UserId = userId, ActividadId = actividadId, Horas = horas });
-    }
-}
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            string query = @"
+                INSERT INTO UsuariosPatologias (id_usuario, id_patologia)
+                VALUES (@UserId, @PatologiaId)";
 
-    public Usuario? ValidarUsuario(string email, string password)
+            connection.Execute(query, new { UserId = userId, PatologiaId = patologiaId });
+        }
+    }    
+    // Método para agregar una actividad a un usuario en la tabla ActividadesUsuario
+    public static void AgregarActividadUsuario(int userId, int actividadId, int horas)
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            string query = @"
+                INSERT INTO ActividadesUsuario (id_usuario, id_actividad, frecuencia_semanal)
+                VALUES (@UserId, @ActividadId, @Horas)";
+
+            connection.Execute(query, new { UserId = userId, ActividadId = actividadId, Horas = horas });
+        }
+    }
+
+    public static Usuario ValidarUsuario(string email, string password)
     {
         using (var connection = new SqlConnection(_connectionString))
         {
@@ -77,19 +89,20 @@ public class BD
         }
     }
 
-
-    public int CrearUsuario(Usuario usuario)
-{
-    using (var connection = new SqlConnection(_connectionString))
+public static int CrearUsuario(Usuario usuario)
     {
-        string query = @"
-            INSERT INTO Usuarios (nombre, email, password, fecha_registro, edad, sexo, peso, altura)
-            OUTPUT INSERTED.id_usuario
-            VALUES (@Nombre, @Email, @Password, @FechaRegistro, @Edad, @Sexo, @Peso, @Altura)";
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            string query = @"
+                INSERT INTO Usuarios (nombre, email, password, fecha_registro, edad, sexo, peso, altura)
+                OUTPUT INSERTED.id_usuario
+                VALUES (@nombre, @email, @password, @fecha_registro, @edad, @sexo, @peso, @altura);
+        ";
 
-        return connection.QuerySingle<int>(query, usuario);
+
+            return connection.QuerySingle<int>(query, usuario);
+        }
     }
-}
 
     public static List<Patologias> ObtenerPatologias()
     {

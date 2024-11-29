@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class Usuario
 {
@@ -14,13 +15,41 @@ public class Usuario
     public float altura { get; set; }
     public string password { get; set; } = string.Empty;
 
-    // Método estático para validar usuario y poblar los datos
+    // Método estático para registrar un nuevo usuario
+    public static void Registrar(
+        string email,
+        string password,
+        string nombre,
+        string apellido,
+        DateTime fechaNacimiento,
+        string genero,
+        int altura,
+        int peso
+    )
+    {
+        // Crear una nueva instancia del usuario con la información proporcionada
+        Usuario nuevoUsuario = new Usuario
+        {
+            nombre = nombre,
+            email = email,
+            password = password, // Recuerda que debe encriptarse en un escenario real
+            fecha_registro = DateTime.Now,
+            edad = DateTime.Now.Year - fechaNacimiento.Year,
+            sexo = genero,
+            peso = peso,
+            altura = altura
+        };
+
+        // Instancia de la clase BD para interactuar con la base de datos
+
+        // Insertar el usuario en la base de datos y obtener el ID generado
+        int userId = BD.CrearUsuario(nuevoUsuario);
+
+    }
     public static Usuario? Validar(string email, string password)
     {
-        // Instancia de la clase BD para acceder a la base de datos
-        var bd = new BD();
 
         // Consulta al método de BD para validar credenciales
-        return bd.ValidarUsuario(email, password);
+        return BD.ValidarUsuario(email, password);
     }
 }

@@ -17,14 +17,14 @@ public class Posts // Cambiado el nombre de la clase
     // Métodos estáticos dentro de la clase para trabajar con Posts
     public static List<Posts> CargarPosts()
     {
-        var BD = new BD(); // Instancia la clase BD para interactuar con la base de datos
+        // Instancia la clase BD para interactuar con la base de datos
         var posts = BD.ObtenerPostsOrdenadosPorFecha(); // Llama al método para obtener los posts ordenados
         return posts;
     }
 
     public static List<Posts> CargarUltimosTresPosts()
     {
-        var BD = new BD(); // Instancia la clase BD para interactuar con la base de datos
+        // Instancia la clase BD para interactuar con la base de datos
         var posts = BD.ObtenerUltimosTresPosts(); // Llama al método para obtener los últimos 3 posts
         return posts;
     }
@@ -36,7 +36,7 @@ public class Posts // Cambiado el nombre de la clase
 
      public static List<Posts> CargarPostsPorUsuario(int userId)
     {
-        var BD = new BD(); // Instance of BD to interact with the database
+        // Instance of BD to interact with the database
         return BD.ObtenerPostsPorUsuario(userId); // Calls the method to get all posts from a specific user
     }
 
