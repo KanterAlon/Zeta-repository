@@ -165,22 +165,21 @@ public static int CrearUsuario(Usuario usuario)
     }
 
     public static int InsertarPost(int idUsuario, string contenidoPost, DateTime fechaCreacion)
-{
-    using (SqlConnection db = new SqlConnection(_connectionString))
     {
-        string query = @"
-            INSERT INTO Posts (id_usuario, contenido_post, fecha_creacion)
-            OUTPUT INSERTED.id_post
-            VALUES (@IdUsuario, @ContenidoPost, @FechaCreacion)";
-
-        return db.QuerySingle<int>(query, new
+        using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            IdUsuario = idUsuario,
-            ContenidoPost = contenidoPost,
-            FechaCreacion = fechaCreacion
-        });
-    }
-}
+            string query = @"
+                INSERT INTO Posts (id_usuario, contenido_post, fecha_creacion)
+                OUTPUT INSERTED.id_post
+                VALUES (@IdUsuario, @ContenidoPost, @FechaCreacion)";
 
+            return db.QuerySingle<int>(query, new
+            {
+                IdUsuario = idUsuario,
+                ContenidoPost = contenidoPost,
+                FechaCreacion = fechaCreacion
+            });
+        }
+    }
 
 }

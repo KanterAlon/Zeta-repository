@@ -76,6 +76,7 @@
 
 
 
+
 <!-- Popup para comentarios -->
 <div id="commentsPopup" class="popup-container" style="display: none;">
     <div class="popup-comments-content">
@@ -119,13 +120,15 @@
             return;
         }
 
+        let Data = {contenidoPost: contenidoPost};
+
         try {
             const response = await fetch('/Home/PublicarPost', {
                 method: 'POST',
+                body: Data,
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ ContenidoPost: contenidoPost })
+                    "Content-Type": "text/json"
+                }
             });
 
             const data = await response.json();
@@ -134,7 +137,7 @@
                 // Limpia el textarea
                 textarea.value = '';
 
-                // Inserta el nuevo post dinámicamente
+                // Inserta dinámicamente el nuevo post
                 const container = document.querySelector('.community-cards-container');
                 const postHtml = `
                     <div class="community-card">

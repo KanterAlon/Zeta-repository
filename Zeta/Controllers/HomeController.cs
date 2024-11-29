@@ -231,11 +231,12 @@ public IActionResult DarDislike(int idPost)
 }
 
 [HttpPost]
-public IActionResult PublicarPost([FromBody] PostInputModel postInput)
+public IActionResult PublicarPost(string contenidoPost)
 {
     try
     {
-        if (string.IsNullOrWhiteSpace(postInput.ContenidoPost))
+
+        if (string.IsNullOrWhiteSpace(contenidoPost))
         {
             return BadRequest(new { success = false, message = "El contenido no puede estar vacío." });
         }
@@ -244,18 +245,18 @@ public IActionResult PublicarPost([FromBody] PostInputModel postInput)
         var fechaCreacion = DateTime.Now;
 
         // Inserta el post y recupera el ID generado
-        int postId = BD.InsertarPost(idUsuario, postInput.ContenidoPost, fechaCreacion);
+        int postId = BD.InsertarPost(idUsuario, contenidoPost, fechaCreacion);
 
-        // Retorna el JSON del nuevo post
+        // Retorna el JSON con los datos del nuevo post
         return Json(new
         {
             success = true,
             post = new
             {
                 id_post = postId,
-                contenido_post = postInput.ContenidoPost,
+                contenido_post = contenidoPost,
                 fecha_creacion = fechaCreacion.ToString("yyyy-MM-dd HH:mm:ss"),
-                autor = "UsuarioActual" // Cambiar por el nombre del usuario autenticado si es necesario
+                autor = "UsuarioActual" // Opcional: nombre del usuario autenticado
             }
         });
     }
@@ -268,6 +269,7 @@ public IActionResult PublicarPost([FromBody] PostInputModel postInput)
         return BadRequest(new { success = false, error = ex.Message });
     }
 }
+
 
 // Modelo para recibir los datos del post
 public class PostInputModel

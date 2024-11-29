@@ -35,6 +35,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+// Habilitar middleware de sesión y autorización
 app.UseSession(); // Habilitar middleware de sesión
 app.UseAuthorization();
 
