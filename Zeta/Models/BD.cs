@@ -152,13 +152,35 @@ public static int CrearUsuario(Usuario usuario)
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            // SQL query to get all posts by user ID
-            string query = @"SELECT id_post, titulo_post AS Titulo, contenido_post AS Contenido, fecha_creacion AS FechaCreacion, imagen_url AS ImagenUrl
-                            FROM Posts
-                            WHERE id_usuario = @UserId";
-            
-            return db.Query<Posts>(query, new { UserId = userId }).ToList();
+           // Modificación de la consulta para hacer el JOIN con la tabla Usuarios y obtener los likes y dislikes
+            string sql = @"SELECT p.id_post, p.titulo_post, p.contenido_post, p.fecha_creacion, p.imagen_url, u.nombre AS autor,
+                                  (SELECT COUNT(*) FROM Interacciones i WHERE i.id_post = p.id_post AND i.tipo_interaccion = 1) AS likes,
+                                  (SELECT COUNT(*) FROM Interacciones i WHERE i.id_post = p.id_post AND i.tipo_interaccion = 2) AS dislikes
+                           FROM Posts p
+                           INNER JOIN Usuarios u ON p.id_usuario = u.id_usuario
+                           ORDER BY p.fecha_creacion DESC";
+
+            return db.Query<Posts>(sql).ToList();
         }
     }
-    
+
+    public static int InsertarPost(int idUsuario, string contenidoPost, DateTime fechaCreacion)
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string query = @"
+            INSERT INTO Posts (id_usuario, contenido_post, fecha_creacion)
+            OUTPUT INSERTED.id_post
+            VALUES (@IdUsuario, @ContenidoPost, @FechaCreacion)";
+
+        return db.QuerySingle<int>(query, new
+        {
+            IdUsuario = idUsuario,
+            ContenidoPost = contenidoPost,
+            FechaCreacion = fechaCreacion
+        });
+    }
+}
+
+
 }

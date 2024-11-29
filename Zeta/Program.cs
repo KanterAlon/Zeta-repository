@@ -9,8 +9,12 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; // Necesario para GDPR
 });
 
-// Configuración de controladores y vistas
-builder.Services.AddControllersWithViews();
+// Configuración de controladores y vistas con soporte para JSON
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null; // Desactiva el cambio de nombre automático en JSON
+    });
 
 var app = builder.Build();
 

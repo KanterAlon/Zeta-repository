@@ -5,7 +5,7 @@
             @foreach (var post in ViewBag.Posts as List<Posts>)
             {
                 <div class="community-card">
-                    <img src="@post.imagen_url" alt="Imagen del post" class="community-card-image">
+                    <img src="/img/@post.imagen_url" alt="Imagen del post" class="community-card-image">
 
                     <div class="bottom-community-card">
                         <p class="community-card-text">@post.contenido_post</p>
@@ -48,7 +48,7 @@
     <img src="/img/icon_button_add.svg">
 </button>
 
-<div id="postPopup" class="popup-container" style="display: none;">
+<!-- <div id="postPopup" class="popup-container" style="display: none;">
     <div class="popup-content">
         <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
         <div class="top-pop-up-add-post">
@@ -59,7 +59,22 @@
         </div>
         <button class="publish-btn">Publicar</button>
     </div>
+</div> -->
+
+<div id="postPopup" class="popup-container" style="display: none;">
+    <div class="popup-content">
+        <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
+        <div class="top-pop-up-add-post">
+            <textarea id="postInput" name="contenidoPost" placeholder="¿Qué quieres decir?" required></textarea>
+            <button class="button-select-img">
+                <img src="/img/icon_img.svg" alt="Seleccionar imagen">
+            </button>
+        </div>
+        <button type="button" class="publish-btn">Publicar</button>
+    </div>
 </div>
+
+
 
 <!-- Popup para comentarios -->
 <div id="commentsPopup" class="popup-container" style="display: none;">
@@ -92,3 +107,62 @@
     </div>
 </div>
 
+<script>
+    document.querySelector('.publish-btn').addEventListener('click', async function (e) {
+        e.preventDefault();
+
+        const textarea = document.getElementById('postInput');
+        const contenidoPost = textarea.value.trim();
+
+        if (!contenidoPost) {
+            alert('El contenido no puede estar vacío.');
+            return;
+        }
+
+        try {
+            const response = await fetch('/Home/PublicarPost', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ ContenidoPost: contenidoPost })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Limpia el textarea
+                textarea.value = '';
+
+                // Inserta el nuevo post dinámicamente
+                const container = document.querySelector('.community-cards-container');
+                const postHtml = `
+                    <div class="community-card">
+                        <div class="bottom-community-card">
+                            <p class="community-card-text">${data.post.contenido_post}</p>
+                            <span class="community-time-posted">${data.post.fecha_creacion} por ${data.post.autor}</span>
+                            <div class="community-card-footer">
+                                <button class="like-button">
+                                    <img src="/img/icon_like.svg" class="img-like">
+                                    <span>0</span>
+                                </button>
+                                <button class="dislike-button">
+                                    <img src="/img/icon_dislike.svg" class="img-dislike">
+                                    <span>0</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                container.insertAdjacentHTML('afterbegin', postHtml);
+
+                // Cierra el popup
+                closePopup();
+            } else {
+                alert(data.message || 'Error al publicar el post.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Ocurrió un error al intentar publicar el post.');
+        }
+    });
+</script>

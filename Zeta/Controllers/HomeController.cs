@@ -25,10 +25,23 @@ public class HomeController : Controller
 
     public IActionResult Blog()
     {
-        // Load all posts from the user with ID 1
+
+        // Cargar la lista de posts desde la base de datos
         List<Posts> userPosts = Posts.CargarPostsPorUsuario(1);
-        ViewData["UserPosts"] = userPosts;
+
+        // Validar si hay posts
+        if (userPosts == null || !userPosts.Any())
+        {
+            ViewBag.ErrorMessage = "No se encontraron posts para este usuario.";
+            ViewBag.UserPosts = new List<Posts>(); // Evitar errores en la vista
+        }
+        else
+        {
+            ViewBag.UserPosts = userPosts;
+        }
+
         return View();
+
     }
 
    public async Task<IActionResult> Product(string query)
@@ -217,6 +230,50 @@ public IActionResult DarDislike(int idPost)
     }
 }
 
+[HttpPost]
+public IActionResult PublicarPost([FromBody] PostInputModel postInput)
+{
+    try
+    {
+        if (string.IsNullOrWhiteSpace(postInput.ContenidoPost))
+        {
+            return BadRequest(new { success = false, message = "El contenido no puede estar vacío." });
+        }
+
+        int idUsuario = ObtenerIdUsuario();
+        var fechaCreacion = DateTime.Now;
+
+        // Inserta el post y recupera el ID generado
+        int postId = BD.InsertarPost(idUsuario, postInput.ContenidoPost, fechaCreacion);
+
+        // Retorna el JSON del nuevo post
+        return Json(new
+        {
+            success = true,
+            post = new
+            {
+                id_post = postId,
+                contenido_post = postInput.ContenidoPost,
+                fecha_creacion = fechaCreacion.ToString("yyyy-MM-dd HH:mm:ss"),
+                autor = "UsuarioActual" // Cambiar por el nombre del usuario autenticado si es necesario
+            }
+        });
+    }
+    catch (UnauthorizedAccessException)
+    {
+        return Unauthorized(new { success = false, message = "Usuario no autenticado." });
+    }
+    catch (Exception ex)
+    {
+        return BadRequest(new { success = false, error = ex.Message });
+    }
+}
+
+// Modelo para recibir los datos del post
+public class PostInputModel
+{
+    public string ContenidoPost { get; set; }
+}
 
 private int ObtenerIdUsuario()
 {
