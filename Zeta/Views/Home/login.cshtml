@@ -23,6 +23,13 @@
                         <div class="input-group">
                             <input type="password" name="password" placeholder="Contraseña" required />
                         </div>
+                        @if (ViewBag.Error != null)
+                        {
+                            <div style="color: red; text-align: center; margin-bottom: 10px;">
+                                @ViewBag.Error
+                            </div>
+                        }
+
                         <div class="forgot-password">
                             <a href="/Account/ForgotPassword">
                                 <span class="small-text">¿Has olvidado tu contraseña?</span>

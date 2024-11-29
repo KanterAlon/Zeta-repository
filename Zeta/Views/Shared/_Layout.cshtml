@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Zeta.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 4px;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .profile-dropdown a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .profile-dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
 
@@ -35,7 +58,14 @@
                 <div class="icon-group">
                     <a href="#"><img src="/img/icon_notif.svg" alt="Notifications Icon" class="icon-img"></a>
                     <a href="#"><img src="/img/icon_save.svg" alt="Settings Icon" class="icon-img"></a>
-                    <a href="#"><img src="/img/icon_profile.svg" alt="Profile Icon" class="icon-img"></a>
+                    <a href="#" id="icon_profile" class="icon-img">
+                        <img src="/img/icon_profile.svg" alt="Profile Icon">
+                    </a>
+                    <div id="profile-dropdown" class="profile-dropdown">
+                        <a href="#">Mi perfil</a>
+                        <a href="#">Configuración</a>
+                        <a href="javascript:void(0);" onclick="logOut()">Cerrar sesión</a>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -83,6 +113,31 @@
         </div>
     </footer>
 }
+
+<script>
+    // Mostrar/ocultar el dropdown del perfil
+    $('#icon_profile').on('click', function() {
+        $('#profile-dropdown').toggle();
+    });
+
+    // Cerrar sesión (ejecuta la función del HomeController)
+    function logOut() {
+        $.ajax({
+            url: '/Home/LogOut',
+            type: 'POST',
+            success: function() {
+                window.location.href = '/Home'; // Redirige a la página de inicio después de hacer logout
+            }
+        });
+    }
+
+    // Cerrar el dropdown si se hace clic fuera de él
+    $(document).on('click', function(event) {
+        if (!$(event.target).closest('#icon_profile, #profile-dropdown').length) {
+            $('#profile-dropdown').hide();
+        }
+    });
+</script>
 
 </body>
 </html>

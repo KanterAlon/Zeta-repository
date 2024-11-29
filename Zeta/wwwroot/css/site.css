@@ -1451,6 +1451,11 @@ textarea:focus, input:focus {
   text-align: center; /* Center align the h1 */
 }
 
+.error-message {
+  color: red;
+  text-align: center;
+}
+
 .inputs-group {
   display: flex;
   flex-direction: column;
@@ -1559,7 +1564,7 @@ textarea:focus, input:focus {
   gap: 4rem;
   min-height: 600px;
   width: 95%;
-  max-width: 1700px;
+  max-width: 60rem;
   position: relative;
   justify-content: space-between;
 }

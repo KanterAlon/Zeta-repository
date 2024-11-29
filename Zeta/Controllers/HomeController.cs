@@ -324,7 +324,7 @@ public IActionResult LoginValidation(string email, string password)
     ViewBag.Error = "Credenciales incorrectas.";
     return View("Login");
 }
-
+    
  [HttpPost]
     public IActionResult CreateAccount(
         string email,
