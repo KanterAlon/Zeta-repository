@@ -1562,6 +1562,8 @@ textarea:focus, input:focus {
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease;
+  margin: 0 auto;
+  top: 30%;
 }
 
 /* Título del modal */
