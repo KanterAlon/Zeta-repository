@@ -67,6 +67,25 @@
                 </div>
             </div>
             <button type="button" class="ca1-btn-next" onclick="validateAndNavigate('ca2-section', 'ca1-section')">Siguiente</button>
+            <!-- Modal -->
+                <!-- Modal -->
+            
+<div id="emailModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">¡Correo electrónico ya registrado!</h4>
+        </div>
+        <div class="modal-body">
+            <p>Este correo ya está registrado en nuestra base de datos.</p>
+        </div>
+        <div class="modal-footer">
+            <button onclick="window.location.href='/Account/Login'" class="btn-modal cancel-btn">Volver al Login</button>
+            <button onclick="closeModal()" class="btn-modal continue-btn">Continuar con otro correo</button>
+        </div>
+    </div>
+</div>
+
+
         </div>
     </section>
 
@@ -226,4 +245,47 @@
             container.appendChild(horasGroup);
         }
     }
+    function validateAndNavigate(showId, currentSectionId) {
+    // Validar los campos dentro de la sección actual antes de avanzar
+    const email = document.getElementById('email').value;  // Obtener el email
+    const currentSection = document.getElementById(currentSectionId);
+    const inputs = currentSection.querySelectorAll("input, select");
+
+    let isValid = true;
+
+    inputs.forEach(input => {
+        if (!input.checkValidity()) {
+            isValid = false;
+            input.reportValidity(); // Muestra el mensaje de error del campo inválido
+        }
+    });
+
+    if (isValid) {
+        // Verificar si el email ya está registrado
+        $.ajax({
+            url: '/Home/ExisteMail',
+            type: 'GET',
+            data: { email: email },
+            success: function(response) {
+                if (response.existe) {
+                    // Mostrar el modal si el correo ya está registrado
+                    document.getElementById('emailModal').style.display = 'block';
+                } else {
+                    // Si no está registrado, continuar con la navegación
+                    navigateTo(showId, currentSectionId);
+                }
+            },
+            error: function() {
+                alert('Hubo un error al verificar el correo.');
+            }
+        });
+    }
+}
+
+function closeModal() {
+    document.getElementById('emailModal').style.display = 'none';
+    document.getElementById('email').value = ''; // Limpiar el campo de correo electrónico
+    navigateTo('ca1-section', 'ca2-section');  // Regresar a la sección CA1
+}
+
 </script>

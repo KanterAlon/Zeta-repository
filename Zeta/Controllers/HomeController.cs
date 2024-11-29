@@ -44,6 +44,13 @@ public class HomeController : Controller
 
     }
 
+
+     public JsonResult ExisteMail(string email)
+    {
+        bool existe = Usuario.ExisteEmail(email);  // Llamada a la función de la clase Usuario
+        return Json(new { existe });
+    }
+    
    public async Task<IActionResult> Product(string query)
     {
         if (string.IsNullOrWhiteSpace(query))
@@ -361,6 +368,7 @@ public IActionResult LoginValidation(string email, string password)
         }
     }
 
+    
 
     public IActionResult Logout()
     {

@@ -182,4 +182,14 @@ public static int CrearUsuario(Usuario usuario)
         }
     }
 
+    public static bool ExisteEmail(string email)
+    {
+        using (var connection = new SqlConnection(_connectionString))
+        {
+            string query = "SELECT COUNT(1) FROM Usuarios WHERE email = @Email";
+            var result = connection.ExecuteScalar<int>(query, new { Email = email });
+            return result > 0;  // Devuelve true si existe al menos un registro con ese email
+        }
+    }
+
 }

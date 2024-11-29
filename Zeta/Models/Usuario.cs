@@ -52,4 +52,9 @@ public class Usuario
         // Consulta al método de BD para validar credenciales
         return BD.ValidarUsuario(email, password);
     }
+
+    public static bool ExisteEmail(string email)
+    {
+        return BD.ExisteEmail(email);
+    }
 }
