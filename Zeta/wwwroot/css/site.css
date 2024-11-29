@@ -1439,9 +1439,10 @@ textarea:focus, input:focus {
 .welcome-message {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 9rem; /* Set gap to 9rem */
+  gap: 9rem;
 }
 
 .welcome-heading {
@@ -1494,6 +1495,7 @@ textarea:focus, input:focus {
   display: flex;
   justify-content: center;
   gap: 70px; /* Space between buttons */
+  padding-top: 9rem;
 }
 
 .btn-login {
@@ -1559,13 +1561,12 @@ textarea:focus, input:focus {
   width: 95%;
   max-width: 1700px;
   position: relative;
+  justify-content: space-between;
 }
 
 .ca1-inputs-grid {
+  grid-gap: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 15px;
-  margin-top: 20px;
 }
 
 .ca1-input-group {
@@ -1608,9 +1609,7 @@ textarea:focus, input:focus {
   text-align: center;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
-  position: absolute;
-  left: 3rem;
-  bottom: 3rem;
+  align-self: end;
 }
 
 .ca1-btn-next:hover {
