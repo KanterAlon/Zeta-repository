@@ -277,7 +277,6 @@ public IActionResult PublicarPost(string contenidoPost)
     }
 }
 
-
 // Modelo para recibir los datos del post
 public class PostInputModel
 {

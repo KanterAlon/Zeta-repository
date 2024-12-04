@@ -1,20 +1,49 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios necesarios para la sesión
-builder.Services.AddDistributedMemoryCache(); // Usado para almacenar datos de sesión en memoria
+// Configuración de servicios
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Duración de la sesión
-    options.Cookie.HttpOnly = true; // Seguridad adicional
-    options.Cookie.IsEssential = true; // Necesario para GDPR
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
 });
 
 // Configuración de controladores y vistas con soporte para JSON
 builder.Services.AddControllersWithViews()
     .AddJsonOptions(options =>
     {
-        options.JsonSerializerOptions.PropertyNamingPolicy = null; // Desactiva el cambio de nombre automático en JSON
+        options.JsonSerializerOptions.PropertyNamingPolicy = null;
+        options.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
     });
+
+// Habilitar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+// Configuración de autenticación (opcional)
+builder.Services.AddAuthentication("CookieAuthentication")
+    .AddCookie("CookieAuthentication", options =>
+    {
+        options.LoginPath = "/Account/Login";
+        options.LogoutPath = "/Account/Logout";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+    });
+
+// Habilitar HttpClient si es necesario
+builder.Services.AddHttpClient();
+
+// Configuración de logs
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
 
 var app = builder.Build();
 
@@ -29,15 +58,15 @@ else
     app.UseHsts();
 }
 
-// Middleware de la aplicación
+// Middleware
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
-// Habilitar middleware de sesión y autorización
-app.UseSession(); // Habilitar middleware de sesión
+app.UseCors("AllowAll"); // Aplica la política CORS
+app.UseAuthentication();
 app.UseAuthorization();
+app.UseSession(); // Habilitar middleware de sesión
 
 // Configuración de rutas
 app.MapControllerRoute(

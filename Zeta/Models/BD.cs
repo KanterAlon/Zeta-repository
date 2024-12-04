@@ -8,9 +8,9 @@ using System.Linq;
 public static class BD
 {
     // private static string _connectionString = @"Server=192.168.0.243;Database=bdZeta;User Id=sa;Password=Gjdmsp3275"; juan
-    //private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True"; //localhost
+    private static string _connectionString = @"Server=localhost;Database=bdZeta;Integrated Security=True"; //localhost
 
-     private static string _connectionString = @"Server=zetabd.c5g00cey2pne.us-east-1.rds.amazonaws.com,1433;Database=bdZeta;User Id=admin;Password=somoszeta;"; //aws
+     //private static string _connectionString = @"Server=zetabd.c5g00cey2pne.us-east-1.rds.amazonaws.com,1433;Database=bdZeta;User Id=admin;Password=somoszeta;"; //aws
     //agregar regla en aws para ejecutar en local y en la nube
     //https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#ModifyInboundSecurityGroupRules:securityGroupId=sg-00fb263b5ddd14fd6
     public static List<Posts> ObtenerPostsOrdenadosPorFecha()

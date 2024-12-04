@@ -109,63 +109,59 @@
 </div>
 
 <script>
-    document.querySelector('.publish-btn').addEventListener('click', async function (e) {
+
+    $('.publish-btn').click(function (e) {
         e.preventDefault();
 
-        const textarea = document.getElementById('postInput');
-        const contenidoPost = textarea.value.trim();
+        const contenidoPost = $('#postInput').val().trim();
 
         if (!contenidoPost) {
             alert('El contenido no puede estar vacío.');
             return;
         }
 
-        let Data = {contenidoPost: contenidoPost};
+        $.ajax({
+            url: '/Home/PublicarPost',
+            type: 'POST',
+            data: { contenidoPost: contenidoPost },
+            dataType : 'json',
+            success: function (data) {
+                if (data.success) {
+                    // Limpia el textarea
+                    $('#postInput').val('');
 
-        try {
-            const response = await fetch('/Home/PublicarPost', {
-                method: 'POST',
-                body: Data,
-                headers: {
-                    "Content-Type": "text/json"
-                }
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                // Limpia el textarea
-                textarea.value = '';
-
-                // Inserta dinámicamente el nuevo post
-                const container = document.querySelector('.community-cards-container');
-                const postHtml = `
-                    <div class="community-card">
-                        <div class="bottom-community-card">
-                            <p class="community-card-text">${data.post.contenido_post}</p>
-                            <span class="community-time-posted">${data.post.fecha_creacion} por ${data.post.autor}</span>
-                            <div class="community-card-footer">
-                                <button class="like-button">
-                                    <img src="/img/icon_like.svg" class="img-like">
-                                    <span>0</span>
-                                </button>
-                                <button class="dislike-button">
-                                    <img src="/img/icon_dislike.svg" class="img-dislike">
-                                    <span>0</span>
-                                </button>
+                    // Inserta dinámicamente el nuevo post
+                    const container = $('.community-cards-container');
+                    const postHtml = `
+                        <div class="community-card">
+                            <div class="bottom-community-card">
+                                <p class="community-card-text">${data.post.contenido_post}</p>
+                                <span class="community-time-posted">${data.post.fecha_creacion} por ${data.post.autor}</span>
+                                <div class="community-card-footer">
+                                    <button class="like-button">
+                                        <img src="/img/icon_like.svg" class="img-like">
+                                        <span>0</span>
+                                    </button>
+                                    <button class="dislike-button">
+                                        <img src="/img/icon_dislike.svg" class="img-dislike">
+                                        <span>0</span>
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </div>`;
-                container.insertAdjacentHTML('afterbegin', postHtml);
+                        </div>`;
+                    container.prepend(postHtml);
 
-                // Cierra el popup
-                closePopup();
-            } else {
-                alert(data.message || 'Error al publicar el post.');
+                    // Cierra el popup
+                    closePopup();
+                } else {
+                    alert(data.message || 'Error al publicar el post.');
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error('Error:', error);
+                alert('Ocurrió un error al intentar publicar el post.');
             }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Ocurrió un error al intentar publicar el post.');
-        }
+        });
     });
+    
 </script>
