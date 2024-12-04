@@ -177,15 +177,6 @@ button {
   transform: scale(1.1);
 }
 
-.a span :hover {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
-a:hover {
-  text-decoration: none;
-  color: var(--primary-color);
-}
 
 
 /* ------------------ HEADER ------------------ */
@@ -546,7 +537,7 @@ span.button-text{
 
 .contact-section {
   background-color: var(--secondary3-color);
-  padding-top: 2rem;
+  padding-top: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,123 +586,91 @@ span.button-text{
   width: 9rem;
   height: 3rem;
   background-color: var(--primary-color);
-  color: var(--secondary3-color);
-  font-family: var(--font-family-button);
   text-decoration: none;
   border-radius: 8px;
   text-align: center;
+  color: var(--whiteback-color);
 }
 
-.contact-button h3 {
-  font-size: var(--heading3-size);
-  color: var(--secondary3-color);
+.contact-button span {
+  font-size: var(--button-text-size);
+  color: var(--whiteback-color);
   margin: 0;
 }
 
 /* ------------------ FUNCIONALIDADES ------------------ */
-.sec-funcionalidades {
-  padding: 3rem 1rem;
-  background-color: var(--background-color);
-}
-
-.funcionalidades-inner {
+.funcionalidades-inner, .advertisements-blog-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-.funcionalidades-inner h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--secondary2-color);
-  text-align: center;
-  margin-bottom: 1rem;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+  gap: 2.5rem;
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.card-funcionalidad {
+.card-funcionalidad, .card-advertisement-blog {
   background-color: var(--whiteback-color);
-  border-radius: 5px;
+  border-radius: 17px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 0; /* Eliminamos el padding general */
-  overflow: hidden;
-  position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  height: 120%; /* Asegura consistencia en las alturas */
+  justify-content: space-between;
+  text-align: justify;
+  min-width: 300px;
+  max-width: 400px;
+  min-height: 500px;
+  gap: .5rem;
+  padding-bottom: 1.5rem;
 }
 
-.card-funcionalidad:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.contenedor-imagen-card-funcionalidad {
+.contenedor-imagen-card-funcionalidad, .contenedor-imagen-card-blog {
   width: 100%;
-  height: 180px;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 230px;
 }
 
 .contenedor-imagen-card-funcionalidad img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  max-height: 100%;
 }
 
-.titulo-card-funcionalidad {
-  font-size: 1.5rem;
-  font-weight: 600;
+.titulo-card-funcionalidad, .descripcion-card-funcionalidad {
   color: var(--secondary2-color);
-  margin: 1rem 0 0.5rem;
 }
 
-.descripcion-card-funcionalidad {
-  font-size: 1rem;
-  color: var(--text-color);
-  margin: 0 1rem 1.5rem;
-  line-height: 1.6;
-  flex-grow: 1; /* Hace que el texto crezca sin afectar la posición del botón */
+.funcionalidades-inner h2 {
+  color: var(--secondary2-color);
+}
+
+.card-funcionalidad h3, .card-funcionalidad p {
+  width: 89%;
 }
 
 .button-card {
   background-color: var(--primary-color);
-  color: var(--whiteback-color);
+  width: 89%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px; /* Botón menos cuadrado */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin-bottom: 1.5rem;
-  position: absolute; /* Botón en la misma posición siempre */
-  bottom: 1.5rem; /* Alineado al fondo de la tarjeta */
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 2rem); /* Ancho relativo al card con márgenes */
-  max-width: 200px; /* Tamaño máximo para evitar estiramientos */
+  color: var(--whiteback-color);
+  border-radius: 4px;
 }
 
 .button-card:hover {
-  background-color: var(--whiteback-color);
-  transform: translateX(-50%) scale(1.05);
+  color: var(--whiteback-color);
+  transform: scale(1.01);
 }
-
 
 /* ------------------ PUBLICIDAD DEL BLOG ------------------ */
 
@@ -730,6 +689,7 @@ span.button-text{
   flex-direction: column;
   justify-content: space-evenly;
   flex: 1;
+  gap: .5rem;
 }
 
 .contenedor-imagen-card-blog {
@@ -739,6 +699,7 @@ span.button-text{
 
 .contenedor-imagen-card-blog img {
   width: 100%;
+  max-height: 100%;
   border-radius: 17px;  
 }
 
