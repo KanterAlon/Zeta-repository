@@ -158,7 +158,7 @@ public async Task<IActionResult> SearchProducts(string query)
         }
 
         var products = productData["products"]
-            ?.Where(p => p["lang"]?.ToString() == "es" || p["lang"]?.ToString() == "en") // Filtrar por idioma
+            ?.Where(p => p["lang"]?.ToString() == "es" || p["lang"]?.ToString() == "en") // F   iltrar por idioma
             .OrderByDescending(p => p["popularity_tags"]?.Count()) // Ordenar por relevancia
             .Select(p => new
             {
