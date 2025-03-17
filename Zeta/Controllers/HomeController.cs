@@ -157,14 +157,17 @@ public async Task<IActionResult> SearchProducts(string query)
             return Json(new { success = true, products = new List<string>() });
         }
 
-        var products = productData["products"]
-            ?.Where(p => p["lang"]?.ToString() == "es" || p["lang"]?.ToString() == "en") // F   iltrar por idioma
-            .OrderByDescending(p => p["popularity_tags"]?.Count()) // Ordenar por relevancia
-            .Select(p => new
-            {
-                name = p["product_name"]?.ToString(),
-                image = p["image_url"]?.ToString() ?? "/img/default_product.png"
-            });
+       var products = productData["products"]
+    ?.Where(p => 
+         (p["lang"]?.ToString() == "es" || p["lang"]?.ToString() == "en") && // Filtrar por idioma
+         (p["countries"]?.ToString().ToLower().Contains("argentina") ?? false) // Filtrar por país Argentina
+    )
+    .OrderByDescending(p => p["popularity_tags"]?.Count()) // Ordenar por relevancia
+    .Select(p => new
+    {
+        name = p["product_name"]?.ToString(),
+        image = p["image_url"]?.ToString() ?? "/img/default_product.png"
+    });
 
         return Json(new { success = true, products });
     }
