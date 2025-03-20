@@ -162,7 +162,127 @@
             <button type="submit" class="ca1-btn-next">Siguiente</button>
         </div>
     </section>
-<script>
+
+    <script>
+    function navigateTo(showId, hideId) {
+        document.getElementById(hideId).style.display = "none";
+        // Para que el layout de la sección mostrada sea de tipo flex
+        document.getElementById(showId).style.display = "flex";
+    }
+
+    function validateAndNavigate(showId, currentSectionId) {
+        const currentSection = document.getElementById(currentSectionId);
+        const inputs = currentSection.querySelectorAll("input, select");
+        let isValid = true;
+
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                isValid = false;
+                input.reportValidity();
+            }
+        });
+
+        if (!isValid) return;
+
+        // Si estamos en CA1, validamos que el email no esté registrado.
+        if (currentSectionId === 'ca1-section') {
+            const email = document.getElementById('email').value;
+            $.ajax({
+                url: '/Home/ExisteMail',
+                type: 'GET',
+                data: { email: email },
+                success: function(response) {
+                    if (response.existe) {
+                        document.getElementById('emailModal').style.display = 'block';
+                    } else {
+                        navigateTo(showId, currentSectionId);
+                    }
+                },
+                error: function() {
+                    alert('Hubo un error al verificar el correo.');
+                }
+            });
+        } else {
+            navigateTo(showId, currentSectionId);
+        }
+    }
+
+    function generarInputsActividades() {
+        const cantidad = document.getElementById('cantActividades').value;
+        const container = document.getElementById('actividades-container');
+        container.innerHTML = ""; // Limpiar contenedor
+
+        for (let i = 1; i <= cantidad; i++) {
+            const actividadGroup = document.createElement('div');
+            actividadGroup.className = 'ca1-input-group';
+
+            const selectActividad = document.createElement('select');
+            selectActividad.name = `actividad_${i}`;
+            selectActividad.required = true;
+
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.selected = true;
+            defaultOption.textContent = `Selecciona la actividad física número ${i}`;
+            selectActividad.appendChild(defaultOption);
+
+            // Rellenar las opciones (se asume que el server renderiza estas opciones)
+            @if (actividades != null && actividades.Any())
+            {
+                foreach (var actividad in actividades)
+                {
+                    <text>
+                    const option = document.createElement('option');
+                    option.value = "@actividad.IdActividad";
+                    option.textContent = "@actividad.NombreActividad";
+                    selectActividad.appendChild(option);
+                    </text>
+                }
+            }
+
+            actividadGroup.appendChild(selectActividad);
+            container.appendChild(actividadGroup);
+
+            const horasGroup = document.createElement('div');
+            horasGroup.className = 'ca1-input-group';
+
+            const inputHoras = document.createElement('input');
+            inputHoras.type = 'number';
+            inputHoras.min = '0';
+            inputHoras.name = `horasActividad_${i}`;
+            inputHoras.placeholder = `Ingresa cuántas horas por semana realizas la actividad ${i}`;
+            inputHoras.required = true;
+
+            horasGroup.appendChild(inputHoras);
+            container.appendChild(horasGroup);
+        }
+    }
+
+    // Agregar event listener para capturar la tecla Enter en el formulario de "Crear cuenta"
+    document.getElementById("create-account-form").addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+            // Prevenir el submit por defecto
+            e.preventDefault();
+            // Identificar la sección actualmente visible
+            if (document.getElementById("ca1-section").style.display !== "none") {
+                validateAndNavigate('ca2-section', 'ca1-section');
+            } else if (document.getElementById("ca2-section").style.display !== "none") {
+                // Para CA2, simular el clic en el botón "Crear Cuenta"
+                document.querySelector("#ca2-section button[type='submit']").click();
+            } else if (document.getElementById("ca3-section").style.display !== "none") {
+                document.querySelector("#ca3-section button[type='submit']").click();
+            }
+        }
+    });
+
+    function closeModal() {
+        document.getElementById('emailModal').style.display = 'none';
+        document.getElementById('email').value = '';
+        navigateTo('ca1-section', 'ca2-section');
+    }
+</script>
+
+<!-- <script>
     function navigateTo(showId, hideId) {
         // Oculta la sección actual
         document.getElementById(hideId).style.display = "none";
@@ -288,4 +408,4 @@ function closeModal() {
     navigateTo('ca1-section', 'ca2-section');  // Regresar a la sección CA1
 }
 
-</script>
+</script> -->
