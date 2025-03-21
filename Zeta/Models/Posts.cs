@@ -30,8 +30,15 @@ public class Posts // Cambiado el nombre de la clase
     }
 
     public static void DarLike(int idPost, int idUsuario)
-    {
-        BD.InsertarLike(idPost, idUsuario);
+    {   
+        int tipo_interaccion = 1;
+        int autorizado = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion);
+        if (autorizado == 0)
+        {
+             //HAY QUE HACER VEROFOCAR AUTORIZADO CON EL OTRO TIPO DE INTERACCION, PARA VER SI HAY DEL OTRO, Y SI HAY, CREAR FUNCION EN BD PARA ELIMINAR EL OTRO, Y DESPUES QUE SE INSERTE EL LIKE. SI NO HAY DEL OTRO, ENTONCES INSERTA EL LIKE DIRECTO
+            BD.InsertarLike(idPost, idUsuario);
+        }
+        
     }
 
      public static List<Posts> CargarPostsPorUsuario(int userId)
@@ -42,6 +49,11 @@ public class Posts // Cambiado el nombre de la clase
 
     public static void DarDislike(int idPost, int idUsuario)
     {
-        BD.InsertarDislike(idPost, idUsuario);
+        int tipo_interaccion = 2;
+                int autorizado = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion);
+                if (autorizado == 0)
+                {
+                    BD.InsertarDislike(idPost, idUsuario);
+                }
     }
 }

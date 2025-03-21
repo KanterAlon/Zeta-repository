@@ -29,8 +29,36 @@ public static class BD
         }
     }
 
-     public static void InsertarLike(int idPost, int idUsuario)
+ public static int VerificarAutorizado(int idPost, int idUsuario, int tipo_interaccion)
+{
+      using (SqlConnection db = new SqlConnection(_connectionString))
     {
+        string sql = @"
+            SELECT 
+                CASE 
+                    WHEN EXISTS (
+                        SELECT 1 
+                        FROM Interacciones 
+                        WHERE id_usuario = @idUsuario 
+                        AND id_post = @idPost 
+                        AND tipo_interaccion = @tipo_interaccion
+                    ) 
+                    THEN 1
+                    ELSE 0 
+                END AS resultado;
+        ";
+
+
+       return db.QueryFirstOrDefault<int>(sql, new { idUsuario, idPost, tipo_interaccion });
+
+    }
+}
+
+
+     public static void InsertarLike(int idPost, int idUsuario)
+    {      
+
+
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
             string sql = @"INSERT INTO Interacciones (id_post,id_usuario,tipo_interaccion,fecha_interaccion)
