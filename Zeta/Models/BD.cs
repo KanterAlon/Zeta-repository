@@ -67,6 +67,19 @@ public static class BD
         }
     }
 
+    
+public static void EliminarLike(int idPost, int idUsuario)
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = @"DELETE FROM Interacciones 
+                      WHERE id_post = @IdPost AND id_usuario = @IdUsuario 
+                      AND tipo_interaccion = 1";
+        
+        db.Execute(sql, new { IdPost = idPost, IdUsuario = idUsuario });
+    }
+}
+
       public static void InsertarDislike(int idPost, int idUsuario)
     {
         using (SqlConnection db = new SqlConnection(_connectionString))
@@ -76,6 +89,18 @@ public static class BD
             db.Execute(sql, new { IdPost = idPost, IdUsuario = idUsuario });
         }
     }
+
+    public static void EliminarDislike(int idPost, int idUsuario)
+{
+    using (SqlConnection db = new SqlConnection(_connectionString))
+    {
+        string sql = @"DELETE FROM Interacciones 
+                      WHERE id_post = @IdPost AND id_usuario = @IdUsuario 
+                      AND tipo_interaccion = 2";
+        
+        db.Execute(sql, new { IdPost = idPost, IdUsuario = idUsuario });
+    }
+}
 
   public static void AgregarPatologiaUsuario(int userId, int patologiaId)
     {

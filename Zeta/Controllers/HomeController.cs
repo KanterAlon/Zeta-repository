@@ -195,25 +195,23 @@ public async Task<IActionResult> SearchProducts(string query)
         return View();
     }
 [HttpPost]
-public IActionResult DarLike(int idPost)
+public IActionResult DarLike([FromBody] dynamic data)
 {
     try
     {
-        // Verificar si el usuario está autenticado
+        int idPost = data.idPost;
         int idUsuario = ObtenerIdUsuario();
-
-        // Registrar el "Me gusta"
         Posts.DarLike(idPost, idUsuario);
 
-        return  Redirect("/home/Community");
+        return Json(new { success = true });
     }
     catch (UnauthorizedAccessException)
     {
-        return Redirect("/home/login");
+        return Json(new { success = false, message = "Usuario no autenticado." });
     }
     catch (Exception ex)
     {
-        return BadRequest(new { success = false, error = ex.Message });
+        return Json(new { success = false, error = ex.Message });
     }
 }
 
@@ -239,6 +237,32 @@ public IActionResult DarDislike(int idPost)
         return BadRequest(new { success = false, error = ex.Message });
     }
 }
+[HttpGet]
+public IActionResult ObtenerPosts()
+{
+    try
+    {
+        List<Posts> posts = Posts.CargarPosts();
+        var postsJson = posts.Select(post => new
+        {
+            id_post = post.id_post,
+            contenido_post = post.contenido_post,
+            fecha_creacion = post.fecha_creacion.ToString("yyyy-MM-dd HH:mm:ss"),
+            autor = post.Autor,
+            imagen_url = post.imagen_url,
+            likes = post.Likes,
+            dislikes = post.Dislikes
+        });
+
+        return Json(new { success = true, posts = postsJson });
+    }
+    catch (Exception ex)
+    {
+        return Json(new { success = false, message = ex.Message });
+    }
+}
+
+
 
 [HttpPost]
 public IActionResult PublicarPost(string contenidoPost)

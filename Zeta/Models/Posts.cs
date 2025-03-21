@@ -32,15 +32,21 @@ public class Posts // Cambiado el nombre de la clase
     public static void DarLike(int idPost, int idUsuario)
     {   
         int tipo_interaccion = 1;
+        int tipo_interaccion_contrario = 2;
         int autorizado = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion);
         if (autorizado == 0)
         {
+            int autorizado2 = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion_contrario);
+            if (autorizado2==1)
+            {
+                BD.EliminarDislike(idPost, idUsuario);
+            }
              //HAY QUE HACER VEROFOCAR AUTORIZADO CON EL OTRO TIPO DE INTERACCION, PARA VER SI HAY DEL OTRO, Y SI HAY, CREAR FUNCION EN BD PARA ELIMINAR EL OTRO, Y DESPUES QUE SE INSERTE EL LIKE. SI NO HAY DEL OTRO, ENTONCES INSERTA EL LIKE DIRECTO
             BD.InsertarLike(idPost, idUsuario);
         }
         
     }
-
+//LIKE ES 1, DISLIKE ES 2
      public static List<Posts> CargarPostsPorUsuario(int userId)
     {
         // Instance of BD to interact with the database
@@ -50,10 +56,20 @@ public class Posts // Cambiado el nombre de la clase
     public static void DarDislike(int idPost, int idUsuario)
     {
         int tipo_interaccion = 2;
-                int autorizado = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion);
-                if (autorizado == 0)
-                {
-                    BD.InsertarDislike(idPost, idUsuario);
-                }
+        int tipo_interaccion_contrario = 1;
+        int autorizado = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion);
+        if (autorizado == 0)
+        {
+            int autorizado2 = BD.VerificarAutorizado(idUsuario, idPost, tipo_interaccion_contrario);
+            if (autorizado2==1)
+            {
+                BD.EliminarLike(idPost, idUsuario);
+            } 
+            
+            BD.InsertarDislike(idPost, idUsuario);
+        }
+        
     }
+
+    
 }

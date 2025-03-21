@@ -2,65 +2,16 @@
     <div class="inner-community">
         <h1 class="community-title">Comunidad</h1>
         <div class="community-cards-container">
-            @foreach (var post in ViewBag.Posts as List<Posts>)
-            {
-                <div class="community-card">
-                    <img src="/img/@post.imagen_url" alt="Imagen del post" class="community-card-image">
-
-                    <div class="bottom-community-card">
-                        <p class="community-card-text">@post.contenido_post</p>
-                        <span class="community-time-posted">
-                            @post.fecha_creacion.ToShortDateString() por @post.Autor
-                        </span>
-
-                        <div class="community-card-footer">
-                            <form action="/Home/DarLike" method="post">
-                                <input type="hidden" name="idPost" value="@post.id_post" />
-                                <button type="submit" class="like-button">
-                                    <img src="/img/icon_like.svg" class="img-like">
-                                    <span>@post.Likes</span>
-                                </button>
-                            </form>
-                            <form action="/Home/DarDislike" method="post">
-                                <input type="hidden" name="idPost" value="@post.id_post" />
-                                <button type="submit" class="dislike-button">
-                                    <img src="/img/icon_dislike.svg" class="img-dislike">
-                                    <span>@post.Dislikes</span>
-                                </button>
-                            </form>
-                            <button class="button-comments" onclick="openCommentsPopup(this)">
-                                <img src="/img/icon_comments.svg">
-                                <span>214</span>
-                            </button>
-                            <button class="button-share" onclick="openSharePopup()">
-                                <img src="/img/icon_share.svg">
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            }
+            <!-- Aquí se cargarán dinámicamente los posts con JS -->
         </div>
     </div>
 </section>
-
 
 <button class="button-add-post" onclick="openPopup()">
     <img src="/img/icon_button_add.svg">
 </button>
 
-<!-- <div id="postPopup" class="popup-container" style="display: none;">
-    <div class="popup-content">
-        <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
-        <div class="top-pop-up-add-post">
-            <textarea id="postInput" name="comments" placeholder="¿Qué quieres decir?"></textarea>
-            <button class="button-select-img">
-                <img src="/img/icon_img.svg">
-            </button>
-        </div>
-        <button class="publish-btn">Publicar</button>
-    </div>
-</div> -->
-
+<!-- Popup para agregar un post -->
 <div id="postPopup" class="popup-container" style="display: none;">
     <div class="popup-content">
         <img src="/img/icon_close.svg" class="close-btn" onclick="closePopup()">
@@ -70,98 +21,127 @@
                 <img src="/img/icon_img.svg" alt="Seleccionar imagen">
             </button>
         </div>
-        <button type="button" class="publish-btn">Publicar</button>
-    </div>
-</div>
-
-
-
-
-<!-- Popup para comentarios -->
-<div id="commentsPopup" class="popup-container" style="display: none;">
-    <div class="popup-comments-content">
-        <img src="/img/icon_close.svg" class="close-btn" onclick="closeCommentsPopup()">
-        <h2>Comentarios</h2>
-        <div id="commentsList">
-            <div class="comment-item">
-                <p><strong>Usuario1:</strong> Este es un comentario ejemplo.</p>
-            </div>
-        </div>
-        <textarea id="newCommentInput" placeholder="Añadir un comentario..."></textarea>
-        <button class="publish-comment-btn">Publicar comentario</button>
-    </div>
-</div>
-
-<!-- Popup para compartir -->
-<div id="sharePopup" class="popup-container" style="display: none;">
-    <div class="popup-share-content">
-        <img src="/img/icon_close.svg" class="close-btn" onclick="closeSharePopup()">
-        <h2>¡Comparte este post!</h2>
-        <div class="share-options">
-            <a href="https://web.whatsapp.com" target="_blank">
-                <img src="/img/icon_whatsapp.svg" alt="WhatsApp">
-            </a>
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
-                <img src="/img/icon_mail.svg" alt="Email">
-            </a>
-        </div>
+        <button type="button" class="publish-btn" onclick="publicarPost()">Publicar</button>
     </div>
 </div>
 
 <script>
+    // Cargar posts dinámicamente
+    async function cargarPosts() {
+    try {
+        const response = await fetch('/Home/ObtenerPosts', { method: 'GET' });
 
-    $('.publish-btn').click(function (e) {
-        e.preventDefault();
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
 
-        const contenidoPost = $('#postInput').val().trim();
+        const data = await response.json();
+
+        if (data.success) {
+            const container = document.querySelector('.community-cards-container');
+            container.innerHTML = ''; // Limpiar antes de cargar nuevos posts
+
+            data.posts.forEach(post => {
+                const postHtml = `
+                    <div class="community-card" data-id="${post.id_post}">
+                        <img src="/img/${post.imagen_url}" alt="Imagen del post" class="community-card-image">
+                        <div class="bottom-community-card">
+                            <p class="community-card-text">${post.contenido_post}</p>
+                            <span class="community-time-posted">${post.fecha_creacion} por ${post.autor}</span>
+                            <div class="community-card-footer">
+                                <button class="like-button" onclick="darLike(${post.id_post}, this)">
+                                    <img src="/img/icon_like.svg" class="img-like">
+                                    <span class="like-count">${post.likes}</span>
+                                </button>
+                                <button class="dislike-button" onclick="darDislike(${post.id_post}, this)">
+                                    <img src="/img/icon_dislike.svg" class="img-dislike">
+                                    <span class="dislike-count">${post.dislikes}</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>`;
+                container.insertAdjacentHTML('beforeend', postHtml);
+            });
+        } else {
+            console.error('Error al cargar posts:', data.message);
+        }
+    } catch (error) {
+        console.error('Error al obtener posts:', error);
+    }
+}
+
+
+    // Dar Like a un post
+    async function darLike(idPost, button) {
+        try {
+            const response = await fetch('/Home/DarLike', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ idPost })
+            });
+
+            if (response.ok) {
+                const likeCount = button.querySelector('.like-count');
+                likeCount.textContent = parseInt(likeCount.textContent) + 1;
+            } else {
+                console.error("Error al dar like.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+
+    // Dar Dislike a un post
+    async function darDislike(idPost, button) {
+        try {
+            const response = await fetch('/Home/DarDislike', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ idPost })
+            });
+
+            if (response.ok) {
+                const dislikeCount = button.querySelector('.dislike-count');
+                dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
+            } else {
+                console.error("Error al dar dislike.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    }
+
+    // Publicar un nuevo post
+    async function publicarPost() {
+        const contenidoPost = document.getElementById('postInput').value.trim();
 
         if (!contenidoPost) {
             alert('El contenido no puede estar vacío.');
             return;
         }
 
-        $.ajax({
-            url: '/Home/PublicarPost',
-            type: 'POST',
-            data: { contenidoPost: contenidoPost },
-            dataType : 'json',
-            success: function (data) {
-                if (data.success) {
-                    // Limpia el textarea
-                    $('#postInput').val('');
+        try {
+            const response = await fetch('/Home/PublicarPost', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ contenidoPost })
+            });
 
-                    // Inserta dinámicamente el nuevo post
-                    const container = $('.community-cards-container');
-                    const postHtml = `
-                        <div class="community-card">
-                            <div class="bottom-community-card">
-                                <p class="community-card-text">${data.post.contenido_post}</p>
-                                <span class="community-time-posted">${data.post.fecha_creacion} por ${data.post.autor}</span>
-                                <div class="community-card-footer">
-                                    <button class="like-button">
-                                        <img src="/img/icon_like.svg" class="img-like">
-                                        <span>0</span>
-                                    </button>
-                                    <button class="dislike-button">
-                                        <img src="/img/icon_dislike.svg" class="img-dislike">
-                                        <span>0</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>`;
-                    container.prepend(postHtml);
+            const data = await response.json();
 
-                    // Cierra el popup
-                    closePopup();
-                } else {
-                    alert(data.message || 'Error al publicar el post.');
-                }
-            },
-            error: function (xhr, status, error) {
-                console.error('Error:', error);
-                alert('Ocurrió un error al intentar publicar el post.');
+            if (data.success) {
+                document.getElementById('postInput').value = '';
+                closePopup();
+                cargarPosts(); // Recargar los posts después de publicar
+            } else {
+                alert(data.message || 'Error al publicar el post.');
             }
-        });
-    });
-    
+        } catch (error) {
+            console.error("Error:", error);
+            alert('Ocurrió un error al intentar publicar el post.');
+        }
+    }
+
+    // Cargar los posts al cargar la página
+    document.addEventListener('DOMContentLoaded', cargarPosts);
 </script>
