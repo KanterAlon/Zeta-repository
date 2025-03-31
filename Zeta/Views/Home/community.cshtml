@@ -5,11 +5,12 @@
             <!-- Aquí se cargarán dinámicamente los posts con JS -->
         </div>
     </div>
+    
+    <button class="button-add-post" onclick="openPopup()">
+        <img src="/img/icon_button_add.svg">
+    </button>
 </section>
 
-<button class="button-add-post" onclick="openPopup()">
-    <img src="/img/icon_button_add.svg">
-</button>
 
 <!-- Popup para agregar un post -->
 <div id="postPopup" class="popup-container" style="display: none;">
@@ -26,122 +27,234 @@
 </div>
 
 <script>
+    // ID único para el usuario (simulado ya que no tenemos autenticación)
+    const USER_ID = 'user_' + Math.random().toString(36).substr(2, 9);
+    
+    // Funciones para el popup
+    function openPopup() {
+        document.getElementById('postPopup').style.display = 'flex';
+    }
+    
+    function closePopup() {
+        document.getElementById('postPopup').style.display = 'none';
+        document.getElementById('postInput').value = '';
+    }
+    
+    // Obtener posts del Local Storage
+    function obtenerPosts() {
+        const posts = localStorage.getItem('communityPosts');
+        return posts ? JSON.parse(posts) : [];
+    }
+    
+    // Guardar posts en el Local Storage
+    function guardarPosts(posts) {
+        localStorage.setItem('communityPosts', JSON.stringify(posts));
+    }
+    
+    // Obtener interacciones del usuario del Local Storage
+    function obtenerInteraccionesUsuario() {
+        const interacciones = localStorage.getItem('userInteractions');
+        return interacciones ? JSON.parse(interacciones) : {};
+    }
+    
+    // Guardar interacciones del usuario en el Local Storage
+    function guardarInteraccionesUsuario(interacciones) {
+        localStorage.setItem('userInteractions', JSON.stringify(interacciones));
+    }
+    
     // Cargar posts dinámicamente
-    async function cargarPosts() {
-    try {
-        const response = await fetch('/Home/ObtenerPosts', { method: 'GET' });
-
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
+    function cargarPosts() {
+        const posts = obtenerPosts();
+        const interacciones = obtenerInteraccionesUsuario();
+        
+        const container = document.querySelector('.community-cards-container');
+        container.innerHTML = ''; // Limpiar antes de cargar nuevos posts
+        
+        if (posts.length === 0) {
+            container.innerHTML = '<p>No hay posts aún. ¡Sé el primero en publicar!</p>';
+            return;
         }
-
-        const data = await response.json();
-
-        if (data.success) {
-            const container = document.querySelector('.community-cards-container');
-            container.innerHTML = ''; // Limpiar antes de cargar nuevos posts
-
-            data.posts.forEach(post => {
-                const postHtml = `
-                    <div class="community-card" data-id="${post.id_post}">
-                        <img src="/img/${post.imagen_url}" alt="Imagen del post" class="community-card-image">
-                        <div class="bottom-community-card">
-                            <p class="community-card-text">${post.contenido_post}</p>
-                            <span class="community-time-posted">${post.fecha_creacion} por ${post.autor}</span>
-                            <div class="community-card-footer">
-                                <button class="like-button" onclick="darLike(${post.id_post}, this)">
-                                    <img src="/img/icon_like.svg" class="img-like">
-                                    <span class="like-count">${post.likes}</span>
-                                </button>
-                                <button class="dislike-button" onclick="darDislike(${post.id_post}, this)">
-                                    <img src="/img/icon_dislike.svg" class="img-dislike">
-                                    <span class="dislike-count">${post.dislikes}</span>
-                                </button>
-                            </div>
+        
+        posts.forEach(post => {
+            const userInteraction = interacciones[post.id] || {};
+            const hasLiked = userInteraction.liked || false;
+            const hasDisliked = userInteraction.disliked || false;
+            
+            const postHtml = `
+                <div class="community-card" data-id="${post.id}">
+                    ${post.imagen_url ? `<img src="${post.imagen_url}" alt="Imagen del post" class="community-card-image">` : ''}
+                    <div class="bottom-community-card">
+                        <p class="community-card-text">${post.contenido}</p>
+                        <span class="community-time-posted">${post.fecha}</span>
+                        <div class="community-card-footer">
+                            <button class="like-button" onclick="darLike('${post.id}', this)">
+                                <img src="/img/icon_like${hasLiked ? '-fill' : ''}.svg" class="img-like">
+                                <span class="like-count">${post.likes}</span>
+                            </button>
+                            <button class="dislike-button" onclick="darDislike('${post.id}', this)">
+                                <img src="/img/icon_dislike${hasDisliked ? '-fill' : ''}.svg" class="img-dislike">
+                                <span class="dislike-count">${post.dislikes}</span>
+                            </button>
                         </div>
-                    </div>`;
-                container.insertAdjacentHTML('beforeend', postHtml);
-            });
-        } else {
-            console.error('Error al cargar posts:', data.message);
-        }
-    } catch (error) {
-        console.error('Error al obtener posts:', error);
+                    </div>
+                </div>`;
+            container.insertAdjacentHTML('beforeend', postHtml);
+        });
     }
-}
-
-
+    
     // Dar Like a un post
-    async function darLike(idPost, button) {
-        try {
-            const response = await fetch('/Home/DarLike', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ idPost })
-            });
-
-            if (response.ok) {
-                const likeCount = button.querySelector('.like-count');
-                likeCount.textContent = parseInt(likeCount.textContent) + 1;
-            } else {
-                console.error("Error al dar like.");
-            }
-        } catch (error) {
-            console.error("Error:", error);
+    function darLike(idPost, button) {
+        const posts = obtenerPosts();
+        const interacciones = obtenerInteraccionesUsuario();
+        const postIndex = posts.findIndex(p => p.id === idPost);
+        
+        if (postIndex === -1) return;
+        
+        const post = posts[postIndex];
+        const userInteraction = interacciones[idPost] || {};
+        
+        // Si ya había dado dislike, lo quitamos
+        if (userInteraction.disliked) {
+            post.dislikes--;
+            userInteraction.disliked = false;
+        }
+        
+        // Alternar like
+        if (userInteraction.liked) {
+            post.likes--;
+            userInteraction.liked = false;
+        } else {
+            post.likes++;
+            userInteraction.liked = true;
+        }
+        
+        // Actualizar datos
+        interacciones[idPost] = userInteraction;
+        posts[postIndex] = post;
+        
+        guardarPosts(posts);
+        guardarInteraccionesUsuario(interacciones);
+        
+        // Actualizar UI
+        const likeImg = button.querySelector('.img-like');
+        const likeCount = button.querySelector('.like-count');
+        const dislikeButton = button.parentElement.querySelector('.dislike-button');
+        const dislikeImg = dislikeButton.querySelector('.img-dislike');
+        
+        likeImg.src = `/img/icon_like${userInteraction.liked ? '-fill' : ''}.svg`;
+        likeCount.textContent = post.likes;
+        dislikeImg.src = `/img/icon_dislike${userInteraction.disliked ? '-fill' : ''}.svg`;
+        
+        // Actualizar contador de dislike (por si habíamos quitado uno)
+        if (dislikeButton) {
+            dislikeButton.querySelector('.dislike-count').textContent = post.dislikes;
         }
     }
-
+    
     // Dar Dislike a un post
-    async function darDislike(idPost, button) {
-        try {
-            const response = await fetch('/Home/DarDislike', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ idPost })
-            });
-
-            if (response.ok) {
-                const dislikeCount = button.querySelector('.dislike-count');
-                dislikeCount.textContent = parseInt(dislikeCount.textContent) + 1;
-            } else {
-                console.error("Error al dar dislike.");
-            }
-        } catch (error) {
-            console.error("Error:", error);
+    function darDislike(idPost, button) {
+        const posts = obtenerPosts();
+        const interacciones = obtenerInteraccionesUsuario();
+        const postIndex = posts.findIndex(p => p.id === idPost);
+        
+        if (postIndex === -1) return;
+        
+        const post = posts[postIndex];
+        const userInteraction = interacciones[idPost] || {};
+        
+        // Si ya había dado like, lo quitamos
+        if (userInteraction.liked) {
+            post.likes--;
+            userInteraction.liked = false;
+        }
+        
+        // Alternar dislike
+        if (userInteraction.disliked) {
+            post.dislikes--;
+            userInteraction.disliked = false;
+        } else {
+            post.dislikes++;
+            userInteraction.disliked = true;
+        }
+        
+        // Actualizar datos
+        interacciones[idPost] = userInteraction;
+        posts[postIndex] = post;
+        
+        guardarPosts(posts);
+        guardarInteraccionesUsuario(interacciones);
+        
+        // Actualizar UI
+        const dislikeImg = button.querySelector('.img-dislike');
+        const dislikeCount = button.querySelector('.dislike-count');
+        const likeButton = button.parentElement.querySelector('.like-button');
+        const likeImg = likeButton.querySelector('.img-like');
+        
+        dislikeImg.src = `/img/icon_dislike${userInteraction.disliked ? '-fill' : ''}.svg`;
+        dislikeCount.textContent = post.dislikes;
+        likeImg.src = `/img/icon_like${userInteraction.liked ? '-fill' : ''}.svg`;
+        
+        // Actualizar contador de like (por si habíamos quitado uno)
+        if (likeButton) {
+            likeButton.querySelector('.like-count').textContent = post.likes;
         }
     }
-
+    
     // Publicar un nuevo post
-    async function publicarPost() {
+    function publicarPost() {
         const contenidoPost = document.getElementById('postInput').value.trim();
-
+        
         if (!contenidoPost) {
             alert('El contenido no puede estar vacío.');
             return;
         }
-
-        try {
-            const response = await fetch('/Home/PublicarPost', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ contenidoPost })
-            });
-
-            const data = await response.json();
-
-            if (data.success) {
-                document.getElementById('postInput').value = '';
-                closePopup();
-                cargarPosts(); // Recargar los posts después de publicar
-            } else {
-                alert(data.message || 'Error al publicar el post.');
-            }
-        } catch (error) {
-            console.error("Error:", error);
-            alert('Ocurrió un error al intentar publicar el post.');
+        
+        const posts = obtenerPosts();
+        const nuevoPost = {
+            id: 'post_' + Date.now(),
+            contenido: contenidoPost,
+            imagen_url: '', // Puedes implementar la subida de imágenes después
+            fecha: new Date().toLocaleString(),
+            likes: 0,
+            dislikes: 0
+        };
+        
+        posts.unshift(nuevoPost); // Agregar al inicio
+        guardarPosts(posts);
+        
+        closePopup();
+        cargarPosts(); // Recargar los posts después de publicar
+    }
+    
+    // Inicializar con algunos posts de ejemplo si no hay ninguno
+    function inicializarPostsEjemplo() {
+        const posts = obtenerPosts();
+        if (posts.length === 0) {
+            const postsEjemplo = [
+                {
+                    id: 'post_1',
+                    contenido: '¡Bienvenidos a la comunidad! Este es un post de ejemplo.',
+                    imagen_url: '',
+                    fecha: new Date().toLocaleString(),
+                    likes: 0,
+                    dislikes: 0
+                },
+                {
+                    id: 'post_2',
+                    contenido: 'No olviden dar like a los posts que les gusten.',
+                    imagen_url: '',
+                    fecha: new Date().toLocaleString(),
+                    likes: 0,
+                    dislikes: 0
+                }
+            ];
+            guardarPosts(postsEjemplo);
         }
     }
-
+    
     // Cargar los posts al cargar la página
-    document.addEventListener('DOMContentLoaded', cargarPosts);
+    document.addEventListener('DOMContentLoaded', () => {
+        inicializarPostsEjemplo();
+        cargarPosts();
+    });
 </script>

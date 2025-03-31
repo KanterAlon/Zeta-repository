@@ -43,6 +43,14 @@
             <div class="logo" onclick="window.location.href='/Home/'" style="cursor: pointer;">
                 <img src="/img/Logo_Zeta_Header.svg" alt="ZETA Logo">
             </div>
+            
+            <!-- Botón del menú hamburguesa -->
+            <button class="hamburger-btn" aria-label="Menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
             <nav class="nav-links">
                 <a href="/home/index">
                     <img src="/img/icon_home.svg" alt="Inicio Icon" class="nav-icon" width="30" height="30"><span class="body-text">Inicio</span>
@@ -77,6 +85,14 @@
             <div class="logo" onclick="window.location.href='/Home/'" style="cursor: pointer;">
                 <img src="/img/Logo_Zeta_Header.svg" alt="ZETA Logo">
             </div>
+            
+            <!-- Botón del menú hamburguesa -->
+            <button class="hamburger-btn" aria-label="Menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
             <nav class="nav-links">
                 <a href="/home/index">
                     <img src="/img/icon_home.svg" alt="Inicio Icon" class="nav-icon" width="30" height="30"><span class="body-text">Inicio</span>
@@ -137,6 +153,38 @@
             $('#profile-dropdown').hide();
         }
     });
+
+    // Toggle del menú hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+    
+    // Cerrar el menú al hacer clic en un enlace (opcional)
+    const navItems = document.querySelectorAll('.nav-links a');
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (window.innerWidth <= 940) {
+                hamburgerBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    
+    // Cerrar el menú al redimensionar la pantalla a más de 940px
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 940) {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+});
 </script>
 
 </body>
